@@ -9,5 +9,6 @@ public class ScoreTarget : MonoBehaviour
     public void AddPoint()
     {
         Score.Plus(toAdd);
+        AttentionController.Instance.UpdateAttention();
     }
 }

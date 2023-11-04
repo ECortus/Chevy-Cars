@@ -13,8 +13,34 @@ MonoBehaviour:
   m_Name: CopsRating v1
   m_EditorClassIdentifier: 
   Slots:
-  - Units: []
-  - Units: []
-  - Units: []
-  - Units: []
-  - Units: []
+  - GoalPercentToReachThisRating: 5
+    Units:
+    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 1
+  - GoalPercentToReachThisRating: 20
+    Units:
+    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 2
+  - GoalPercentToReachThisRating: 35
+    Units:
+    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 3
+    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 3
+  - GoalPercentToReachThisRating: 60
+    Units:
+    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 1
+    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 1
+  - GoalPercentToReachThisRating: 80
+    Units:
+    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 1

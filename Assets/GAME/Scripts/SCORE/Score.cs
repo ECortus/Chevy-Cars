@@ -13,10 +13,58 @@ public static class Score
             PlayerPrefs.Save();
         }
     }
+    
+    public static float ValueToCurrentGoal
+    {
+        get
+        {
+            uint value = Score.Value;
+            
+            Stage[] Stages = LevelManager.Instance.ActualLevel.Stages;
+            for (int i = 0; i < LevelManager.Instance.ActualLevel.StageIndex; i++)
+            {
+                value -= Stages[i].ScoreGoal;
+            }
+
+            return value;
+        }
+    }
+
+    public static float CurrentGoal
+    {
+        get
+        {
+            uint goal = 0;
+            goal = LevelManager.Instance.ActualLevel.CurrentStage.ScoreGoal;
+            return goal;
+        }
+    }
+
+    public static float AllGoal
+    {
+        get
+        {
+            uint value = 0;
+            
+            Stage[] Stages = LevelManager.Instance.ActualLevel.Stages;
+            for (int i = 0; i < LevelManager.Instance.ActualLevel.StageIndex; i++)
+            {
+                value += Stages[i].ScoreGoal;
+            }
+
+            return value;
+        }
+    }
 
     public static void Plus(uint amount)
     {
         Value += amount;
+
+        if (ValueToCurrentGoal >= CurrentGoal)
+        {
+            LevelManager.Instance.ActualLevel.CompleteCurrentStage();
+        }
+        
         ScoreUI.Instance.Refresh();
     }
     

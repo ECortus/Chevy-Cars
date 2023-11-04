@@ -8,16 +8,35 @@ public class LevelManager : Instancer<LevelManager>
     {
         Instance = this;
     }
-    
-    [SerializeField] private List<Level> Levels = new List<Level>();
 
-    private int _Index { get { return Statistics.LevelIndex; } set { Statistics.LevelIndex = value; } }
-    public int GetIndex() => _Index % Levels.Count;
-    public void SetIndex(int value)
+    [SerializeField] private Level[] Levels;
+
+    private int index { get { return Statistics.LevelIndex; } set { Statistics.LevelIndex = value; } }
+    public int Index => index % Levels.Length;
+    
+    public void SetIndex(int value) => index = Mathf.Clamp(value, 0, Levels.Length - 1);
+    public void IncreaseIndex() => SetIndex(Index + 1);
+    public void DecreaseIndex() => SetIndex(Index - 1);
+
+    public Level ActualLevel => Levels[Index];
+
+    public void Starting()
     {
-        if(value < 0) _Index = 0;
-        else _Index = value;
+        ActualLevel.StartingLevel();
     }
 
-    public Level ActualLevel => Levels[GetIndex()];
+    public void Restart()
+    {
+        ActualLevel.RestartLevel();
+    }
+
+    public void Win()
+    {
+        ActualLevel.WinLevel();
+    }
+    
+    public void Lose()
+    {
+        ActualLevel.LoseLevel();
+    }
 }

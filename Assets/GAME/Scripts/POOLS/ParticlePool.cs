@@ -16,6 +16,6 @@ public class ParticlePool : BasePool<ParticlePool, ParticleSystem, ParticleType>
     
     protected override bool Condition(ParticleSystem obj)
     {
-        return obj.isPlaying;
+        return !obj.isPlaying;
     }
 }

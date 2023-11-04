@@ -28,7 +28,7 @@ public abstract class BasePool<TC, T, TP> : Instancer<TC>
         }
     }
     
-    private Pool[] Pools = Array.Empty<Pool>();
+    protected Pool[] Pools = Array.Empty<Pool>();
     
     public void CreatePools()
     {
@@ -57,7 +57,7 @@ public abstract class BasePool<TC, T, TP> : Instancer<TC>
         {
             if(item == null) continue;
 
-            if(!Condition(item))
+            if(Condition(item))
             {
                 InsertAction(item, pos, rot);
                 return item.gameObject;

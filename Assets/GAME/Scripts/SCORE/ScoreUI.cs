@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class ScoreUI : DoubleBarUI
+public class ScoreUI : BarUI
 {
     [Inject] public static ScoreUI Instance { get; set; }
     [Inject] void Awake()
@@ -16,6 +16,6 @@ public class ScoreUI : DoubleBarUI
         Instance = this;
     }
 
-    protected override float Amount { get; }
-    protected override float MaxAmount { get; }
+    protected override float Amount => Score.ValueToCurrentGoal;
+    protected override float MaxAmount => Score.CurrentGoal;
 }

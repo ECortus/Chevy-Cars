@@ -6,6 +6,10 @@ public abstract class CarController : MonoBehaviour
 {
 	[SerializeField] private TinyCarController carController;
 	[SerializeField] private Rigidbody rb;
+
+	[Space]
+	[SerializeField] private TrailRenderer rightTrial;
+	[SerializeField] private TrailRenderer leftTrial;
 	
 	[Space]
 	[SerializeField] private float rotateSpeed;
@@ -17,7 +21,21 @@ public abstract class CarController : MonoBehaviour
 	public bool TakeControl => _takeControl;
 	public void SetControl(bool value) => _takeControl = value;
 
+	public bool IsActive => gameObject.activeSelf && gameObject.activeInHierarchy;
+
 	protected abstract void FixedUpdate();
 
-	public void SetMotor(uint value) => carController.setMotor(value);
+	protected void SetMotor(uint value) => carController.setMotor(value);
+
+	public void Stop()
+	{
+		SetControl(true);
+		rb.velocity = Vector3.zero;
+	}
+
+	protected void ClearTrials()
+	{
+		if(rightTrial) rightTrial.Clear();
+		if(leftTrial) leftTrial.Clear();
+	}
 }

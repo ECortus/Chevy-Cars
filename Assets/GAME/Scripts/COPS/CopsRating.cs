@@ -10,6 +10,8 @@ public class CopsRating : ScriptableObject
     
     public int MinSearchRate => 1;
     public int MaxSearchRate => Slots.Length;
+
+    public CopsSlot[] GetSlots() => Slots;
     
     public CopsSlot GetSlot(int ind)
     {
@@ -23,12 +25,14 @@ public class CopsRating : ScriptableObject
 [System.Serializable]
 public class CopsSlot
 {
+    [Range(0, 100f)]
+    public float GoalPercentToReachThisRating = 15;
     public CopUnit[] Units;
 }
 
 [System.Serializable]
 public class CopUnit
 {
-    public GameObject CopPrefab;
+    public CopController CopPrefab;
     public int Count;
 }
