@@ -17,6 +17,10 @@ public class PlayerController : CarController
         Instance = this;
     }
 
+    public void FullHeal() => health.FullHeal();
+    public void Heal(int hp) => health.Heal(hp);
+    public void GetHit(int dmg) => health.GetHit(dmg);
+
     public async void On(Vector3 spawn)
     {
         FullHeal();
@@ -34,9 +38,7 @@ public class PlayerController : CarController
     }
     
     public Transform Transform => transform;
-
-    [Space] 
-    [SerializeField] private ArrestData arrest;
+    private ArrestData arrest;
 
     public void SetFree() => arrest.SetFree();
     public void GetArrested() => arrest.GetArrested();
@@ -49,6 +51,8 @@ public class PlayerController : CarController
     {
         FullHeal();
         _handle = GameManager.Instance.Joystick.transform.GetChild(0);
+        
+        arrest = GetComponent<ArrestData>();
     }
     
     protected override void FixedUpdate()

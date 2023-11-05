@@ -22,6 +22,7 @@ public class ArrestData : MonoBehaviour
         if (Attempt < attemptToLose)
         {
             ReviveOperator.Instance.On();
+            Attempt++;
         }
         else
         {

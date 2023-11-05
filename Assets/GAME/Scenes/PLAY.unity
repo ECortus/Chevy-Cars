@@ -565,6 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1743435625}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 1743435625}
@@ -672,6 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1647771970}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 1647771970}
@@ -1646,6 +1648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1576742406}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 1576742406}
@@ -2102,37 +2105,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 48.5, y: 0, z: 5.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1542690824}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &660733963
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 660733964}
-  m_Layer: 0
-  m_Name: GameObject (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &660733964
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660733963}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.25, y: 0, z: 50.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3466,6 +3438,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Levels:
   - {fileID: 1087347472}
+--- !u!134 &953369382
+PhysicMaterial:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DynamicMaterial
+  dynamicFriction: 0
+  staticFriction: 0
+  bounciness: 0
+  frictionCombine: 1
+  bounceCombine: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,7 +4052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CopsRating: {fileID: 11400000, guid: 79f9d8ceb8778464cac92a4f6af1ef78, type: 2}
   Stages:
-  - _ScoreGoal: 500
+  - _ScoreGoal: 1000
     _Event:
       m_PersistentCalls:
         m_Calls:
@@ -4445,18 +4429,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126084843}
   m_CullTransparentMesh: 1
---- !u!134 &1184398597
-PhysicMaterial:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: DynamicMaterial
-  dynamicFriction: 0
-  staticFriction: 0
-  bounciness: 0
-  frictionCombine: 1
-  bounceCombine: 1
 --- !u!1 &1212915192
 GameObject:
   m_ObjectHideFlags: 0
@@ -4774,6 +4746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1623726142}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 1623726142}
@@ -5294,6 +5267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1738275038}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 1738275038}
@@ -5401,6 +5375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 2135479358}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 2135479358}
@@ -6217,7 +6192,6 @@ MonoBehaviour:
   - {fileID: 14142288}
   - {fileID: 1852470129}
   - {fileID: 2067350767}
-  - {fileID: 660733964}
   requireDistanceToSpawn: 25
 --- !u!114 &1519884074
 MonoBehaviour:
@@ -6301,7 +6275,6 @@ Transform:
   - {fileID: 14142288}
   - {fileID: 1852470129}
   - {fileID: 2067350767}
-  - {fileID: 660733964}
   m_Father: {fileID: 1519884072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1547365429
@@ -6503,6 +6476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 984396804}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 984396804}
@@ -6821,6 +6795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 226642135}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 226642135}
@@ -7244,6 +7219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1738363471}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 1738363471}
@@ -7716,6 +7692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 607618239}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 607618239}
@@ -8401,6 +8378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 570218656}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 570218656}
@@ -8508,6 +8486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1463651887}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 1463651887}
@@ -9344,6 +9323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1922160273}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 1922160273}
@@ -9451,6 +9431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1123732112}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 1123732112}
@@ -20577,7 +20558,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4617967541805965564}
-  m_Material: {fileID: 1184398597}
+  m_Material: {fileID: 953369382}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -20667,13 +20648,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carController: {fileID: 4617967541805965568}
   rb: {fileID: 4617967541805965552}
+  health: {fileID: 4617967541805965569}
   rightTrial: {fileID: 904822831}
   leftTrial: {fileID: 2107537743}
   rotateSpeed: 0.035
   ragdoll: {fileID: 4617967541805965571}
   destroyingEffect: {fileID: 4326550291119950910, guid: 6c7fafe3d7a26fe41a1ecc4b9aad8881,
     type: 3}
-  health: {fileID: 4617967541805965569}
   arrest: {fileID: 4617967541805965570}
 --- !u!114 &4617967541805965568
 MonoBehaviour:
@@ -20825,6 +20806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 5536956745123166396}
+  rbMasses: 5
   rb: {fileID: 4617967541805965552}
   rbObjects:
   - {fileID: 5536956745123166396}
@@ -26799,6 +26781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 8981887856276595342}
+  rbMasses: 1
   rb: {fileID: 0}
   rbObjects:
   - {fileID: 8981887856276595342}

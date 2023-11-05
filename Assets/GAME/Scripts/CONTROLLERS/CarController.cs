@@ -7,13 +7,17 @@ public abstract class CarController : MonoBehaviour
 {
 	[SerializeField] private TinyCarController carController;
 	[SerializeField] private Rigidbody rb;
-	
-	[Space]
-	[SerializeField] private HealthData health;
 
-	public void FullHeal() => health.FullHeal();
-	public void Heal(int hp) => health.Heal(hp);
-	public void GetHit(int dmg) => health.GetHit(dmg);
+	private HealthData _health;
+
+	protected HealthData health
+	{
+		get
+		{
+			if (!_health) _health = GetComponent<HealthData>();
+			return _health;
+		}
+	}
 	public bool Died => health.Died;
 
 	[Space]
@@ -31,6 +35,8 @@ public abstract class CarController : MonoBehaviour
 	public void SetControl(bool value) => _takeControl = value;
 
 	public bool IsActive => gameObject.activeSelf && gameObject.activeInHierarchy;
+
+	public float Speed => rb.velocity.magnitude;
 
 	protected abstract void FixedUpdate();
 

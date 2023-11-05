@@ -8,7 +8,19 @@ public class CopController : CarController
 {
     [Space]
     public CopType Type = CopType.Nothing;
-    [SerializeField] private ScoreTarget scoreTarget;
+    private ScoreTarget scoreTarget;
+    private CopArrestController arrest;
+    
+    public void FullHeal() => health.FullHeal();
+    public void Heal(int hp) => health.Heal(hp);
+
+    public void GetHit(int dmg)
+    {
+        if (!arrest.RequireToArrest)
+        {
+            health.GetHit(dmg);
+        }
+    }
     
     public void AddPoint() => scoreTarget.AddPoint();
     
@@ -60,6 +72,12 @@ public class CopController : CarController
                 return Vector3.zero;
             }
         }
+    }
+
+    void Start()
+    {
+        arrest = GetComponent<CopArrestController>();
+        scoreTarget = GetComponent<ScoreTarget>();
     }
 
     protected override void FixedUpdate()

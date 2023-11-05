@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 4173601819608669383}
   - component: {fileID: 5530421842339099359}
   - component: {fileID: 9108547428591215412}
+  - component: {fileID: -4344981357470601841}
   m_Layer: 9
   m_Name: Cop_helicopter
   m_TagString: Cop
@@ -463,7 +464,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carController: {fileID: 4173601819608669383}
   rb: {fileID: 8599890153594489365}
-  health: {fileID: 8338622838206641392}
   rightTrial: {fileID: 4069992939738125883}
   leftTrial: {fileID: 9071056866137002207}
   rotateSpeed: 0.04
@@ -471,7 +471,6 @@ MonoBehaviour:
   destroyingEffect: {fileID: 4326550291119950910, guid: 6c7fafe3d7a26fe41a1ecc4b9aad8881,
     type: 3}
   Type: 3
-  scoreTarget: {fileID: 9108547428591215412}
 --- !u!114 &8338622838206641392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 2831908479551917864}
+  rbMasses: 5
   rb: {fileID: 8599890153594489365}
   rbObjects:
   - {fileID: 2831908479551917864}
@@ -674,6 +674,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toAdd: 5
+--- !u!114 &-4344981357470601841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5227893724974608513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2822560330766964caa6dd864d4427be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 4
+  speed: 15
+  arrestTime: 3
 --- !u!1 &6865059612459285651
 GameObject:
   m_ObjectHideFlags: 0
