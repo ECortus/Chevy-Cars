@@ -55,7 +55,7 @@ public abstract class BasePool<TC, T, TP> : Instancer<TC>
         
         foreach(T item in list)
         {
-            if(item == null) continue;
+            if(!item) continue;
 
             if(Condition(item))
             {

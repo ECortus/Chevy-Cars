@@ -14,12 +14,29 @@ public class LevelManager : Instancer<LevelManager>
     private int index { get { return Statistics.LevelIndex; } set { Statistics.LevelIndex = value; } }
     public int Index => index % Levels.Length;
     
-    public void SetIndex(int value) => index = Mathf.Clamp(value, 0, Levels.Length - 1);
-    public void IncreaseIndex() => SetIndex(Index + 1);
-    public void DecreaseIndex() => SetIndex(Index - 1);
+    public void SetIndex(int value) => index = Mathf.Clamp(value, 0, 9999);
+
+    public void IncreaseIndex()
+    {
+        int ind = index;
+        ind++;
+        SetIndex(ind);
+    }
+
+    public void DecreaseIndex()
+    {
+        int ind = index;
+        ind--;
+        SetIndex(ind);
+    }
 
     public Level ActualLevel => Levels[Index];
 
+    void Start()
+    {
+        Starting();
+    }
+    
     public void Starting()
     {
         ActualLevel.StartingLevel();
@@ -32,6 +49,7 @@ public class LevelManager : Instancer<LevelManager>
 
     public void Win()
     {
+        IncreaseIndex();
         ActualLevel.WinLevel();
     }
     

@@ -17,21 +17,15 @@ public class PlayerController : CarController
         Instance = this;
     }
 
-    public void On(Vector3 spawn)
+    public async void On(Vector3 spawn)
     {
         FullHeal();
         
         gameObject.SetActive(true);
         SpawnOnStartDot(spawn);
-        SetControl(false);
-    }
-    
-    public void SpawnOnStartDot(Vector3 spawn)
-    {
-        transform.position = spawn;
-        transform.localEulerAngles = Vector3.zero;
         
-        ClearTrials();
+        await SetDefaultRagdoll();
+        SetControl(false);
     }
     
     public void Off()
@@ -42,18 +36,11 @@ public class PlayerController : CarController
     public Transform Transform => transform;
 
     [Space] 
-    [SerializeField] private HealthData health;
     [SerializeField] private ArrestData arrest;
-    
-    public void FullHeal() => health.FullHeal();
-    public void Heal(int hp) => health.Heal(hp);
-    public void GetHit(int dmg) => health.GetHit(dmg);
 
     public void SetFree() => arrest.SetFree();
     public void GetArrested() => arrest.GetArrested();
     public void Busted() => arrest.Busted();
-    
-    public bool Died => health.Died;
     
     private Transform _handle;
     private Vector3 Move => new Vector3(_handle.localPosition.x, 0, _handle.localPosition.y);

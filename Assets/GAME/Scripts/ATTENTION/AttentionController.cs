@@ -15,24 +15,22 @@ public class AttentionController : Instancer<AttentionController>
     public int Attention => _attention;
     public int MaxAttention => LevelManager.Instance.ActualLevel.CopsRating.MaxSearchRate;
 
-    private float PercentGoal => Score.Value / Score.AllGoal * 100f;
+    private float PercentGoal => (float)Score.Value / (float)Score.AllGoal * 100f;
     
     private CopsSlot[] Cops => LevelManager.Instance.ActualLevel.CopsRating.GetSlots();
 
     public void UpdateAttention()
     {
-        int attention = -1;
-        for (int i = Cops.Length - 1; i < 0; i--)
+        int attention = 0;
+        for (int i = 0; i < Cops.Length; i++)
         {
-            if (PercentGoal >= Cops[i].GoalPercentToReachThisRating)
+            if (PercentGoal >= Cops[Cops.Length - 1 - i].GoalPercentToReachThisRating)
             {
-                attention = i + 1;
-            }
-            else
-            {
+                attention = Cops.Length - i;
                 break;
             }
         }
         SetAttention(attention);
+        AttentionCounterUI.Instance.Refresh();
     }
 }

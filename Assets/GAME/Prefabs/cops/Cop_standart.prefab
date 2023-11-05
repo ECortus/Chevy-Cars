@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5675821946213262722}
   - component: {fileID: 7020736586485227318}
   - component: {fileID: 3579067389371498769}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Car1
-  m_TagString: Player
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,7 +34,6 @@ Transform:
   m_Children:
   - {fileID: 364334514785881398}
   - {fileID: 4697467804929920928}
-  - {fileID: 6868251570028514036}
   m_Father: {fileID: 7081411894348205549}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &5675821946213262722
@@ -104,7 +103,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -121,9 +120,9 @@ GameObject:
   - component: {fileID: 2008630582654599239}
   - component: {fileID: 3168932915070174946}
   - component: {fileID: 6089068090712890053}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: City Car Hatchback Wheel (1)
-  m_TagString: Player
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,94 +209,11 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4652389498977204739, guid: b709ef623755f434c86cf8a627976b85, type: 3}
---- !u!1 &3019057356558836067
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6868251570028514036}
-  - component: {fileID: 6068091067973644401}
-  - component: {fileID: 4841852109415010927}
-  m_Layer: 8
-  m_Name: Cube.003
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6868251570028514036
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3019057356558836067}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.028320326, y: 0.70653933, z: 0.028320322, w: 0.7065395}
-  m_LocalPosition: {x: -0.78146005, y: 4.9047637, z: 0.09427446}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8891021132663527174}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6068091067973644401
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3019057356558836067}
-  m_Mesh: {fileID: -8678823145569952518, guid: b709ef623755f434c86cf8a627976b85, type: 3}
---- !u!23 &4841852109415010927
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3019057356558836067}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 53915411ef7093445bee556b58e8a3c6, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5032582970300509024
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,9 +224,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6000733211424368333}
   - component: {fileID: 9071056866137002207}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: trialL
-  m_TagString: Player
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -456,12 +372,13 @@ GameObject:
   - component: {fileID: 225303618898518878}
   - component: {fileID: 3166723721924440251}
   - component: {fileID: 8338622838206641392}
-  - component: {fileID: 2539326554187440888}
+  - component: {fileID: 207922983970529745}
   - component: {fileID: 4173601819608669383}
   - component: {fileID: 5530421842339099359}
-  m_Layer: 8
+  - component: {fileID: 9108547428591215412}
+  m_Layer: 9
   m_Name: Cop_standart
-  m_TagString: Player
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -475,7 +392,7 @@ Transform:
   m_GameObject: {fileID: 5227893724974608513}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 1.5, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -492,7 +409,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5227893724974608513}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 15
   m_Drag: 0
   m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -546,12 +463,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carController: {fileID: 4173601819608669383}
   rb: {fileID: 8599890153594489365}
+  health: {fileID: 8338622838206641392}
   rightTrial: {fileID: 4069992939738125883}
   leftTrial: {fileID: 9071056866137002207}
-  rotateSpeed: 0.002
+  rotateSpeed: 0.04
+  ragdoll: {fileID: 207922983970529745}
+  destroyingEffect: {fileID: 4326550291119950910, guid: 6c7fafe3d7a26fe41a1ecc4b9aad8881,
+    type: 3}
   Type: 1
-  health: {fileID: 8338622838206641392}
-  scoreForDestroying: 5
+  scoreTarget: {fileID: 9108547428591215412}
 --- !u!114 &8338622838206641392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,7 +503,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2539326554187440888
+      - m_Target: {fileID: 3166723721924440251}
+        m_TargetAssemblyTypeName: CarController, Assembly-CSharp
+        m_MethodName: Destroying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &207922983970529745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -592,9 +524,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 5227893724974608513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb5fa2d6b0eef6145bf269fefb5c4a94, type: 3}
+  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objParent: {fileID: 2831908479551917864}
+  rb: {fileID: 8599890153594489365}
+  rbObjects:
+  - {fileID: 2831908479551917864}
+  - {fileID: 7386781370119954061}
+  - {fileID: 2933090362479167355}
+  rbs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cols:
+  - {fileID: 3579067389371498769}
+  - {fileID: 1046620162341194392}
+  - {fileID: 6089068090712890053}
+  DefaultPoses:
+  - {x: -0, y: -0.5, z: -0.1225}
+  - {x: -2.231964, y: 0.7043749, z: -0.00000369994}
+  - {x: 2.93, y: 0.7043749, z: -0}
+  DefaultRotation:
+  - {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!114 &4173601819608669383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,10 +561,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652c0dc572bd1ec4899afb10f513fab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainController: {fileID: 0}
+  mainController: {fileID: 3166723721924440251}
   surface: {fileID: 5530421842339099359}
   colliderRadius: 0.5
-  bodyMass: 1
+  bodyMass: 15
   gravityMode: 1
   gravityVelocity: 15
   maxGravity: 50
@@ -701,12 +655,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameters:
-    name: Player
+    name: Cop
     steeringMultiplier: 0.5
     accelerationMultiplier: 0.75
     speedMultiplier: 0.25
     forwardFrictionMultiplier: 0.75
     lateralFrictionMultiplier: 1
+--- !u!114 &9108547428591215412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5227893724974608513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb010323e504d874b9edeaa57f07a224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toAdd: 5
 --- !u!1 &6865059612459285651
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,9 +684,9 @@ GameObject:
   m_Component:
   - component: {fileID: 432933215804007522}
   - component: {fileID: 4069992939738125883}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: trialR
-  m_TagString: Player
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -864,9 +831,9 @@ GameObject:
   - component: {fileID: 7760641326849826982}
   - component: {fileID: 4207414776356492469}
   - component: {fileID: 1046620162341194392}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: City Car Hatchback Wheel
-  m_TagString: Player
+  m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -953,7 +920,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30

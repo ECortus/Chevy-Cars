@@ -1,21 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class CopController : CarController
 {
     [Space]
     public CopType Type = CopType.Nothing;
-    [SerializeField] private HealthData health;
-    [SerializeField] private uint scoreForDestroying = 5;
-
-    public void FullHeal() => health.FullHeal();
-    public void Heal(int hp) => health.Heal(hp);
-    public void GetHit(int dmg) => health.GetHit(dmg);
-    public bool Died => health.Died;
+    [SerializeField] private ScoreTarget scoreTarget;
     
-    public void On(Transform target, Vector3 spawn)
+    public void AddPoint() => scoreTarget.AddPoint();
+    
+    public async void On(Transform target, Vector3 spawn)
     {
         FullHeal();
         
@@ -28,17 +25,17 @@ public class CopController : CarController
             transform.rotation = Quaternion.LookRotation((target.position - transform.position).normalized);
         }
 
+        await SetDefaultRagdoll();
         SetControl(false);
     }
-    
-    public void SpawnOnStartDot(Vector3 spawn)
+
+    public override async void Destroying()
     {
-        transform.position = spawn;
-        ClearTrials();
+        base.Destroying();
+        await UniTask.Delay(10000);
+        Off();
     }
 
-    public void AddPoint() => Score.Plus(scoreForDestroying);
-    
     public void Off()
     {
         gameObject.SetActive(false);

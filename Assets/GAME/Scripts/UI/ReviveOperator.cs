@@ -10,24 +10,13 @@ public class ReviveOperator : Instancer<ReviveOperator>
     }
     
     [SerializeField] private GameObject menu;
-    [Space]
-    [SerializeField] private PlayerSettings settings;
-    private uint attemptToLose => settings.ReviveAttempt;
-    private int Attempt { get; set; }
 
     public void On()
     {
-        if (Attempt < attemptToLose)
-        {
-            CameraController.Instance.SetDistance(11f);
+        CameraController.Instance.SetDistance(11f);
             
-            menu.SetActive(true);
-            GameManager.Instance.SetTimeScale(0f);
-        }
-        else
-        {
-            LevelManager.Instance.Lose();
-        }
+        menu.SetActive(true);
+        GameManager.Instance.SetTimeScale(0f);
     }
 
     public void Revive()
@@ -38,10 +27,10 @@ public class ReviveOperator : Instancer<ReviveOperator>
         CameraController.Instance.ResetDistance();
         PlayerController.Instance.On(PlayerController.Instance.Transform.position);
     }
-    
-    public void Lose()
+
+    public void Decline()
     {
         menu.SetActive(false);
-        LoseOperator.Instance.On();
+        LevelManager.Instance.Lose();
     }
 }

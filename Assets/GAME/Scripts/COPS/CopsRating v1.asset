@@ -15,32 +15,32 @@ MonoBehaviour:
   Slots:
   - GoalPercentToReachThisRating: 5
     Units:
-    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+    - CopPrefab: {fileID: 3166723721924440251, guid: 3807f3a7adadf7b4c8a161099ee6c555,
         type: 3}
       Count: 1
   - GoalPercentToReachThisRating: 20
     Units:
-    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+    - CopPrefab: {fileID: 3166723721924440251, guid: 3807f3a7adadf7b4c8a161099ee6c555,
         type: 3}
       Count: 2
   - GoalPercentToReachThisRating: 35
     Units:
-    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+    - CopPrefab: {fileID: 3166723721924440251, guid: 3807f3a7adadf7b4c8a161099ee6c555,
         type: 3}
       Count: 3
-    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
-        type: 3}
-      Count: 3
-  - GoalPercentToReachThisRating: 60
-    Units:
-    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+    - CopPrefab: {fileID: 3166723721924440251, guid: 0ab4b5cd37319ca41b466ee9393ac7ce,
         type: 3}
       Count: 1
-    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+  - GoalPercentToReachThisRating: 60
+    Units:
+    - CopPrefab: {fileID: 3166723721924440251, guid: 0ab4b5cd37319ca41b466ee9393ac7ce,
+        type: 3}
+      Count: 1
+    - CopPrefab: {fileID: 3166723721924440251, guid: 24d40b905fd578d4d85cef6d271b7514,
         type: 3}
       Count: 1
   - GoalPercentToReachThisRating: 80
     Units:
-    - CopPrefab: {fileID: 5227893724974608513, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+    - CopPrefab: {fileID: 3166723721924440251, guid: 33058432619159b4fb436da6ba1d9e3f,
         type: 3}
       Count: 1

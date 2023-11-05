@@ -132,6 +132,8 @@ namespace DavidJalbert
             //body.hideFlags = HideFlags.NotEditable;
             //sphereCollider.hideFlags = HideFlags.NotEditable;
 
+            if (mainController.Died) return;
+
             body.mass = bodyMass * (adjustToScale ? cubicScale : 1);
             body.drag = 0;
             body.angularDrag = 1f;

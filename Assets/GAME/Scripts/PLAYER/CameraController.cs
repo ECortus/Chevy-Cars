@@ -46,7 +46,7 @@ public class CameraController : Instancer<CameraController>
     {
         if (target != null)
         {
-            transform.position = Vector3.MoveTowards(
+            transform.position = Vector3.Lerp(
                 transform.position, position, speedMove * Time.unscaledDeltaTime
             );
         }

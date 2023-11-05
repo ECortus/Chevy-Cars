@@ -30,7 +30,7 @@ public static class Score
         }
     }
 
-    public static float CurrentGoal
+    public static uint CurrentGoal
     {
         get
         {
@@ -40,14 +40,14 @@ public static class Score
         }
     }
 
-    public static float AllGoal
+    public static uint AllGoal
     {
         get
         {
             uint value = 0;
             
             Stage[] Stages = LevelManager.Instance.ActualLevel.Stages;
-            for (int i = 0; i < LevelManager.Instance.ActualLevel.StageIndex; i++)
+            for (int i = 0; i < LevelManager.Instance.ActualLevel.StageIndex + 1; i++)
             {
                 value += Stages[i].ScoreGoal;
             }

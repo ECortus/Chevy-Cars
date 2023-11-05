@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CopsSpawnController : Instancer<CopsSpawnController>
 {
@@ -10,6 +12,9 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
     }
 
     [SerializeField] private Transform[] Dots;
+    [SerializeField] private float requireDistanceToSpawn = 10f;
+
+    private Transform RequireTarget => PlayerController.Instance.Transform;
 
     private int Attention => AttentionController.Instance.Attention;
     private CopsSlot CopsSlot => LevelManager.Instance.ActualLevel.CopsRating.GetSlot(Attention);
@@ -44,6 +49,7 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
         
         int requireCount = -1;
         int aliveCount = -1;
+        Transform spawnDot;
         
         // int attention = -1;
         
@@ -54,34 +60,38 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
             //     Clean();
             //     attention = Attention;
             // }
-            
-            units = CopsSlot.Units;
-            
-            for (int i = 0; i < units.Length; i++)
+
+            if (Attention > 0)
             {
-                unit = units[i];
-                
-                for (int j = 0; j < unit.Count; j++)
+                units = CopsSlot.Units;
+
+                for (int i = 0; i < units.Length; i++)
                 {
-                    type = unit.CopPrefab.Type;
-                    cops = CopsPool.Instance.GetArray(type);
+                    unit = units[i];
 
-                    requireCount = unit.Count;
-                    aliveCount = 0;
-
-                    for (int k = 0; k < cops.Count; k++)
+                    for (int j = 0; j < unit.Count; j++)
                     {
-                        if (cops[k].IsActive && !cops[k].Died)
+                        type = unit.CopPrefab.Type;
+                        cops = CopsPool.Instance.GetArray(type);
+
+                        requireCount = unit.Count;
+                        aliveCount = 0;
+
+                        for (int k = 0; k < cops.Count; k++)
                         {
-                            aliveCount++;
+                            if (cops[k].IsActive && !cops[k].Died)
+                            {
+                                aliveCount++;
+                            }
                         }
-                    }
 
-                    if (aliveCount < requireCount)
-                    {
-                        for (int k = 0; k < requireCount - aliveCount; k++)
+                        if (aliveCount < requireCount)
                         {
-                            CopsPool.Instance.Insert(type, unit.CopPrefab, RandomDot.position);
+                            for (int k = 0; k < requireCount - aliveCount; k++)
+                            {
+                                spawnDot = RandomDot();
+                                CopsPool.Instance.Insert(type, unit.CopPrefab, spawnDot.position);
+                            }
                         }
                     }
                 }
@@ -91,5 +101,24 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
         }
     }
 
-    Transform RandomDot => Dots[Random.Range(0, Dots.Length)];
+    Transform RandomDot()
+    {
+        Transform dot = Dots[Random.Range(0, Dots.Length)];
+
+        if ((dot.position - RequireTarget.position).magnitude <= requireDistanceToSpawn)
+        {
+            return RandomDot();
+        }
+
+        return dot;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.black;
+        foreach (var VARIABLE in Dots)
+        {
+            Gizmos.DrawWireSphere(VARIABLE.transform.position, requireDistanceToSpawn);
+        }
+    }
 }

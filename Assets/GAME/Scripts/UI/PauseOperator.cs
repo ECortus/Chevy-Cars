@@ -25,13 +25,13 @@ public class PauseOperator : Instancer<PauseOperator>
 
     public void Resume()
     {
-        On();
+        Off();
     }
 
     public void Restart()
     {
-        menu.SetActive(true);
-        GameManager.Instance.SetTimeScale(0f);
+        LevelManager.Instance.Restart();
+        Off();
     }
 
     public void SetVibration()
