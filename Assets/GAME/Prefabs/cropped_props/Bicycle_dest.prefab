@@ -164,8 +164,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5880296250375957504}
   - {fileID: 6594922868585390717}
@@ -234,6 +234,12 @@ MonoBehaviour:
   rbMasses: 1
   additionalObjectToOn: {fileID: 6095508297669106287}
   additionalObjectToOff: {fileID: 8474821878970345010}
+  additionalActionOnOn:
+    m_PersistentCalls:
+      m_Calls: []
+  additionalActionOnOff:
+    m_PersistentCalls:
+      m_Calls: []
   rbs:
   - {fileID: 650347895243648163}
   - {fileID: 3655733061688809719}
