@@ -43,5 +43,5 @@ public class CopArrestController : MonoBehaviour
 
     public bool RequireToArrest => RequireSpeed && RequireDistance;
     bool RequireDistance => (Player.Transform.position - controller.transform.position).magnitude <= distance;
-    bool RequireSpeed => Player.Speed <= speed;
+    bool RequireSpeed => Player.Speed <= speed || Player.GetMotor() <= 0;
 }

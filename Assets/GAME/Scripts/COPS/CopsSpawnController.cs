@@ -118,7 +118,7 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
         Gizmos.color = Color.black;
         foreach (var VARIABLE in Dots)
         {
-            Gizmos.DrawWireSphere(VARIABLE.transform.position, requireDistanceToSpawn);
+            if(VARIABLE) Gizmos.DrawWireSphere(VARIABLE.transform.position, requireDistanceToSpawn);
         }
     }
 }

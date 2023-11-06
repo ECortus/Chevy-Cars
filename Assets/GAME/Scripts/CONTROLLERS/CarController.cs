@@ -41,6 +41,7 @@ public abstract class CarController : MonoBehaviour
 	protected abstract void FixedUpdate();
 
 	protected void SetMotor(uint value) => carController.setMotor(value);
+	public int GetMotor() => (int)carController.getMotor();
 	
 	public void SpawnOnStartDot(Vector3 spawn)
 	{

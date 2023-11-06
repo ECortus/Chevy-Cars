@@ -47,7 +47,7 @@ public class RagdollController : MonoBehaviour
         for(int i = 0; i < rbObjects.Length; i++)
         {
             // SetRB(rbs[i], false);
-            cols[i].enabled = false;
+            cols[i].enabled = true;
             
             DefaultPoses[i] = rbObjects[i].transform.localPosition;
             DefaultRotation[i] = rbObjects[i].transform.localRotation;
@@ -64,7 +64,7 @@ public class RagdollController : MonoBehaviour
             // SetRB(rbs[i], false);
             // cols[i].enabled = true;
             
-            cols[i].enabled = false;
+            cols[i].enabled = true;
             
             if(rbObjects[i].TryGetComponent(out orb)) Destroy(orb);
             
