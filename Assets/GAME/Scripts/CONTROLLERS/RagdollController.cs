@@ -81,7 +81,7 @@ public class RagdollController : MonoBehaviour
         {
             rbs[i] = rbObjects[i].AddComponent<Rigidbody>();
             rbs[i].mass = rbMasses;
-            SetRB(rbs[i], false);
+            SetRb(rbs[i], false);
         }
     }
 
@@ -138,7 +138,7 @@ public class RagdollController : MonoBehaviour
         }
     }
 
-    void SetRB(Rigidbody rbc, bool state)
+    void SetRb(Rigidbody rbc, bool state)
     {
         rbc.isKinematic = !state;
         rbc.detectCollisions = state;
@@ -148,13 +148,13 @@ public class RagdollController : MonoBehaviour
 
     void SetMain(bool state)
     {
-        if (rb) SetRB(rb, state);
+        if (rb) SetRb(rb, state);
         // if (col) col.enabled = state;
     }
 
     void ForceRb(Rigidbody rbc, Vector3 dir, float force)
     {
-        SetRB(rbc, true);
+        SetRb(rbc, true);
         rbc.AddForce(dir * force, ForceMode.Force);
     }
 }

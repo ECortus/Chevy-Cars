@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 622083054279997972}
   - component: {fileID: 1663951172768870307}
   - component: {fileID: 641845877731763967}
+  - component: {fileID: 3104382956043786489}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01
   m_TagString: Untagged
@@ -106,6 +107,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -947388504099713920, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &3104382956043786489
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21506580600905184}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &41441162939662278
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +146,7 @@ GameObject:
   - component: {fileID: 9097560073601036398}
   - component: {fileID: 2828718154933158593}
   - component: {fileID: 5548258131597087214}
+  - component: {fileID: 8831187327075841285}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.008
   m_TagString: Untagged
@@ -212,6 +241,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1162314636921356110, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &8831187327075841285
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41441162939662278}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &907961291753932770
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +280,7 @@ GameObject:
   - component: {fileID: 5982288995246990064}
   - component: {fileID: 6146553728373662921}
   - component: {fileID: 3282330323972010537}
+  - component: {fileID: 4345757424572153786}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.003
   m_TagString: Untagged
@@ -318,6 +375,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2797991318711741218, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &4345757424572153786
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907961291753932770}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3345333264048015921
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +414,7 @@ GameObject:
   - component: {fileID: 9082235977391073458}
   - component: {fileID: 8327002412823201029}
   - component: {fileID: 6244796774246999179}
+  - component: {fileID: 6213127802848509935}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.017
   m_TagString: Untagged
@@ -424,6 +509,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4695486496090713705, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &6213127802848509935
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3345333264048015921}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3346334827126584466
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +590,7 @@ GameObject:
   - component: {fileID: 7219772074125941730}
   - component: {fileID: 7853125829547599189}
   - component: {fileID: 8951209520157851916}
+  - component: {fileID: 4614264498794742241}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.004
   m_TagString: Untagged
@@ -572,6 +685,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6946172855266930016, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &4614264498794742241
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3582187772998398175}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3963258030033867490
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +724,7 @@ GameObject:
   - component: {fileID: 8556367141941722019}
   - component: {fileID: 4737582607363877418}
   - component: {fileID: 5895468043603398345}
+  - component: {fileID: 4346959147919706738}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.006
   m_TagString: Untagged
@@ -678,6 +819,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4829100961124643465, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &4346959147919706738
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3963258030033867490}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4364122156314163376
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +858,7 @@ GameObject:
   - component: {fileID: 8326561566494053529}
   - component: {fileID: 4842425484511357622}
   - component: {fileID: 8869088529367182945}
+  - component: {fileID: 8866242532818490927}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.005
   m_TagString: Untagged
@@ -784,6 +953,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1701059923584406572, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &8866242532818490927
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4364122156314163376}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4906648551877403931
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +992,7 @@ GameObject:
   - component: {fileID: 2259772706030715648}
   - component: {fileID: 1471868759953103088}
   - component: {fileID: 4414721265178092722}
+  - component: {fileID: 8988459563502067606}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.011
   m_TagString: Untagged
@@ -890,6 +1087,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6211327673954152618, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &8988459563502067606
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906648551877403931}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4925610735685153022
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,6 +1126,7 @@ GameObject:
   - component: {fileID: 3230921196373509649}
   - component: {fileID: 1354972784443766248}
   - component: {fileID: 1266670787813191027}
+  - component: {fileID: 6231733853781820674}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.012
   m_TagString: Untagged
@@ -996,6 +1221,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2762227116339031065, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &6231733853781820674
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925610735685153022}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6552402115549324756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1260,7 @@ GameObject:
   - component: {fileID: 4793447590880020974}
   - component: {fileID: 7566248129217367763}
   - component: {fileID: 1685659307985556814}
+  - component: {fileID: 3978990455953852979}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.009
   m_TagString: Untagged
@@ -1102,6 +1355,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6453025899963920717, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &3978990455953852979
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6552402115549324756}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8702104102189316764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,10 +1391,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7369992433817136154}
-  - component: {fileID: 5641967838133136084}
   - component: {fileID: 7478450848459597811}
   - component: {fileID: 4042460258117547506}
   - component: {fileID: 8505285126043594319}
+  - component: {fileID: -6116843306111302697}
   m_Layer: 10
   m_Name: Bridge_dest
   m_TagString: Untagged
@@ -1138,81 +1418,6 @@ Transform:
   - {fileID: 2189752567210723918}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5641967838133136084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8702104102189316764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 3346334827126584466}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 21506580600905184}
-  - {fileID: 9055269197405317626}
-  - {fileID: 907961291753932770}
-  - {fileID: 3582187772998398175}
-  - {fileID: 4364122156314163376}
-  - {fileID: 3963258030033867490}
-  - {fileID: 41441162939662278}
-  - {fileID: 6552402115549324756}
-  - {fileID: 4906648551877403931}
-  - {fileID: 4925610735685153022}
-  - {fileID: 3345333264048015921}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 641845877731763967}
-  - {fileID: 8580890378589817680}
-  - {fileID: 3282330323972010537}
-  - {fileID: 8951209520157851916}
-  - {fileID: 8869088529367182945}
-  - {fileID: 5895468043603398345}
-  - {fileID: 5548258131597087214}
-  - {fileID: 1685659307985556814}
-  - {fileID: 4414721265178092722}
-  - {fileID: 1266670787813191027}
-  - {fileID: 6244796774246999179}
-  DefaultPoses:
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!114 &7478450848459597811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,6 +1465,58 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2, y: 2.2, z: 8}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-6116843306111302697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702104102189316764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 3346334827126584466}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 3104382956043786489}
+  - {fileID: 2816603501567263921}
+  - {fileID: 4345757424572153786}
+  - {fileID: 4614264498794742241}
+  - {fileID: 8866242532818490927}
+  - {fileID: 4346959147919706738}
+  - {fileID: 8831187327075841285}
+  - {fileID: 3978990455953852979}
+  - {fileID: 8988459563502067606}
+  - {fileID: 6231733853781820674}
+  - {fileID: 6213127802848509935}
+  DefaultPoses:
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!1 &9055269197405317626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1529,7 @@ GameObject:
   - component: {fileID: 433290183179656355}
   - component: {fileID: 4100422110539332}
   - component: {fileID: 8580890378589817680}
+  - component: {fileID: 2816603501567263921}
   m_Layer: 10
   m_Name: SM_Prop_Bridge_Curved_01.002
   m_TagString: Untagged
@@ -1366,3 +1624,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3502526639689063664, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &2816603501567263921
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9055269197405317626}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

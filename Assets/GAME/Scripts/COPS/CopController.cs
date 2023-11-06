@@ -4,27 +4,9 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public class CopController : CarController
+public class CopController : CopBasic
 {
-    [Space]
-    public CopType Type = CopType.Nothing;
-    private ScoreTarget scoreTarget;
-    private CopArrestController arrest;
-    
-    public void FullHeal() => health.FullHeal();
-    public void Heal(int hp) => health.Heal(hp);
-
-    public void GetHit(int dmg)
-    {
-        if (!arrest.RequireToArrest)
-        {
-            health.GetHit(dmg);
-        }
-    }
-    
-    public void AddPoint() => scoreTarget.AddPoint();
-    
-    public async void On(Transform target, Vector3 spawn)
+    public override void On(Transform target, Vector3 spawn)
     {
         FullHeal();
         
@@ -37,7 +19,7 @@ public class CopController : CarController
             transform.rotation = Quaternion.LookRotation((target.position - transform.position).normalized);
         }
 
-        await SetDefaultRagdoll();
+        SetDefaultRagdoll();
         SetControl(false);
     }
 
@@ -48,36 +30,9 @@ public class CopController : CarController
         Off();
     }
 
-    public void Off()
+    public override void Off()
     {
         gameObject.SetActive(false);
-    }
-
-    private Transform _target;
-    public void SetTarget(Transform trg) => _target = trg;
-    public Transform Target => _target;
-
-    private Vector3 Move
-    {
-        get
-        {
-            if (Target)
-            {
-                Vector3 dir = (Target.position - transform.position).normalized;
-                dir.y = 0f;
-                return dir;
-            }
-            else
-            {
-                return Vector3.zero;
-            }
-        }
-    }
-
-    void Start()
-    {
-        arrest = GetComponent<CopArrestController>();
-        scoreTarget = GetComponent<ScoreTarget>();
     }
 
     protected override void FixedUpdate()

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8724769396479493368}
   - component: {fileID: 7427454516210439112}
   - component: {fileID: 7281484465401410583}
+  - component: {fileID: 8234950733764626077}
   m_Layer: 10
   m_Name: SM_Prop_Chest_Wood_Lid
   m_TagString: Untagged
@@ -105,6 +106,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.011310553, y: 0.008828331, z: 0.0032399385}
   m_Center: {x: 0.000170646, y: 0.0013626148, z: -0.0003865377}
+--- !u!54 &8234950733764626077
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938811967459096993}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4853332445786360254
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +179,7 @@ GameObject:
   - component: {fileID: 4947365489028164067}
   - component: {fileID: 2466470994598799803}
   - component: {fileID: 4170501726873824279}
+  - component: {fileID: 6354931884106293937}
   m_Layer: 10
   m_Name: SM_Prop_Chest_Wood_01.001
   m_TagString: Untagged
@@ -244,6 +273,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0058866017, y: 0.0080397315, z: 0.0046860795}
   m_Center: {x: -0.0029409996, y: -0.00009983033, z: 0.0023111056}
+--- !u!54 &6354931884106293937
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190180601754290405}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7007588234548405631
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +312,7 @@ GameObject:
   - component: {fileID: 1018548748249521430}
   - component: {fileID: 9037190920732998575}
   - component: {fileID: 9183187871799865891}
+  - component: {fileID: 7880609044502751403}
   m_Layer: 10
   m_Name: SM_Prop_Chest_Wood_01
   m_TagString: Untagged
@@ -349,6 +406,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0072642486, y: 0.008101473, z: 0.0046860795}
   m_Center: {x: 0.0021310241, y: -0.00013070088, z: 0.0023111056}
+--- !u!54 &7880609044502751403
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7007588234548405631}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8613289229971073744
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,10 +442,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2315455237232434146}
-  - component: {fileID: 1104128806043698524}
   - component: {fileID: 2820319650065815370}
   - component: {fileID: 8487232674570708710}
   - component: {fileID: 5527241022725913335}
+  - component: {fileID: 804029507278579025}
   m_Layer: 10
   m_Name: Chest_dest
   m_TagString: Untagged
@@ -385,41 +469,6 @@ Transform:
   - {fileID: 6775539167472584972}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1104128806043698524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8613289229971073744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 4853332445786360254}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 7007588234548405631}
-  - {fileID: 6190180601754290405}
-  - {fileID: 1938811967459096993}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 9183187871799865891}
-  - {fileID: 4170501726873824279}
-  - {fileID: 7281484465401410583}
-  DefaultPoses:
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: 0, y: -0.0013000017, z: 0.0055999993}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
 --- !u!114 &2820319650065815370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,3 +516,31 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3, y: 2, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &804029507278579025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8613289229971073744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 4853332445786360254}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 7880609044502751403}
+  - {fileID: 6354931884106293937}
+  - {fileID: 8234950733764626077}
+  DefaultPoses:
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: 0, y: -0.0013000017, z: 0.0055999993}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: -0, y: -0, z: -0, w: 1}

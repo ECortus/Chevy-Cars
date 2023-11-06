@@ -73,9 +73,9 @@ public abstract class CarController : MonoBehaviour
 	[SerializeField] private RagdollController ragdoll;
 	[SerializeField] private ParticleSystem destroyingEffect;
 
-	public async UniTask SetDefaultRagdoll()
+	public void SetDefaultRagdoll()
 	{
-		await ragdoll.SetDefault();
+		ragdoll.SetDefault();
 	}
 	
 	public virtual void Destroying()

@@ -21,14 +21,14 @@ public class PlayerController : CarController
     public void Heal(int hp) => health.Heal(hp);
     public void GetHit(int dmg) => health.GetHit(dmg);
 
-    public async void On(Vector3 spawn)
+    public void On(Vector3 spawn)
     {
         FullHeal();
         
         gameObject.SetActive(true);
         SpawnOnStartDot(spawn);
         
-        await SetDefaultRagdoll();
+        SetDefaultRagdoll();
         SetControl(false);
     }
     

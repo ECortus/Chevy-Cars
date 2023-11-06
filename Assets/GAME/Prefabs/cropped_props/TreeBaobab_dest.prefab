@@ -114,10 +114,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3130100421238763755}
-  - component: {fileID: 817227486625093293}
   - component: {fileID: 1255762867441114242}
   - component: {fileID: 257748640824416228}
   - component: {fileID: 780939404055505300}
+  - component: {fileID: 976553496047562032}
   m_Layer: 10
   m_Name: TreeBaobab_dest
   m_TagString: Untagged
@@ -142,41 +142,6 @@ Transform:
   - {fileID: 5891009560555449774}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &817227486625093293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141803184060029548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 6859494293960134550}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 1169704836808913268}
-  - {fileID: 4752931853875103689}
-  - {fileID: 5721515550057799915}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 7391856342403342773}
-  - {fileID: 8905427874415470753}
-  - {fileID: 4860757438545451948}
-  DefaultPoses:
-  - {x: 0.018787967, y: 0.0017542847, z: 0.024770763}
-  - {x: -0.0064850696, y: -0.0026555639, z: 0.031385902}
-  - {x: -0.009827544, y: 0.0052892487, z: 0.03199489}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!114 &1255762867441114242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +189,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 3, z: 2}
   m_Center: {x: -0.052967846, y: 1.1356503, z: -0.14177078}
+--- !u!114 &976553496047562032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141803184060029548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 6859494293960134550}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 6577604455135599149}
+  - {fileID: 2468075195429225057}
+  - {fileID: 5733623006740968274}
+  DefaultPoses:
+  - {x: 0.018787967, y: 0.0017542847, z: 0.024770763}
+  - {x: -0.0064850696, y: -0.0026555639, z: 0.031385902}
+  - {x: -0.009827544, y: 0.0052892487, z: 0.03199489}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!1 &1169704836808913268
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +229,7 @@ GameObject:
   - component: {fileID: 7829462698516733094}
   - component: {fileID: 677475937999539998}
   - component: {fileID: 7391856342403342773}
+  - component: {fileID: 6577604455135599149}
   m_Layer: 10
   m_Name: tree_baobab.001
   m_TagString: Untagged
@@ -330,6 +324,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2431661491655580494, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &6577604455135599149
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169704836808913268}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4752931853875103689
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +363,7 @@ GameObject:
   - component: {fileID: 4853815546771325736}
   - component: {fileID: 5995416550169156552}
   - component: {fileID: 8905427874415470753}
+  - component: {fileID: 2468075195429225057}
   m_Layer: 10
   m_Name: tree_baobab.002
   m_TagString: Untagged
@@ -436,6 +458,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -472802664565675848, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &2468075195429225057
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752931853875103689}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5721515550057799915
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +497,7 @@ GameObject:
   - component: {fileID: 3090260866403869869}
   - component: {fileID: 5188486996562394340}
   - component: {fileID: 4860757438545451948}
+  - component: {fileID: 5733623006740968274}
   m_Layer: 10
   m_Name: tree_baobab.003
   m_TagString: Untagged
@@ -542,6 +592,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8065656849912871715, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &5733623006740968274
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721515550057799915}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6859494293960134550
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2562855786814864054}
   - component: {fileID: 1932147533573302171}
   - component: {fileID: 5461902450500444754}
+  - component: {fileID: 1603537312157798450}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_02_cell.006
   m_TagString: Untagged
@@ -105,6 +106,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.00969307, y: 0.0055036163, z: 0.004600245}
   m_Center: {x: 0.0005475106, y: -0.00009773442, z: -0.00033468427}
+--- !u!54 &1603537312157798450
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289936026619525909}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1840268874563337205
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +145,7 @@ GameObject:
   - component: {fileID: 3258342971616535147}
   - component: {fileID: 739458888701141154}
   - component: {fileID: 1261385876468442340}
+  - component: {fileID: 3961316148666384637}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_02_cell.005
   m_TagString: Untagged
@@ -210,6 +239,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009418309, y: 0.0058229007, z: 0.0046958937}
   m_Center: {x: 0.0003427402, y: -0.00008832384, z: -0.00010332721}
+--- !u!54 &3961316148666384637
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840268874563337205}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5504120630902098841
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +278,7 @@ GameObject:
   - component: {fileID: 2942267990804648678}
   - component: {fileID: 6075831262102712954}
   - component: {fileID: 8954520545281264498}
+  - component: {fileID: 8904161753732986037}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_02_cell.002
   m_TagString: Untagged
@@ -315,6 +372,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.007324105, y: 0.005107457, z: 0.0039795525}
   m_Center: {x: 0.0006657884, y: -0.00026871974, z: 0.00032659492}
+--- !u!54 &8904161753732986037
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5504120630902098841}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5862465762818215727
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +411,7 @@ GameObject:
   - component: {fileID: 8649735282833683056}
   - component: {fileID: 2867426052213689378}
   - component: {fileID: 8432091688054310677}
+  - component: {fileID: 7617023673657989271}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_02_cell
   m_TagString: Untagged
@@ -420,6 +505,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.014385784, y: 0.00420553, z: 0.0067739766}
   m_Center: {x: 0.000028268667, y: -0.000120742974, z: 0.00042601523}
+--- !u!54 &7617023673657989271
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862465762818215727}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6213506357202338082
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +544,7 @@ GameObject:
   - component: {fileID: 2426390812831818960}
   - component: {fileID: 3783676616053891489}
   - component: {fileID: 2853954337970934366}
+  - component: {fileID: 8145615108030520957}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_02.001
   m_TagString: Untagged
@@ -525,6 +638,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0061391275, y: 0.0057124137, z: 0.002800575}
   m_Center: {x: 0.015726227, y: -0.00024020975, z: 0.0013772349}
+--- !u!54 &8145615108030520957
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213506357202338082}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6494098519008291778
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,10 +713,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4774269487315456388}
-  - component: {fileID: 3203020400140398334}
   - component: {fileID: 2908183043899041071}
   - component: {fileID: 5656059153438267834}
   - component: {fileID: 5362789329641141188}
+  - component: {fileID: -467537428463899097}
   m_Layer: 10
   m_Name: StoneWall_1_dest
   m_TagString: Untagged
@@ -600,66 +740,6 @@ Transform:
   - {fileID: 614543617194955566}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3203020400140398334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6600117437786366655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 6494098519008291778}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 6213506357202338082}
-  - {fileID: 5862465762818215727}
-  - {fileID: 7679732564573335992}
-  - {fileID: 5504120630902098841}
-  - {fileID: 8279750545494995652}
-  - {fileID: 7650134459197005649}
-  - {fileID: 1840268874563337205}
-  - {fileID: 1289936026619525909}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 2853954337970934366}
-  - {fileID: 8432091688054310677}
-  - {fileID: 2885345688846785632}
-  - {fileID: 8954520545281264498}
-  - {fileID: 6854594502353610183}
-  - {fileID: 8694583048921578446}
-  - {fileID: 1261385876468442340}
-  - {fileID: 5461902450500444754}
-  DefaultPoses:
-  - {x: -0, y: 0, z: 0}
-  - {x: -0.016710652, y: 0.00034590712, z: 0.0067852344}
-  - {x: -0.0042123743, y: 0.00041519545, z: 0.0031852287}
-  - {x: -0.0066414857, y: 0.0005540432, z: 0.001498973}
-  - {x: -0.011915412, y: 0.000090002046, z: 0.004139567}
-  - {x: 0.0015009685, y: 0.00032356716, z: 0.0036923855}
-  - {x: 0.006144537, y: 0.0004335197, z: 0.0023599872}
-  - {x: -0.01917379, y: 0.00038070988, z: 0.002470784}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
 --- !u!114 &2908183043899041071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,6 +787,49 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.040277, y: 2, z: 0.7610209}
   m_Center: {x: -0.2708094, y: 0.5, z: -0.030453488}
+--- !u!114 &-467537428463899097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6600117437786366655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 6494098519008291778}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 8145615108030520957}
+  - {fileID: 7617023673657989271}
+  - {fileID: 237566335174894192}
+  - {fileID: 8904161753732986037}
+  - {fileID: 3637335430902627856}
+  - {fileID: 8898600986657445813}
+  - {fileID: 3961316148666384637}
+  - {fileID: 1603537312157798450}
+  DefaultPoses:
+  - {x: -0, y: 0, z: 0}
+  - {x: -0.016710652, y: 0.00034590712, z: 0.0067852344}
+  - {x: -0.0042123743, y: 0.00041519545, z: 0.0031852287}
+  - {x: -0.0066414857, y: 0.0005540432, z: 0.001498973}
+  - {x: -0.011915412, y: 0.000090002046, z: 0.004139567}
+  - {x: 0.0015009685, y: 0.00032356716, z: 0.0036923855}
+  - {x: 0.006144537, y: 0.0004335197, z: 0.0023599872}
+  - {x: -0.01917379, y: 0.00038070988, z: 0.002470784}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
 --- !u!1 &7650134459197005649
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,6 +842,7 @@ GameObject:
   - component: {fileID: 4095245782002089739}
   - component: {fileID: 6663670086815966149}
   - component: {fileID: 8694583048921578446}
+  - component: {fileID: 8898600986657445813}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_02_cell.004
   m_TagString: Untagged
@@ -812,6 +936,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009904738, y: 0.0058539007, z: 0.006843917}
   m_Center: {x: -0.00029111188, y: 0.000020567415, z: -0.00014100538}
+--- !u!54 &8898600986657445813
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650134459197005649}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7679732564573335992
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +975,7 @@ GameObject:
   - component: {fileID: 3003504277226982086}
   - component: {fileID: 7703540347225280584}
   - component: {fileID: 2885345688846785632}
+  - component: {fileID: 237566335174894192}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_02_cell.001
   m_TagString: Untagged
@@ -917,6 +1069,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010784887, y: 0.005725221, z: 0.007803892}
   m_Center: {x: 0.0006298928, y: -0.00012675102, z: 0.0007461532}
+--- !u!54 &237566335174894192
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7679732564573335992}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8279750545494995652
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,6 +1108,7 @@ GameObject:
   - component: {fileID: 1783141653052995939}
   - component: {fileID: 1108922752332387181}
   - component: {fileID: 6854594502353610183}
+  - component: {fileID: 3637335430902627856}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_02_cell.003
   m_TagString: Untagged
@@ -1022,3 +1202,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.011187434, y: 0.005512237, z: 0.008377308}
   m_Center: {x: -0.00071390974, y: 0.00019219122, z: 0.00014688843}
+--- !u!54 &3637335430902627856
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279750545494995652}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

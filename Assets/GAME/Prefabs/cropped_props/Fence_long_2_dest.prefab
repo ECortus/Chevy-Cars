@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3550314363704238428}
   - component: {fileID: 6470035372380276683}
   - component: {fileID: 3291731788864689271}
+  - component: {fileID: 97789252512262316}
   m_Layer: 10
   m_Name: SM_Prop_Fence_02
   m_TagString: Untagged
@@ -105,6 +106,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.007372484, y: 0.0011487072, z: 0.0009496027}
   m_Center: {x: 0.0000012801029, y: 0.0000152064895, z: -0.000018581457}
+--- !u!54 &97789252512262316
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951351966099665994}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2839465411293818578
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +145,7 @@ GameObject:
   - component: {fileID: 3106428946606366884}
   - component: {fileID: 425387262149800392}
   - component: {fileID: 5024383268702050917}
+  - component: {fileID: 6688823318475552544}
   m_Layer: 10
   m_Name: SM_Prop_Fence_02.002
   m_TagString: Untagged
@@ -210,6 +239,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.015910026, y: 0.0015355146, z: 0.011415834}
   m_Center: {x: 0.0033046664, y: -0.00005460592, z: -0.0010561806}
+--- !u!54 &6688823318475552544
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839465411293818578}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3139470707779139423
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +278,7 @@ GameObject:
   - component: {fileID: 7139556059148000986}
   - component: {fileID: 2390614194022994256}
   - component: {fileID: 4615549719196011286}
+  - component: {fileID: 4866309750918512218}
   m_Layer: 10
   m_Name: SM_Prop_Fence_02.001
   m_TagString: Untagged
@@ -315,6 +372,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.017505765, y: 0.0014883446, z: 0.011337401}
   m_Center: {x: -0.003069158, y: -0.000030507392, z: -0.0012463217}
+--- !u!54 &4866309750918512218
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139470707779139423}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3242442701579225693
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,10 +408,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4224050129950396799}
-  - component: {fileID: 4776401100072007560}
   - component: {fileID: 3925160352032124434}
   - component: {fileID: 4533863793794697915}
   - component: {fileID: 2949397836039095365}
+  - component: {fileID: 7341516150991234305}
   m_Layer: 10
   m_Name: Fence_long_2_dest
   m_TagString: Untagged
@@ -351,46 +435,6 @@ Transform:
   - {fileID: 8441726861384737687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4776401100072007560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3242442701579225693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 7803361411853120124}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 1951351966099665994}
-  - {fileID: 3139470707779139423}
-  - {fileID: 2839465411293818578}
-  - {fileID: 6126580668886184881}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 3291731788864689271}
-  - {fileID: 4615549719196011286}
-  - {fileID: 5024383268702050917}
-  - {fileID: 824095430347613843}
-  DefaultPoses:
-  - {x: 0.00017017504, y: 0.00015522256, z: 0.009412569}
-  - {x: 0.009399161, y: 0.00005483799, z: 0.006915017}
-  - {x: -0.010484719, y: 0.00005535156, z: 0.0067640916}
-  - {x: -0.0051919958, y: -0.000105238556, z: 0.0045665507}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!114 &3925160352032124434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,6 +482,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 2, z: 0.5}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &7341516150991234305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3242442701579225693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 7803361411853120124}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 97789252512262316}
+  - {fileID: 4866309750918512218}
+  - {fileID: 6688823318475552544}
+  - {fileID: 57731849356493346}
+  DefaultPoses:
+  - {x: 0.00017017504, y: 0.00015522256, z: 0.009412569}
+  - {x: 0.009399161, y: 0.00005483799, z: 0.006915017}
+  - {x: -0.010484719, y: 0.00005535156, z: 0.0067640916}
+  - {x: -0.0051919958, y: -0.000105238556, z: 0.0045665507}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!1 &6126580668886184881
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +525,7 @@ GameObject:
   - component: {fileID: 4210521295359843272}
   - component: {fileID: 2557310540980103411}
   - component: {fileID: 824095430347613843}
+  - component: {fileID: 57731849356493346}
   m_Layer: 10
   m_Name: SM_Prop_Fence_02.003
   m_TagString: Untagged
@@ -543,6 +619,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0056117745, y: 0.0011755251, z: 0.001456171}
   m_Center: {x: -0.000028059003, y: 0.0000111454865, z: -0.0000036905694}
+--- !u!54 &57731849356493346
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6126580668886184881}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7803361411853120124
 GameObject:
   m_ObjectHideFlags: 0

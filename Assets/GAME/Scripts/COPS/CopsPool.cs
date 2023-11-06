@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CopsPool : BasePool<CopsPool, CopController, CopType>
+public class CopsPool : BasePool<CopsPool, CopBasic, CopType>
 {
     protected override void SetInstance() => Instance = this;
 
     private Transform MainTarget => PlayerController.Instance.Transform;
 
-    protected override void InsertAction(CopController obj, Vector3 pos, Quaternion rot)
+    protected override void InsertAction(CopBasic obj, Vector3 pos, Quaternion rot)
     {
         obj.On(MainTarget, pos);
     }
     
-    protected override bool Condition(CopController obj)
+    protected override bool Condition(CopBasic obj)
     {
         return !obj.IsActive;
     }
     
     public void ClearAll()
     {
-        List<CopController> cops;
-        CopController cop;
+        List<CopBasic> cops;
+        CopBasic cop;
         
         for (int i = 0; i < Pools.Length; i++)
         {
@@ -36,8 +36,8 @@ public class CopsPool : BasePool<CopsPool, CopController, CopType>
 
     public void KillAll()
     {
-        List<CopController> cops;
-        CopController cop;
+        List<CopBasic> cops;
+        CopBasic cop;
         
         for (int i = 0; i < Pools.Length; i++)
         {
@@ -55,8 +55,8 @@ public class CopsPool : BasePool<CopsPool, CopController, CopType>
     
     public void GetHitAllOnDistanceFromTarget(Transform target, float distance, int damage)
     {
-        List<CopController> cops;
-        CopController cop;
+        List<CopBasic> cops;
+        CopBasic cop;
         
         for (int i = 0; i < Pools.Length; i++)
         {

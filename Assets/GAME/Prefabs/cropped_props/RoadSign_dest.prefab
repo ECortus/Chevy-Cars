@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7387510329609660784}
   - component: {fileID: 3437348619597452243}
   - component: {fileID: 6569509299155764698}
+  - component: {fileID: 6767486644090528517}
   m_Layer: 10
   m_Name: SM_Prop_RoadSign_01.001
   m_TagString: Untagged
@@ -106,6 +107,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6540616678001907025, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &6767486644090528517
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356949287575328817}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &966439454723967185
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +146,7 @@ GameObject:
   - component: {fileID: 55605795890554340}
   - component: {fileID: 3845675894371005097}
   - component: {fileID: 7585297388508907072}
+  - component: {fileID: 4548594226851692613}
   m_Layer: 10
   m_Name: SM_Prop_RoadSign_01
   m_TagString: Untagged
@@ -212,6 +241,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8071881405740612923, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &4548594226851692613
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966439454723967185}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3179476648073399537
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +280,7 @@ GameObject:
   - component: {fileID: 5583100151003370075}
   - component: {fileID: 6023684310528576441}
   - component: {fileID: 2632730689412835036}
+  - component: {fileID: 196949095142538578}
   m_Layer: 10
   m_Name: SM_Prop_RoadSign_01.002
   m_TagString: Untagged
@@ -318,6 +375,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8053144005618407353, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &196949095142538578
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179476648073399537}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4839292572805958431
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,10 +446,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599626823383874814}
-  - component: {fileID: 1764791690364796718}
   - component: {fileID: 3774604211909885046}
   - component: {fileID: 4970468557011147055}
   - component: {fileID: 5158685963638371909}
+  - component: {fileID: 8764306413566609739}
   m_Layer: 10
   m_Name: RoadSign_dest
   m_TagString: Untagged
@@ -389,46 +473,6 @@ Transform:
   - {fileID: 8290876663595637532}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1764791690364796718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6615735099668904570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 4839292572805958431}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 966439454723967185}
-  - {fileID: 356949287575328817}
-  - {fileID: 3179476648073399537}
-  - {fileID: 7734812001757460440}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 7585297388508907072}
-  - {fileID: 6569509299155764698}
-  - {fileID: 2632730689412835036}
-  - {fileID: 7716920807033461309}
-  DefaultPoses:
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!114 &3774604211909885046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,6 +520,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8940643, y: 3.2713006, z: 0.71645844}
   m_Center: {x: -0.052967846, y: 1.1356503, z: -0.14177078}
+--- !u!114 &8764306413566609739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615735099668904570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 4839292572805958431}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 4548594226851692613}
+  - {fileID: 6767486644090528517}
+  - {fileID: 196949095142538578}
+  - {fileID: 2028666839045775991}
+  DefaultPoses:
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!1 &7734812001757460440
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +563,7 @@ GameObject:
   - component: {fileID: 7987485516386997621}
   - component: {fileID: 2074085067673050099}
   - component: {fileID: 7716920807033461309}
+  - component: {fileID: 2028666839045775991}
   m_Layer: 10
   m_Name: SM_Prop_RoadSign_01.003
   m_TagString: Untagged
@@ -582,3 +658,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1290278741710390497, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &2028666839045775991
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7734812001757460440}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

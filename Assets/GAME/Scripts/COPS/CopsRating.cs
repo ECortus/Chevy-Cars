@@ -33,6 +33,6 @@ public class CopsSlot
 [System.Serializable]
 public class CopUnit
 {
-    public CopController CopPrefab;
+    public CopBasic CopPrefab;
     public int Count;
 }

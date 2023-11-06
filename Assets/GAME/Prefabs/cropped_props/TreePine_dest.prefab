@@ -29,7 +29,6 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7236538085014762217}
   - {fileID: 7272154846879445674}
   - {fileID: 7391769881250922067}
   - {fileID: 4927635152055227257}
@@ -49,6 +48,7 @@ GameObject:
   - component: {fileID: 4932862311732172931}
   - component: {fileID: 7858147883886305297}
   - component: {fileID: 6305029955935587450}
+  - component: {fileID: 6131856140531916039}
   m_Layer: 10
   m_Name: TreePine.004
   m_TagString: Untagged
@@ -143,6 +143,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 381601662834830213, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &6131856140531916039
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777320768478884078}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2306736295242663513
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +182,7 @@ GameObject:
   - component: {fileID: 2135580587534652569}
   - component: {fileID: 1323008071635516669}
   - component: {fileID: 7327516117006601446}
+  - component: {fileID: 5879444713165572991}
   m_Layer: 10
   m_Name: TreePine.003
   m_TagString: Untagged
@@ -249,6 +277,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2794981342728140265, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &5879444713165572991
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306736295242663513}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5103936316487009704
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,10 +313,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 371679355065526553}
-  - component: {fileID: 1849345208592082675}
   - component: {fileID: 548882742761122361}
   - component: {fileID: 103914604994299691}
   - component: {fileID: 3093736519217336383}
+  - component: {fileID: -3870770226979590322}
   m_Layer: 10
   m_Name: TreePine_dest
   m_TagString: Untagged
@@ -282,59 +337,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7236538085014762217}
   - {fileID: 6805965242563693837}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1849345208592082675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5103936316487009704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 1769106001627770092}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 7877622001856610739}
-  - {fileID: 8340938355247721666}
-  - {fileID: 8039195722835196737}
-  - {fileID: 2306736295242663513}
-  - {fileID: 1777320768478884078}
-  - {fileID: 7336210170089609095}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 2419842547039071796}
-  - {fileID: 5118130007406232072}
-  - {fileID: 2731342715230988588}
-  - {fileID: 7327516117006601446}
-  - {fileID: 6305029955935587450}
-  - {fileID: 1720537944825209719}
-  DefaultPoses:
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: -0.0066}
-  - {x: -0, y: 0, z: -0.0066}
-  - {x: -0, y: 0, z: -0.0066}
-  - {x: -0, y: 0, z: -0.0066}
-  - {x: -0, y: 0, z: -0.0066}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!114 &548882742761122361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +388,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.082985, y: 6.4449396, z: 0.8953407}
   m_Center: {x: 0.04149252, y: 2.7224698, z: -0.05232966}
+--- !u!114 &-3870770226979590322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5103936316487009704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 1769106001627770092}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 1177323991923964109}
+  - {fileID: 3009253655186238834}
+  - {fileID: 5879444713165572991}
+  - {fileID: 6131856140531916039}
+  - {fileID: 1194844142281282228}
+  DefaultPoses:
+  - {x: -0, y: 0, z: -0.0066}
+  - {x: -0, y: 0, z: -0.0066}
+  - {x: -0, y: 0, z: -0.0066}
+  - {x: -0, y: 0, z: -0.0066}
+  - {x: -0, y: 0, z: -0.0066}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!1 &7336210170089609095
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +434,7 @@ GameObject:
   - component: {fileID: 6057037732184276496}
   - component: {fileID: 1177332798224130605}
   - component: {fileID: 1720537944825209719}
+  - component: {fileID: 1194844142281282228}
   m_Layer: 10
   m_Name: TreePine.005
   m_TagString: Untagged
@@ -488,6 +529,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3490775333502255042, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &1194844142281282228
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336210170089609095}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7877622001856610739
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,12 +583,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7877622001856610739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6805965242563693837}
+  m_Father: {fileID: 371679355065526553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5922508024132731079
 MeshFilter:
@@ -606,6 +674,7 @@ GameObject:
   - component: {fileID: 6427729791950990884}
   - component: {fileID: 8180682127986385288}
   - component: {fileID: 2731342715230988588}
+  - component: {fileID: 3009253655186238834}
   m_Layer: 10
   m_Name: TreePine.002
   m_TagString: Untagged
@@ -700,6 +769,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5181126349564461264, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &3009253655186238834
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8039195722835196737}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8340938355247721666
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +808,7 @@ GameObject:
   - component: {fileID: 5471595872843806839}
   - component: {fileID: 6384793496787622208}
   - component: {fileID: 5118130007406232072}
+  - component: {fileID: 1177323991923964109}
   m_Layer: 10
   m_Name: TreePine.001
   m_TagString: Untagged
@@ -806,3 +903,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8491016944179788363, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &1177323991923964109
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340938355247721666}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

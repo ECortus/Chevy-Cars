@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6459431398147359296}
   - component: {fileID: 6106132235783733294}
   - component: {fileID: 5530338087303391461}
+  - component: {fileID: 7681184067005357285}
   m_Layer: 10
   m_Name: fence_classic.002
   m_TagString: Untagged
@@ -105,6 +106,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0021098235, y: 0.0009151172, z: 0.014617667}
   m_Center: {x: 0.0043296227, y: 0.000028272349, z: 0.0072935605}
+--- !u!54 &7681184067005357285
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991072376275983141}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2720332514390343092
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,10 +142,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4149131588502400260}
-  - component: {fileID: 8820413013847668675}
   - component: {fileID: 5944397599670360281}
   - component: {fileID: 9038533007337263328}
   - component: {fileID: 8057715603656643349}
+  - component: {fileID: 4296041657437456387}
   m_Layer: 10
   m_Name: Fence_dest
   m_TagString: Untagged
@@ -141,41 +169,6 @@ Transform:
   - {fileID: 1134456467169527804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8820413013847668675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2720332514390343092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 7418596883797919393}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 3877413959947952674}
-  - {fileID: 7484373587028638519}
-  - {fileID: 991072376275983141}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 8627493253002473323}
-  - {fileID: 2381678492402086941}
-  - {fileID: 5530338087303391461}
-  DefaultPoses:
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!114 &5944397599670360281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +216,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3, y: 2, z: 0.5}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &4296041657437456387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2720332514390343092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 7418596883797919393}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 2474831422764177432}
+  - {fileID: 700510295735497643}
+  - {fileID: 7681184067005357285}
+  DefaultPoses:
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!1 &3877413959947952674
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +256,7 @@ GameObject:
   - component: {fileID: 458582880330601448}
   - component: {fileID: 7225621141157332605}
   - component: {fileID: 8627493253002473323}
+  - component: {fileID: 2474831422764177432}
   m_Layer: 10
   m_Name: fence_classic
   m_TagString: Untagged
@@ -328,6 +350,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.008493175, y: 0.0018867063, z: 0.014612925}
   m_Center: {x: 0.0037830381, y: 0.0003548748, z: 0.007293561}
+--- !u!54 &2474831422764177432
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3877413959947952674}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7418596883797919393
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +423,7 @@ GameObject:
   - component: {fileID: 6453792582664147951}
   - component: {fileID: 723787983128758145}
   - component: {fileID: 2381678492402086941}
+  - component: {fileID: 700510295735497643}
   m_Layer: 10
   m_Name: fence_classic.001
   m_TagString: Untagged
@@ -467,3 +517,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.008347569, y: 0.00192245, z: 0.014657179}
   m_Center: {x: -0.0027965896, y: 0.00033700292, z: 0.0073079336}
+--- !u!54 &700510295735497643
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7484373587028638519}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

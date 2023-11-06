@@ -42,10 +42,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3074666101493695924}
-  - component: {fileID: 5692480876968396370}
   - component: {fileID: 7167878795954821175}
   - component: {fileID: 123753790415219288}
   - component: {fileID: 414818366353058612}
+  - component: {fileID: 46559818394130978}
   m_Layer: 10
   m_Name: Pillar_2_dest
   m_TagString: Untagged
@@ -69,36 +69,6 @@ Transform:
   - {fileID: 5790853330212302552}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5692480876968396370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001393036603941621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 38325944578756381}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 7832097894080429477}
-  - {fileID: 6382452941473221010}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 1141252133711624312}
-  - {fileID: 7499863568511359769}
-  DefaultPoses:
-  - {x: -0.00006637933, y: 0.001797968, z: 0.021520313}
-  - {x: -0, y: 0.0014455462, z: 2.3550936e-10}
-  DefaultRotation:
-  - {x: -0.000000047118238, y: 0.7013789, z: 0.00000016062071, w: 0.71278864}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
 --- !u!114 &7167878795954821175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +116,31 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8940643, y: 3.2713006, z: 0.71645844}
   m_Center: {x: -0.052967846, y: 1.1356503, z: -0.14177078}
+--- !u!114 &46559818394130978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001393036603941621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 38325944578756381}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 4892731487936339937}
+  - {fileID: 6792957565363581561}
+  DefaultPoses:
+  - {x: -0.00006637933, y: 0.001797968, z: 0.021520313}
+  - {x: -0, y: 0.0014455462, z: 2.3550936e-10}
+  DefaultRotation:
+  - {x: -0.000000047118238, y: 0.7013789, z: 0.00000016062071, w: 0.71278864}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
 --- !u!1 &6382452941473221010
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +153,7 @@ GameObject:
   - component: {fileID: 2279859656173538872}
   - component: {fileID: 9069500720678927012}
   - component: {fileID: 7499863568511359769}
+  - component: {fileID: 6792957565363581561}
   m_Layer: 10
   m_Name: SM_Prop_Pillar_Broken_02_1
   m_TagString: Untagged
@@ -251,6 +247,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.006337001, y: 0.006337423, z: 0.015215342}
   m_Center: {x: -0.0002367294, y: -0.00013293931, z: 0.007495036}
+--- !u!54 &6792957565363581561
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382452941473221010}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7832097894080429477
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +286,7 @@ GameObject:
   - component: {fileID: 3351588554999000808}
   - component: {fileID: 2937960216421110448}
   - component: {fileID: 1141252133711624312}
+  - component: {fileID: 4892731487936339937}
   m_Layer: 10
   m_Name: SM_Prop_Pillar_Broken_01
   m_TagString: Untagged
@@ -356,3 +380,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.015007763, y: 0.005103321, z: 0.0051274775}
   m_Center: {x: 0.0008297558, y: -0.00033430848, z: 0.00010100973}
+--- !u!54 &4892731487936339937
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7832097894080429477}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

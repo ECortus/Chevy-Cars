@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2835310786225919557}
   - component: {fileID: 1241599198509016058}
   - component: {fileID: 7159912365520652812}
+  - component: {fileID: 3846678450039441647}
   m_Layer: 10
   m_Name: bamboo_leaves
   m_TagString: Untagged
@@ -107,6 +108,33 @@ CapsuleCollider:
   m_Height: 0.015
   m_Direction: 2
   m_Center: {x: 0.000017738348, y: -0.00024014471, z: 0.0099902535}
+--- !u!54 &3846678450039441647
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448809009925581865}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &725169166586284063
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +147,7 @@ GameObject:
   - component: {fileID: 7598592216761254813}
   - component: {fileID: 9066390025051767463}
   - component: {fileID: 6028050849169823501}
+  - component: {fileID: 5738905364064713744}
   m_Layer: 10
   m_Name: bamboo_leaves.003
   m_TagString: Untagged
@@ -210,10 +239,37 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.000660401
-  m_Height: 0.010675564
+  m_Radius: 0.0005177805
+  m_Height: 0.0106755635
   m_Direction: 2
-  m_Center: {x: 0.002239027, y: -0.0001378458, z: 0.0054789665}
+  m_Center: {x: 0.0017485467, y: -0.00013784572, z: 0.005478966}
+--- !u!54 &5738905364064713744
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725169166586284063}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1891344801962465464
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,10 +279,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6492720322485631459}
-  - component: {fileID: 6821161189808629315}
   - component: {fileID: 5087482777887317936}
   - component: {fileID: 6039802414978813708}
   - component: {fileID: 5053299023219880539}
+  - component: {fileID: -218847062708332738}
   m_Layer: 10
   m_Name: Bamboo_dest
   m_TagString: Untagged
@@ -250,51 +306,6 @@ Transform:
   - {fileID: 3890944987429965463}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6821161189808629315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891344801962465464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 8670780736904322698}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 448809009925581865}
-  - {fileID: 6369312506496432895}
-  - {fileID: 7685045338072143256}
-  - {fileID: 725169166586284063}
-  - {fileID: 6859562111614480414}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 7159912365520652812}
-  - {fileID: 8397497201648713303}
-  - {fileID: 5303726166013279289}
-  - {fileID: 6028050849169823501}
-  - {fileID: 9031284436050327980}
-  DefaultPoses:
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!114 &5087482777887317936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +353,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &-218847062708332738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891344801962465464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 8670780736904322698}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 3846678450039441647}
+  - {fileID: 4458972001628159982}
+  - {fileID: 584984950171303530}
+  - {fileID: 5738905364064713744}
+  - {fileID: 3605279158595040718}
+  DefaultPoses:
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!1 &6369312506496432895
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +399,7 @@ GameObject:
   - component: {fileID: 3308403873306567499}
   - component: {fileID: 318777242672821653}
   - component: {fileID: 8397497201648713303}
+  - component: {fileID: 4458972001628159982}
   m_Layer: 10
   m_Name: bamboo_leaves.001
   m_TagString: Untagged
@@ -449,6 +495,33 @@ CapsuleCollider:
   m_Height: 0.015
   m_Direction: 2
   m_Center: {x: 0.0018427565, y: -0.0003210148, z: 0.017737955}
+--- !u!54 &4458972001628159982
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369312506496432895}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6859562111614480414
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +534,7 @@ GameObject:
   - component: {fileID: 2312007775802449998}
   - component: {fileID: 122291473331374755}
   - component: {fileID: 9031284436050327980}
+  - component: {fileID: 3605279158595040718}
   m_Layer: 10
   m_Name: bamboo_leaves.004
   m_TagString: Untagged
@@ -556,6 +630,33 @@ CapsuleCollider:
   m_Height: 0.0055823377
   m_Direction: 2
   m_Center: {x: -0.0017452335, y: 0.00051533635, z: 0.0028439492}
+--- !u!54 &3605279158595040718
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6859562111614480414}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7685045338072143256
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +669,7 @@ GameObject:
   - component: {fileID: 2477023770396529983}
   - component: {fileID: 5054847626359741357}
   - component: {fileID: 5303726166013279289}
+  - component: {fileID: 584984950171303530}
   m_Layer: 10
   m_Name: bamboo_leaves.002
   m_TagString: Untagged
@@ -663,6 +765,33 @@ CapsuleCollider:
   m_Height: 0.015
   m_Direction: 2
   m_Center: {x: -0.0018880555, y: 0.00046138666, z: 0.014423518}
+--- !u!54 &584984950171303530
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7685045338072143256}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8670780736904322698
 GameObject:
   m_ObjectHideFlags: 0

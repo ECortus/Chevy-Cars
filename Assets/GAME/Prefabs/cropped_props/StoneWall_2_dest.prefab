@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8916187142117155021}
   - component: {fileID: 392395169890867092}
   - component: {fileID: 7388545988733742458}
+  - component: {fileID: 1810128002174061499}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_03_cell.003
   m_TagString: Untagged
@@ -105,6 +106,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.011389649, y: 0.0032989662, z: 0.0071672024}
   m_Center: {x: -0.000099420315, y: -0.00024275007, z: 0.00018206064}
+--- !u!54 &1810128002174061499
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3038245738370963645}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3202582166542068142
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +145,7 @@ GameObject:
   - component: {fileID: 7144487014841934853}
   - component: {fileID: 3635276875265847836}
   - component: {fileID: 7716613010472075405}
+  - component: {fileID: 8516416221087142653}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_03_cell.004
   m_TagString: Untagged
@@ -210,6 +239,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.011740798, y: 0.0035962667, z: 0.006372415}
   m_Center: {x: -0.00088397856, y: 0.00049985206, z: 0.00008354732}
+--- !u!54 &8516416221087142653
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202582166542068142}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5039593821650412853
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +278,7 @@ GameObject:
   - component: {fileID: 8313624085883989532}
   - component: {fileID: 5537605845719989298}
   - component: {fileID: 5800518812613353213}
+  - component: {fileID: 5408051117291685451}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_03_cell.002
   m_TagString: Untagged
@@ -315,6 +372,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010188185, y: 0.0045828247, z: 0.004800856}
   m_Center: {x: 0.00090719084, y: 0.000052753836, z: -0.00013483397}
+--- !u!54 &5408051117291685451
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5039593821650412853}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6093042179720862466
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,10 +443,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4752649869593446246}
-  - component: {fileID: 5272998542185428911}
   - component: {fileID: 8638242192124562860}
   - component: {fileID: 238199472374804193}
   - component: {fileID: 438721946322507530}
+  - component: {fileID: -250465827035576944}
   m_Layer: 10
   m_Name: StoneWall_2_dest
   m_TagString: Untagged
@@ -386,46 +470,6 @@ Transform:
   - {fileID: 3504936113695742218}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5272998542185428911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6864769824996154309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 6093042179720862466}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 8306191061588058722}
-  - {fileID: 5039593821650412853}
-  - {fileID: 3038245738370963645}
-  - {fileID: 3202582166542068142}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 2717224569818665827}
-  - {fileID: 5800518812613353213}
-  - {fileID: 7388545988733742458}
-  - {fileID: 7716613010472075405}
-  DefaultPoses:
-  - {x: 0.0033651898, y: 0.0001519847, z: 0.0031662127}
-  - {x: -0.0022332862, y: -0.000026277836, z: 0.0021224308}
-  - {x: -0.001037911, y: 0.0004039524, z: 0.006626986}
-  - {x: 0.00014201298, y: -0.00095597445, z: 0.0055624354}
-  DefaultRotation:
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
 --- !u!114 &8638242192124562860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +517,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8940643, y: 2.3977358, z: 0.6459679}
   m_Center: {x: -0.052967846, y: 0.6988679, z: -0.017448276}
+--- !u!114 &-250465827035576944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864769824996154309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 6093042179720862466}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 2487917606434826188}
+  - {fileID: 5408051117291685451}
+  - {fileID: 1810128002174061499}
+  - {fileID: 8516416221087142653}
+  DefaultPoses:
+  - {x: 0.0033651898, y: 0.0001519847, z: 0.0031662127}
+  - {x: -0.0022332862, y: -0.000026277836, z: 0.0021224308}
+  - {x: -0.001037911, y: 0.0004039524, z: 0.006626986}
+  - {x: 0.00014201298, y: -0.00095597445, z: 0.0055624354}
+  DefaultRotation:
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  - {x: 0.000000081460335, y: 0, z: -0, w: 1}
 --- !u!1 &8306191061588058722
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +560,7 @@ GameObject:
   - component: {fileID: 2217919240816093252}
   - component: {fileID: 2092597833690488207}
   - component: {fileID: 2717224569818665827}
+  - component: {fileID: 2487917606434826188}
   m_Layer: 10
   m_Name: SM_Prop_StoneWall_03_cell.001
   m_TagString: Untagged
@@ -578,3 +654,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0074928724, y: 0.004670808, z: 0.006228354}
   m_Center: {x: -0.00060311775, y: -0.00007413326, z: -0.00020490808}
+--- !u!54 &2487917606434826188
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8306191061588058722}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

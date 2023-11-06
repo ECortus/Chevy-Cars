@@ -42,7 +42,7 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
     private IEnumerator Control()
     {
         CopType type;
-        List<CopController> cops;
+        List<CopBasic> cops;
         
         CopUnit[] units;
         CopUnit unit;

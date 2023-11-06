@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 360417597227639095}
   - component: {fileID: 2029969141742528623}
   - component: {fileID: 6356972734940186412}
+  - component: {fileID: 1962858841926767122}
   m_Layer: 10
   m_Name: SM_Tree_Stump_03.002
   m_TagString: Untagged
@@ -106,6 +107,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2605825971946986836, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &1962858841926767122
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908062762125566219}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3170397416128165453
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,10 +143,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3222932139023979610}
-  - component: {fileID: 3892096821728626979}
   - component: {fileID: 6338196630142371553}
   - component: {fileID: 3032276694401998118}
   - component: {fileID: 533818889748827825}
+  - component: {fileID: 647970386106514783}
   m_Layer: 10
   m_Name: TreeOak_3_dest
   m_TagString: Untagged
@@ -142,36 +170,6 @@ Transform:
   - {fileID: 3908208336375239798}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3892096821728626979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3170397416128165453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2397cede2db17634fb86840bf3b7cc99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objParent: {fileID: 4412207548524710415}
-  rbMasses: 1
-  rb: {fileID: 0}
-  rbObjects:
-  - {fileID: 1908062762125566219}
-  - {fileID: 6029617938140125595}
-  rbs:
-  - {fileID: 0}
-  - {fileID: 0}
-  cols:
-  - {fileID: 6356972734940186412}
-  - {fileID: 2828281913509625195}
-  DefaultPoses:
-  - {x: -0, y: 0, z: 0}
-  - {x: -0, y: 0, z: 0}
-  DefaultRotation:
-  - {x: 0, y: -0, z: -0, w: 1}
-  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!114 &6338196630142371553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +217,31 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0414215, y: 3.2713006, z: 0.9115652}
   m_Center: {x: 0.020710766, y: 1.1356503, z: -0.044217408}
+--- !u!114 &647970386106514783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3170397416128165453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487c97b011fd5d4ab13a23afb3dfbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objParent: {fileID: 4412207548524710415}
+  rbMasses: 1
+  additionalObjectToOn: {fileID: 0}
+  additionalObjectToOff: {fileID: 0}
+  rbs:
+  - {fileID: 1962858841926767122}
+  - {fileID: 2046844792044247928}
+  DefaultPoses:
+  - {x: -0, y: 0, z: 0}
+  - {x: -0, y: 0, z: 0}
+  DefaultRotation:
+  - {x: 0, y: -0, z: -0, w: 1}
+  - {x: 0, y: -0, z: -0, w: 1}
 --- !u!1 &4412207548524710415
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +287,7 @@ GameObject:
   - component: {fileID: 1577900610468426136}
   - component: {fileID: 7924760912714494199}
   - component: {fileID: 2828281913509625195}
+  - component: {fileID: 2046844792044247928}
   m_Layer: 10
   m_Name: TreeOak_3.001
   m_TagString: Untagged
@@ -358,3 +382,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6876143011175294250, guid: 2b98521e25d2e7d449e6a4acb95ffe6e, type: 3}
+--- !u!54 &2046844792044247928
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6029617938140125595}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
