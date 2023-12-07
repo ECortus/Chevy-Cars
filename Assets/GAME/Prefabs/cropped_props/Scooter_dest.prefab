@@ -102,7 +102,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -115,7 +115,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597129779172451331}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.25
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -236,7 +236,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -249,7 +249,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843964307253882804}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.25
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -370,7 +370,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -383,7 +383,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2155112081844874987}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.25
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -504,7 +504,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -517,7 +517,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4281489586133283848}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.25
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -621,6 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyingForce: 250
+  IsDestroyed: 0
 --- !u!114 &5855730651142179228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb010323e504d874b9edeaa57f07a224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toAdd: 5
+  toAdd: 30
+  achievement: {fileID: 0}
 --- !u!65 &4255953655835309287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -668,14 +670,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 5542216378415540075}
-  rbMasses: 1
+  rbMasses: 0.25
   additionalObjectToOn: {fileID: 5542216378415540075}
   additionalObjectToOff: {fileID: 8778870863708316376}
+  additionalActionOnOn:
+    m_PersistentCalls:
+      m_Calls: []
+  additionalActionOnOff:
+    m_PersistentCalls:
+      m_Calls: []
   rbs:
   - {fileID: 3013659673335883202}
   - {fileID: 8396063094696787672}
   - {fileID: 5916290886736103803}
   - {fileID: 3268522060528892538}
+  cols:
+  - {fileID: 2826055460354294902}
+  - {fileID: 8081309832141474630}
+  - {fileID: 4427741815169274569}
+  - {fileID: 1180488320395621356}
   DefaultPoses:
   - {x: -0, y: 0, z: 0}
   - {x: -0, y: 0, z: 0}

@@ -102,7 +102,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -115,7 +115,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581573145267066345}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.25
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -236,7 +236,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -249,7 +249,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742909122777308363}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.25
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -404,7 +404,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -417,7 +417,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4131438436412025216}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.25
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -484,7 +484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb010323e504d874b9edeaa57f07a224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toAdd: 5
+  toAdd: 30
+  achievement: {fileID: 0}
 --- !u!114 &6074604649007330517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,6 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyingForce: 250
+  IsDestroyed: 0
 --- !u!65 &5392056736890042527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -532,13 +534,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 1532175944873926022}
-  rbMasses: 1
+  rbMasses: 0.25
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 0}
+  additionalActionOnOn:
+    m_PersistentCalls:
+      m_Calls: []
+  additionalActionOnOff:
+    m_PersistentCalls:
+      m_Calls: []
   rbs:
   - {fileID: 7748905394602074938}
   - {fileID: 8474058068109117429}
   - {fileID: 9052642562991299151}
+  cols:
+  - {fileID: 6206571227425012622}
+  - {fileID: 410315069461179615}
+  - {fileID: 8022582295194201928}
   DefaultPoses:
   - {x: -0, y: 0, z: 0}
   - {x: 0.00047424514, y: 0.00047244705, z: 0.033028092}

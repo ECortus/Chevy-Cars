@@ -21,6 +21,8 @@ public class CopController : CopBasic
 
         SetDefaultRagdoll();
         SetControl(false);
+        
+        carController.enabled = true;
     }
 
     public override async void Destroying()
@@ -33,6 +35,13 @@ public class CopController : CopBasic
     public override void Off()
     {
         gameObject.SetActive(false);
+    }
+    
+    void Start()
+    {
+        _health = GetComponent<HealthData>();
+        _arrest = GetComponent<CopArrestController>();
+        _scoreTarget = GetComponent<ScoreTarget>();
     }
 
     protected override void FixedUpdate()

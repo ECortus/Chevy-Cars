@@ -64,7 +64,6 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
             if (Attention > 0)
             {
                 units = CopsSlot.Units;
-
                 for (int i = 0; i < units.Length; i++)
                 {
                     unit = units[i];
@@ -79,7 +78,7 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
 
                         for (int k = 0; k < cops.Count; k++)
                         {
-                            if (cops[k].IsActive && !cops[k].Died)
+                            if (cops[k].IsActive && !cops[k].Died && cops[k].Type == type)
                             {
                                 aliveCount++;
                             }
@@ -90,7 +89,7 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
                             for (int k = 0; k < requireCount - aliveCount; k++)
                             {
                                 spawnDot = RandomDot();
-                                CopsPool.Instance.Insert(type, unit.CopPrefab, spawnDot.position);
+                                CopsPool.Instance.Insert(type, unit.CopPrefab, spawnDot.position + Vector3.up * 1.5f);
                             }
                         }
                     }

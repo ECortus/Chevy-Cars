@@ -11,6 +11,9 @@ public class LevelManager : Instancer<LevelManager>
 
     [SerializeField] private Level[] Levels;
 
+    [Space] 
+    public PlayerCarSpawner PlayerSpawner;
+    
     private int index { get { return Statistics.LevelIndex; } set { Statistics.LevelIndex = value; } }
     public int Index => index % Levels.Length;
     
@@ -39,6 +42,9 @@ public class LevelManager : Instancer<LevelManager>
     
     public void Starting()
     {
+        OffAllLevel();
+        ActualLevel.On();
+        
         ActualLevel.StartingLevel();
     }
 
@@ -56,5 +62,13 @@ public class LevelManager : Instancer<LevelManager>
     public void Lose()
     {
         ActualLevel.LoseLevel();
+    }
+
+    void OffAllLevel()
+    {
+        foreach (var VARIABLE in Levels)
+        {
+            VARIABLE.Off();
+        }
     }
 }

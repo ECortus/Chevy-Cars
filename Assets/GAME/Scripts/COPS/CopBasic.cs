@@ -6,17 +6,17 @@ public class CopBasic : CarController
 {
     [Space]
     public CopType Type = CopType.Nothing;
-    private ScoreTarget _scoreTarget;
-    private CopArrestController _arrest;
+    [SerializeField] protected ScoreTarget _scoreTarget;
+    [SerializeField] protected CopArrestController _arrest;
     
-    public void FullHeal() => health.FullHeal();
-    public void Heal(int hp) => health.Heal(hp);
+    public void FullHeal() => _health.FullHeal();
+    public void Heal(int hp) => _health.Heal(hp);
 
     public void GetHit(int dmg)
     {
         if (!_arrest.RequireToArrest)
         {
-            health.GetHit(dmg);
+            _health.GetHit(dmg);
         }
     }
     
@@ -35,7 +35,7 @@ public class CopBasic : CarController
         {
             if (Target)
             {
-                Vector3 dir = (Target.position - transform.position).normalized;
+                Vector3 dir = (Target.position - Center).normalized;
                 dir.y = 0f;
                 return dir;
             }
@@ -44,12 +44,6 @@ public class CopBasic : CarController
                 return Vector3.zero;
             }
         }
-    }
-
-    void Start()
-    {
-        _arrest = GetComponent<CopArrestController>();
-        _scoreTarget = GetComponent<ScoreTarget>();
     }
     
     protected override void FixedUpdate() { }

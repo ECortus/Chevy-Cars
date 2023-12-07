@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c455b5618f33a43904331adda1175a, type: 3}
+  m_Name: Fortune_v1
+  m_EditorClassIdentifier: 
+  Lots:
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: 5643ad01729dc924f838195289d7eea4, type: 2}
+    Count: 5
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: be138be1c0de74d4b866e8d20239ac62, type: 2}
+    Count: 50
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: 093b73eb4fb7c144abb5c36fc9995783, type: 2}
+    Count: 5
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: 89610f4650661c246abadb67df42c519, type: 2}
+    Count: 2
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: 0f696e9c76d43404baae46b19777e1c9, type: 2}
+    Count: 1
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: 5643ad01729dc924f838195289d7eea4, type: 2}
+    Count: 8
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: 89610f4650661c246abadb67df42c519, type: 2}
+    Count: 1
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: be138be1c0de74d4b866e8d20239ac62, type: 2}
+    Count: 100
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: 093b73eb4fb7c144abb5c36fc9995783, type: 2}
+    Count: 6
+  - Rarity: 10
+    Prize: {fileID: 11400000, guid: 5643ad01729dc924f838195289d7eea4, type: 2}
+    Count: 2
+  saturation: 0.4
+  brightness: 1

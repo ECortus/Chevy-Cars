@@ -8,12 +8,21 @@ public class RagdollController : MonoBehaviour
 {
     [SerializeField] private GameObject objParent;
     [SerializeField] private float rbMasses = 5;
+
+    [Space] 
+    [SerializeField] private PhysicMaterial standardPhysicMaterial;
+
+    [Space] 
+    [SerializeField] private MeshRenderer[] meshes;
+    [SerializeField] private Material defaultMaterial;
+    [SerializeField] private Material blackMaterial;
     
     [Header("DEBUG (click 'Write default'):")]
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject[] rbObjects;
     [SerializeField] private Rigidbody[] rbs;
     [SerializeField] private Collider[] cols;
+    [SerializeField] private Transform[] DefaultParents;
     [SerializeField] private Vector3[] DefaultPoses;
     [SerializeField] private Quaternion[] DefaultRotation;
 
@@ -29,7 +38,6 @@ public class RagdollController : MonoBehaviour
         for(int i = 0; i < rbObjects.Length; i++)
         {
             rbObjects[i] = cols[i].gameObject;
-            
         }
 
         Rigidbody orb;
@@ -41,45 +49,61 @@ public class RagdollController : MonoBehaviour
 
         rbs = new Rigidbody[rbObjects.Length];
         
+        DefaultParents = new Transform[rbObjects.Length];
         DefaultPoses = new Vector3[rbObjects.Length];
         DefaultRotation = new Quaternion[rbObjects.Length];
         
         for(int i = 0; i < rbObjects.Length; i++)
         {
-            // SetRB(rbs[i], false);
-            cols[i].enabled = true;
-            
+            if(rbs[i]) SetRb(rbs[i], false);
+            cols[i].material = standardPhysicMaterial;
+
+            DefaultParents[i] = rbObjects[i].transform.parent;
             DefaultPoses[i] = rbObjects[i].transform.localPosition;
             DefaultRotation[i] = rbObjects[i].transform.localRotation;
         }
+        
+        SetDefaultMaterials();
     }
 
-    public async UniTask SetDefault()
+    public void SetDefault()
     {
         SetMain(true);
         Rigidbody orb;
+
+        SetDefaultMaterials();
         
         for(int i = 0; i < rbObjects.Length; i++)
         {
-            // SetRB(rbs[i], false);
-            // cols[i].enabled = true;
+            if(rbs[i]) SetRb(rbs[i], false);
             
-            cols[i].enabled = true;
+            cols[i].material = standardPhysicMaterial;
             
             if(rbObjects[i].TryGetComponent(out orb)) Destroy(orb);
             
+            rbObjects[i].transform.SetParent(DefaultParents[i]);
             rbObjects[i].transform.localPosition = DefaultPoses[i];
             rbObjects[i].transform.localRotation = DefaultRotation[i];
         }
+    }
 
-        await UniTask.Delay(100);
+    void SetDefaultMaterials() => SetMaterials(defaultMaterial);
+    void SetBlackMaterials() => SetMaterials(blackMaterial);
+
+    void SetMaterials(Material mat)
+    {
+        foreach (var VARIABLE in meshes)
+        {
+            VARIABLE.materials = new Material[] { mat };
+        }
     }
 
     void SetRBArray()
     {
         for (int i = 0; i < rbObjects.Length; i++)
         {
-            rbs[i] = rbObjects[i].AddComponent<Rigidbody>();
+            if(!rbObjects[i].TryGetComponent(out rbs[i])) rbs[i] = rbObjects[i].AddComponent<Rigidbody>();
+            
             rbs[i].mass = rbMasses;
             SetRb(rbs[i], false);
         }
@@ -91,10 +115,11 @@ public class RagdollController : MonoBehaviour
         SetMain(false);
         
         SetRBArray();
+        SetBlackMaterials();
         
         for (int i = 0; i < rbs.Length; i++)
         {
-            cols[i].enabled = true;
+            cols[i].material = null;
             
             dir = (center - rbs[i].transform.position).normalized;
             dir.y = Random.Range(0.5f, 1f);
@@ -111,10 +136,11 @@ public class RagdollController : MonoBehaviour
         SetMain(false);
         
         SetRBArray();
+        SetBlackMaterials();
         
         for (int i = 0; i < rbs.Length; i++)
         {
-            cols[i].enabled = true;
+            cols[i].material = null;
             
             dir = new Vector3(
                 Random.Range(-1f, 1f) / divive,
@@ -131,9 +157,11 @@ public class RagdollController : MonoBehaviour
         SetMain(false);
         
         SetRBArray();
+        SetBlackMaterials();
+        
         for (int i = 0; i < rbs.Length; i++)
         {
-            cols[i].enabled = true;
+            cols[i].material = null;
             ForceRb(rbs[i], dir, force);
         }
     }
@@ -141,7 +169,7 @@ public class RagdollController : MonoBehaviour
     void SetRb(Rigidbody rbc, bool state)
     {
         rbc.isKinematic = !state;
-        rbc.detectCollisions = state;
+        rbc.mass = rbMasses;
         rbc.useGravity = state;
         rbc.constraints = RigidbodyConstraints.None;
     }
@@ -155,6 +183,8 @@ public class RagdollController : MonoBehaviour
     void ForceRb(Rigidbody rbc, Vector3 dir, float force)
     {
         SetRb(rbc, true);
+        rbc.transform.SetParent(null);
+        
         rbc.AddForce(dir * force, ForceMode.Force);
     }
 }

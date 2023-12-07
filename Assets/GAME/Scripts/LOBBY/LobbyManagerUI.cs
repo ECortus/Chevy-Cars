@@ -1,55 +1,47 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LobbyManagerUI : MonoBehaviour
 {
-    [SerializeField] private GameObject main, shop, wheel, progress, settings;
+    [SerializeField] private GameObject wheel, progress;
 
-    void Start()
-    {
-        OpenMain();
-    }
+    [Space] [SerializeField] private SlideMenuUI slide;
     
-    public void CloseAll()
+    public static bool OnMain { get; private set; }
+
+    private void Awake()
     {
-        main.SetActive(false);
-        shop.SetActive(false);
-        wheel.SetActive(false);
-        progress.SetActive(false);
-        settings.SetActive(false);
+        OnMain = true;
+        transform.localPosition = Vector3.zero;
     }
-    
+
     public void OpenMain()
     {
-        main.SetActive(true);
-        shop.SetActive(false);
-        wheel.SetActive(false);
-        progress.SetActive(false);
-        settings.SetActive(false);
+        OnMain = true;
+        slide.SetPosToMove(0);
     }
     
     public void OpenShop()
     {
-        main.SetActive(false);
-        shop.SetActive(true);
+        slide.SetPosToMove(1080);
     }
     
-    public void OpenWheel()
+    public void SetWheel(bool state)
     {
-        main.SetActive(false);
-        wheel.SetActive(true);
+        OnMain = !state;
+        wheel.SetActive(state);
     }
     
-    public void OpenProgress()
+    public void SetProgress(bool state)
     {
-        main.SetActive(false);
-        progress.SetActive(true);
+        OnMain = !state;
+        progress.SetActive(state);
     }
-    
-    public void OpenSettings()
+
+    public void OpenCollection()
     {
-        main.SetActive(false);
-        settings.SetActive(true);
+        slide.SetPosToMove(-1080);
     }
 }

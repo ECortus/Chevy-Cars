@@ -18,7 +18,7 @@ public static class Score
     {
         get
         {
-            uint value = Score.Value;
+            uint value = Value;
             
             Stage[] Stages = LevelManager.Instance.ActualLevel.Stages;
             for (int i = 0; i < LevelManager.Instance.ActualLevel.StageIndex; i++)
@@ -47,7 +47,7 @@ public static class Score
             uint value = 0;
             
             Stage[] Stages = LevelManager.Instance.ActualLevel.Stages;
-            for (int i = 0; i < LevelManager.Instance.ActualLevel.StageIndex + 1; i++)
+            for (int i = 0; i < Stages.Length; i++)
             {
                 value += Stages[i].ScoreGoal;
             }
@@ -63,6 +63,7 @@ public static class Score
         if (ValueToCurrentGoal >= CurrentGoal)
         {
             LevelManager.Instance.ActualLevel.CompleteCurrentStage();
+            return;
         }
         
         ScoreUI.Instance.Refresh();

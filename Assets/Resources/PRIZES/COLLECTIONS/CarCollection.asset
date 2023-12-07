@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7518b3cc400c4c4d9dbc5a66fd22cf2, type: 3}
+  m_Name: CarCollection
+  m_EditorClassIdentifier: 
+  Cars:
+  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+      type: 3}
+    HPBonus: 1
+    SPDBonus: 0.25
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+      type: 3}
+    HPBonus: 1
+    SPDBonus: 0.25
+    Costs:
+    - CostType: 2
+      Cost: 2
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+      type: 3}
+    HPBonus: 1
+    SPDBonus: 0.25
+    Costs:
+    - CostType: 2
+      Cost: 10
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+      type: 3}
+    HPBonus: 1
+    SPDBonus: 0.25
+    Costs:
+    - CostType: 2
+      Cost: 5
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+      type: 3}
+    HPBonus: 1
+    SPDBonus: 0.25
+    Costs:
+    - CostType: 2
+      Cost: 5
+    - CostType: 3
+      Cost: 5
+    - CostType: 4
+      Cost: 5
+  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+      type: 3}
+    HPBonus: 1
+    SPDBonus: 0.25
+    Costs:
+    - CostType: 2
+      Cost: 8
+    - CostType: 3
+      Cost: 1
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+      type: 3}
+    HPBonus: 1
+    SPDBonus: 0.25
+    Costs:
+    - CostType: 2
+      Cost: 10
+    - CostType: 3
+      Cost: 5
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+      type: 3}
+    HPBonus: 1
+    SPDBonus: 0.25
+    Costs:
+    - CostType: 2
+      Cost: 2
+    - CostType: 3
+      Cost: 2
+    - CostType: 4
+      Cost: 2

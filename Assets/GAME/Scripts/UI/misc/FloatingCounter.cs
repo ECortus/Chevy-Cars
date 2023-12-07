@@ -9,8 +9,8 @@ public abstract class FloatingCounter : MonoBehaviour
     [SerializeField] private float bound = 3;
     [SerializeField] private bool forced = false;
 
-    protected abstract uint resource { get; }
-    uint currentMoneyCount = 0;
+    protected abstract int resource { get; }
+    int currentMoneyCount = 0;
 
     Coroutine coroutine;
     
@@ -52,7 +52,7 @@ public abstract class FloatingCounter : MonoBehaviour
 
         while(currentMoneyCount != resource)
         {
-            currentMoneyCount = (uint)Mathf.Lerp(currentMoneyCount, resource, counterPlusBySecond * Time.deltaTime);
+            currentMoneyCount = (int)Mathf.Lerp(currentMoneyCount, resource, counterPlusBySecond * Time.deltaTime);
             if (Mathf.Abs(currentMoneyCount - resource) <= bound) break;
 
             IntoText(currentMoneyCount);
@@ -67,7 +67,7 @@ public abstract class FloatingCounter : MonoBehaviour
         coroutine = null;
     }
 
-    void IntoText(uint value)
+    void IntoText(int value)
     {
         //recourceText.text = ResourceAmountConvertator.IntIntoText(value);
         resourceText.text = value.ToString();

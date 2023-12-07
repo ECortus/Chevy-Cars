@@ -21,6 +21,7 @@ public class DestrictionRagdollController : MonoBehaviour
     
     [Header("DEBUG (click 'Write default'):")]
     [SerializeField] private Rigidbody[] rbs;
+    [SerializeField] private Collider[] cols;
     [SerializeField] private Vector3[] DefaultPoses;
     [SerializeField] private Quaternion[] DefaultRotation;
 
@@ -29,12 +30,15 @@ public class DestrictionRagdollController : MonoBehaviour
     public void WriteDefault()
     {
         rbs = objParent.GetComponentsInChildren<Rigidbody>();
+        cols = objParent.GetComponentsInChildren<Collider>();
         
         DefaultPoses = new Vector3[rbs.Length];
         DefaultRotation = new Quaternion[rbs.Length];
         
         AdditionalObjectsState(false);
         AdditionalOffAction();
+        
+        SetCols(false);
         
         for(int i = 0; i < rbs.Length; i++)
         {
@@ -49,6 +53,8 @@ public class DestrictionRagdollController : MonoBehaviour
     {
         AdditionalObjectsState(false);
         AdditionalOffAction();
+        
+        SetCols(false);
         
         for(int i = 0; i < rbs.Length; i++)
         {
@@ -65,6 +71,8 @@ public class DestrictionRagdollController : MonoBehaviour
         
         AdditionalObjectsState(true);
         AdditionalOnAction();
+        
+        SetCols(true);
         
         for (int i = 0; i < rbs.Length; i++)
         {
@@ -88,6 +96,8 @@ public class DestrictionRagdollController : MonoBehaviour
         AdditionalObjectsState(true);
         AdditionalOnAction();
         
+        SetCols(true);
+        
         for (int i = 0; i < rbs.Length; i++)
         {
             SetRb(rbs[i], true);
@@ -107,17 +117,28 @@ public class DestrictionRagdollController : MonoBehaviour
         AdditionalObjectsState(true);
         AdditionalOnAction();
         
+        SetCols(true);
+        
         for (int i = 0; i < rbs.Length; i++)
         {
             SetRb(rbs[i], true);
+            
             ForceRb(rbs[i], dir, force);
+        }
+    }
+
+    void SetCols(bool state)
+    {
+        foreach (var VARIABLE in cols)
+        {
+            VARIABLE.enabled = state;
         }
     }
 
     void SetRb(Rigidbody rbc, bool state)
     {
         rbc.isKinematic = !state;
-        rbc.detectCollisions = state;
+        rbc.mass = rbMasses;
         rbc.useGravity = state;
         rbc.constraints = RigidbodyConstraints.None;
     }

@@ -94,7 +94,7 @@ namespace DavidJalbert
         private float inputSteering = 0;
         private float inputMotor = 0;
         private PhysicMaterial customPhysicMaterial;
-        public Quaternion groundRotation;
+        private Quaternion groundRotation;
         private TinyCarSurfaceParameters surfaceParameters = null;
         private TinyCarSurfaceParameters triggersParameters = null;
         private float slopeDelta = 0;
@@ -104,6 +104,8 @@ namespace DavidJalbert
         private float scaleAdjustment = 1;
         private float cubicScale = 1;
         private float inverseScaleAdjustment = 1;
+
+        public float SpeedBonus = 0f;
 
         void Start()
         {
@@ -275,7 +277,7 @@ namespace DavidJalbert
                 float slopeMultiplier = Mathf.Max(0, (Mathf.Sign(motor) * slopeDelta * slopeFriction * scaleAdjustment + 1f));
                 float accelerationForce = getAcceleration(surfaceParameters.accelerationMultiplier * boostMultiplier * slopeMultiplier, surfaceParameters.speedMultiplier * boostMultiplier * slopeMultiplier);
 
-                velocity += crossForward * getMotor() * accelerationForce * deltaTime;
+                velocity += crossForward * getMotor() * accelerationForce * deltaTime * (1f + SpeedBonus);
             }
 
             float adjustedMaxGravity = maxGravity * scaleAdjustment;
@@ -527,68 +529,68 @@ namespace DavidJalbert
             return collision.relativeVelocity.sqrMagnitude > 0.1f ? Vector3.Dot(collision.contacts[0].normal, yVelocity) : 0;
         }
 
-        void OnTriggerStay(Collider collider)
-        {
-            TinyCarSurface[] surfaces = collider.GetComponentsInParent<TinyCarSurface>();
-            if (surfaces.Length > 0)
-            {
-                triggersParameters = new TinyCarSurfaceParameters(0);
-                foreach (TinyCarSurface surface in surfaces)
-                {
-                    triggersParameters += surface.parameters / surfaces.Length;
-                }
-            }
-        }
-
-        void OnCollisionStay(Collision collision)
-        {
-            ContactPoint hit = collision.contacts[0];
-            float verticalDot = getVerticalDot(collision);
-            float collisionXZForce = getCollisionForceOnXZ(collision);
-
-            if (verticalDot < 0.1f && collisionXZForce > 0.1f)
-            {
-                bool isStaticCollider = collision.rigidbody == null || collision.rigidbody.isKinematic;
-                if (isStaticCollider) hitSideStayStatic = true;
-                else hitSideStayDynamic = true;
-                if (hitSideForce < collisionXZForce)
-                {
-                    hitSideForce = collisionXZForce;
-                    hitSidePosition = hit.point;
-                }
-            }
-        }
-
-        void OnCollisionEnter(Collision collision)
-        {
-            ContactPoint hit = collision.contacts[0];
-            float verticalDot = getVerticalDot(collision);
-            float collisionYForce = getCollisionForceOnY(collision);
-
-            if (verticalDot > 0.1f && collisionYForce > 0.1f)
-            {
-                hitGround = true;
-                hitGroundMass = collision.rigidbody == null ? 0 : collision.rigidbody.mass;
-                if (hitGroundForce < collisionYForce)
-                {
-                    hitGroundForce = collisionYForce;
-                }
-            }
-
-            float collisionXZForce = getCollisionForceOnXZ(collision);
-            if (verticalDot < 0.1f && collisionXZForce > 0.1f)
-            {
-                hitSideMass = collision.rigidbody == null ? 0 : collision.rigidbody.mass;
-                hitSide = true;
-                bool isStaticCollider = collision.rigidbody == null || collision.rigidbody.isKinematic;
-                if (isStaticCollider) hitSideStayStatic = true;
-                else hitSideStayDynamic = true;
-                if (hitSideForce < collisionXZForce)
-                {
-                    hitSideForce = collisionXZForce;
-                    hitSidePosition = hit.point;
-                }
-            }
-        }
+        // void OnTriggerStay(Collider collider)
+        // {
+        //     TinyCarSurface[] surfaces = collider.GetComponentsInParent<TinyCarSurface>();
+        //     if (surfaces.Length > 0)
+        //     {
+        //         triggersParameters = new TinyCarSurfaceParameters(0);
+        //         foreach (TinyCarSurface surface in surfaces)
+        //         {
+        //             triggersParameters += surface.parameters / surfaces.Length;
+        //         }
+        //     }
+        // }
+        //
+        // void OnCollisionStay(Collision collision)
+        // {
+        //     ContactPoint hit = collision.contacts[0];
+        //     float verticalDot = getVerticalDot(collision);
+        //     float collisionXZForce = getCollisionForceOnXZ(collision);
+        //
+        //     if (verticalDot < 0.1f && collisionXZForce > 0.1f)
+        //     {
+        //         bool isStaticCollider = collision.rigidbody == null || collision.rigidbody.isKinematic;
+        //         if (isStaticCollider) hitSideStayStatic = true;
+        //         else hitSideStayDynamic = true;
+        //         if (hitSideForce < collisionXZForce)
+        //         {
+        //             hitSideForce = collisionXZForce;
+        //             hitSidePosition = hit.point;
+        //         }
+        //     }
+        // }
+        //
+        // void OnCollisionEnter(Collision collision)
+        // {
+        //     ContactPoint hit = collision.contacts[0];
+        //     float verticalDot = getVerticalDot(collision);
+        //     float collisionYForce = getCollisionForceOnY(collision);
+        //
+        //     if (verticalDot > 0.1f && collisionYForce > 0.1f)
+        //     {
+        //         hitGround = true;
+        //         hitGroundMass = collision.rigidbody == null ? 0 : collision.rigidbody.mass;
+        //         if (hitGroundForce < collisionYForce)
+        //         {
+        //             hitGroundForce = collisionYForce;
+        //         }
+        //     }
+        //
+        //     float collisionXZForce = getCollisionForceOnXZ(collision);
+        //     if (verticalDot < 0.1f && collisionXZForce > 0.1f)
+        //     {
+        //         hitSideMass = collision.rigidbody == null ? 0 : collision.rigidbody.mass;
+        //         hitSide = true;
+        //         bool isStaticCollider = collision.rigidbody == null || collision.rigidbody.isKinematic;
+        //         if (isStaticCollider) hitSideStayStatic = true;
+        //         else hitSideStayDynamic = true;
+        //         if (hitSideForce < collisionXZForce)
+        //         {
+        //             hitSideForce = collisionXZForce;
+        //             hitSidePosition = hit.point;
+        //         }
+        //     }
+        // }
     }
 }

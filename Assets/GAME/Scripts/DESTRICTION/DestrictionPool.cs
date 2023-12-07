@@ -58,6 +58,20 @@ public class DestrictionPool : MonoBehaviour
         Waiters.Add(waiter);
     }
 
+    public void ResetDestroyed(DestrictionObject obj)
+    {
+        for (int i = 0; i < Waiters.Count; i++)
+        {
+            if (Waiters[i].Object == obj)
+            {
+                Waiters[i].ResetTime(delayToSpawn);
+                return;
+            }
+        }
+        
+        Add(obj);
+    }
+
     public void SpawnAll()
     {
         for (int i = 0; i < Waiters.Count; i++)

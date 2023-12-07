@@ -8,17 +8,18 @@ using UnityEngine;
 
 public class DestrictionObject : MonoBehaviour
 {
-    private readonly List<string> Tags = new List<string>() { "Player", "Cop" };
-
     private DestrictionRagdollController ragdoll;
     private ScoreTarget score;
-
+    
     [SerializeField] private float destroyingForce = 250f;
 
-    public bool IsDestroyed { get; set; }
+    [Header("DEBUG")]
+    public bool IsDestroyed = false;
 
     void Start()
     {
+        _cancellation = new CancellationTokenSource();
+        
         ragdoll = GetComponent<DestrictionRagdollController>();
         score = GetComponent<ScoreTarget>();
         
@@ -30,22 +31,28 @@ public class DestrictionObject : MonoBehaviour
     {
         DestrictionPool.Instance.Add(this);
     }
-    
-    public void Revive()
+
+    void ResetDestroyed()
     {
-        ragdoll.SetDefault();
-        
+        DestrictionPool.Instance.ResetDestroyed(this);
+    }
+    
+    public virtual void Revive()
+    {
         IsDestroyed = false;
+
         gameObject.SetActive(true);
+        ragdoll.SetDefault();
     }
 
-    private CancellationTokenSource _cancellation = new CancellationTokenSource();
+    private CancellationTokenSource _cancellation;
 
-    public void Destroy()
+    public virtual void Destroy()
     {
+        IsDestroyed = true;
         ragdoll.ForceFromDot(transform.position, destroyingForce);
         
-        IsDestroyed = true;
+        ResetDestroyed();
 
         // await UniTask.Delay(10000, DelayType.DeltaTime, PlayerLoopTiming.Update, _cancellation.Token);
         // gameObject.SetActive(false);
@@ -63,9 +70,11 @@ public class DestrictionObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Tags.Contains(other.tag) && !IsDestroyed)
+        if (IsDestroyed) return;
+        
+        if (other.CompareTag("Player") || other.CompareTag("Cop"))
         {
-            if (other.tag == "Player")
+            if (other.CompareTag("Player"))
             {
                 score.AddPoint();
             }

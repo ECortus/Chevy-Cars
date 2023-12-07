@@ -19,9 +19,13 @@ public class Level : MonoBehaviour
     [SerializeField] private Vector3 defaultPlayerPosition;
     [SerializeField] private bool OnDestrictionPool = true;
 
+    public void On() => gameObject.SetActive(true);
+    public void Off() => gameObject.SetActive(false);
+
     public void StartingLevel()
     {
         gameObject.SetActive(true);
+        if(!PlayerController.Instance) LevelManager.Instance.PlayerSpawner.Spawn();
         
         ResetToDefault();
         CopsSpawnController.Instance.On();
@@ -36,8 +40,8 @@ public class Level : MonoBehaviour
     {
         if (!Ended)
         {
-            _stageIndex = Mathf.Clamp(_stageIndex + 1, 0, Stages.Length - 1);
             Stages[StageIndex].OnEvent();
+            _stageIndex = Mathf.Clamp(_stageIndex + 1, 0, Stages.Length - 1);
         }
     }
 

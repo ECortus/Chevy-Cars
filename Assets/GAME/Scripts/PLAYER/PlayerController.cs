@@ -17,9 +17,9 @@ public class PlayerController : CarController
         Instance = this;
     }
 
-    public void FullHeal() => health.FullHeal();
-    public void Heal(int hp) => health.Heal(hp);
-    public void GetHit(int dmg) => health.GetHit(dmg);
+    public void FullHeal() => _health.FullHeal();
+    public void Heal(int hp) => _health.Heal(hp);
+    public void GetHit(int dmg) => _health.GetHit(dmg);
 
     public void On(Vector3 spawn)
     {
@@ -30,6 +30,8 @@ public class PlayerController : CarController
         
         SetDefaultRagdoll();
         SetControl(false);
+        
+        carController.enabled = true;
     }
     
     public void Off()
@@ -38,21 +40,33 @@ public class PlayerController : CarController
     }
     
     public Transform Transform => transform;
-    private ArrestData arrest;
+    private ArrestData _arrest;
 
-    public void SetFree() => arrest.SetFree();
-    public void GetArrested() => arrest.GetArrested();
-    public void Busted() => arrest.Busted();
+    public void SetFree() => _arrest.SetFree();
+    public void GetArrested() => _arrest.GetArrested();
+    public void Busted() => _arrest.Busted();
     
     private Transform _handle;
-    private Vector3 Move => new Vector3(_handle.localPosition.x, 0, _handle.localPosition.y);
+    private Vector3 Move => new Vector3(_handle.localPosition.x, 0, _handle.localPosition.y).normalized;
+
+    private int HPBonus;
+    private float SPDBonus;
+
+    public void SetBonus(int hp, float spd)
+    {
+        HPBonus = hp;
+        SPDBonus = spd;
+    }
 
     void Start()
     {
-        FullHeal();
         _handle = GameManager.Instance.Joystick.transform.GetChild(0);
-        
-        arrest = GetComponent<ArrestData>();
+        _health = GetComponent<HealthData>();
+        _health.SetBonus(HPBonus);
+        _arrest = GetComponent<ArrestData>();
+
+        carController.SpeedBonus = SPDBonus;
+        FullHeal();
     }
     
     protected override void FixedUpdate()

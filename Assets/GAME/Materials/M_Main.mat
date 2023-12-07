@@ -169,7 +169,7 @@ Material:
     - _RampScale: 1
     - _RampSmooth: 0.1
     - _RampSmoothOtherLights: 0.5
-    - _RampSmoothing: 0.25
+    - _RampSmoothing: 0.1
     - _RampSmoothingOtherLights: 0.5
     - _RampThreshold: 0.5
     - _RampThresholdOtherLights: 0.5
@@ -180,7 +180,7 @@ Material:
     - _ReflectionSmoothness: 0.5
     - _RenderingMode: 0
     - _RimMax: 1
-    - _RimMin: 0.15
+    - _RimMin: 0.5
     - _SampleGI: 0
     - _ShadowColorLightAtten: 1
     - _Shadow_HSV_H: 0

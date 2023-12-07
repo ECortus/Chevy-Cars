@@ -7,7 +7,7 @@ public class ArrestData : MonoBehaviour
     PlayerController Player => PlayerController.Instance;
     
     [SerializeField] private PlayerSettings settings;
-    private uint attemptToLose => settings.ReviveAttempt;
+    private int attemptToLose => settings.ReviveAttempt;
     private int Attempt { get; set; }
     
     public void SetFree()

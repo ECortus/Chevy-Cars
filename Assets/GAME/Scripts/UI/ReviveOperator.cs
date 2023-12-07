@@ -24,6 +24,8 @@ public class ReviveOperator : Instancer<ReviveOperator>
         menu.SetActive(false);
         GameManager.Instance.SetTimeScale(1f);
         
+        CopsPool.Instance.KillAllOnDistanceFromTarget(PlayerController.Instance.Transform, 10f);
+        
         CameraController.Instance.ResetDistance();
         PlayerController.Instance.On(PlayerController.Instance.Transform.position);
     }

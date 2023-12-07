@@ -5,20 +5,11 @@ using DavidJalbert;
 
 public abstract class CarController : MonoBehaviour
 {
-	[SerializeField] private TinyCarController carController;
+	[SerializeField] protected TinyCarController carController;
 	[SerializeField] private Rigidbody rb;
 
-	private HealthData _health;
-
-	protected HealthData health
-	{
-		get
-		{
-			if (!_health) _health = GetComponent<HealthData>();
-			return _health;
-		}
-	}
-	public bool Died => health.Died;
+	[SerializeField] protected HealthData _health;
+	public bool Died => _health ? _health.Died : false;
 
 	[Space]
 	[SerializeField] private TrailRenderer rightTrial;
@@ -42,6 +33,11 @@ public abstract class CarController : MonoBehaviour
 
 	protected void SetMotor(uint value) => carController.setMotor(value);
 	public int GetMotor() => (int)carController.getMotor();
+
+	public virtual Vector3 Center
+	{
+		get => transform.position;
+	}
 	
 	public void SpawnOnStartDot(Vector3 spawn)
 	{
@@ -60,10 +56,11 @@ public abstract class CarController : MonoBehaviour
 	public void Stop()
 	{
 		SetControl(true);
-		rb.velocity = Vector3.zero;
+		if(!rb.isKinematic) rb.velocity = Vector3.zero;
+		if(!rb.isKinematic) rb.angularVelocity = Vector3.zero;
 	}
 
-	protected void ClearTrials()
+	private void ClearTrials()
 	{
 		if(rightTrial) rightTrial.Clear();
 		if(leftTrial) leftTrial.Clear();
@@ -80,7 +77,8 @@ public abstract class CarController : MonoBehaviour
 	
 	public virtual void Destroying()
 	{
-		ragdoll.ForceFromDot(transform.position, 250f);
+		carController.enabled = false;
+		ragdoll.ForceFromDot(transform.position, 600f);
         
 		if (destroyingEffect)
 		{
