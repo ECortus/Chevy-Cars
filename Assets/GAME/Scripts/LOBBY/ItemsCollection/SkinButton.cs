@@ -9,8 +9,18 @@ public class SkinButton : MonoBehaviour
 {
     public static Action OnUpdate { get; set; }
 
-    public int Index = 0;
+    public int Index { get; private set; }
 
+    [Serializable]
+    public struct SkinRaritySprite
+    {
+        public SkinRarity Rarity;
+        public Sprite Sprite;
+    }
+
+    [SerializeField] private Image mainBg;
+    
+    [Space]
     [SerializeField] private Transform objectViewParent;
     [SerializeField] private TextMeshProUGUI hpText, spdText;
 
@@ -19,9 +29,29 @@ public class SkinButton : MonoBehaviour
     [SerializeField] private Image costImage;
     
     [Space] 
+    [SerializeField] private GameObject forAchievementButton;
     [SerializeField] private GameObject buyButton;
     [SerializeField] private GameObject equipButton;
     [SerializeField] private GameObject equippedButton;
+
+    [Space] 
+    [SerializeField] private SkinRaritySprite[] RaritySprites;
+
+    private Sprite GetMainSprite(SkinRarity rarity)
+    {
+        Sprite spr = null;
+
+        foreach (var VARIABLE in RaritySprites)
+        {
+            if (VARIABLE.Rarity == rarity)
+            {
+                spr = VARIABLE.Sprite;
+                break;
+            }
+        }
+        
+        return spr;
+    }
 
     private PlayerSkinCollection _collection;
     private PlayerSkinCollection.Skin _skin;
@@ -49,9 +79,16 @@ public class SkinButton : MonoBehaviour
         OnUpdate -= Refresh;
     }
     
-    private void Awake()
+    // void Awake()
+    // {
+    //     Init();
+    // }
+
+    public void Init(PlayerSkinCollection collection, int index)
     {
-        _collection = Resources.Load("PRIZES/COLLECTIONS/SkinCollection") as PlayerSkinCollection;
+        // _collection = Resources.Load("PRIZES/COLLECTIONS/SkinCollection") as PlayerSkinCollection;
+        _collection = collection;
+        Index = index;
         
         SoftCurrency.OnUpdate += Refresh;
         HardCurrency.OnUpdate += Refresh;
@@ -60,6 +97,7 @@ public class SkinButton : MonoBehaviour
         
         _skin = _collection.GetSkin(Index);
         _currency = _skin.CostType;
+        mainBg.sprite = GetMainSprite(_skin.Rarity);
         
         Transform view = Instantiate(_skin.Prefab).GetComponent<Transform>();
 
@@ -77,8 +115,10 @@ public class SkinButton : MonoBehaviour
 
         if (Index == 0)
         {
-            Buyed = true;
+            Unlock();
         }
+        
+        _skin.RelativeButton = this;
         
         OnUpdate?.Invoke();
     }
@@ -87,7 +127,7 @@ public class SkinButton : MonoBehaviour
     {
         if (TypedCurrency.Value(_currency) >= Cost)
         {
-            Buyed = true;
+            Unlock();
             PlayerIndex.SetSkin(Index);
             
             TypedCurrency.Minus(_currency, Cost);
@@ -104,7 +144,11 @@ public class SkinButton : MonoBehaviour
 
     private void Refresh()
     {
-        if (!Buyed)
+        if (_skin.IsForAchievement && !Buyed)
+        {
+            ChangeButtons(-1);
+        }
+        else if (!Buyed)
         {
             ChangeButtons(0);
         }
@@ -118,8 +162,21 @@ public class SkinButton : MonoBehaviour
         }
     }
 
+    public void Unlock()
+    {
+        Buyed = true;
+        OnUpdate?.Invoke();
+    }
+    
+    public void Lock()
+    {
+        Buyed = false;
+        OnUpdate?.Invoke();
+    }
+
     void ChangeButtons(int index)
     {
+        forAchievementButton.SetActive(index == -1);
         buyButton.SetActive(index == 0);
         equipButton.SetActive(index == 1);
         equippedButton.SetActive(index == 2);

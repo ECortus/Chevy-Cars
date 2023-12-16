@@ -14,6 +14,10 @@ public class LevelManager : Instancer<LevelManager>
     [Space] 
     public PlayerCarSpawner PlayerSpawner;
     
+    [Space]
+    [SerializeField] private GameObject regularUI;
+    [SerializeField] private GameObject endlessUI;
+    
     private int index { get { return Statistics.LevelIndex; } set { Statistics.LevelIndex = value; } }
     public int Index => index % Levels.Length;
     
@@ -34,6 +38,7 @@ public class LevelManager : Instancer<LevelManager>
     }
 
     public Level ActualLevel => Levels[Index];
+    public static bool Ended { get; set; }
 
     void Start()
     {
@@ -70,5 +75,17 @@ public class LevelManager : Instancer<LevelManager>
         {
             VARIABLE.Off();
         }
+    }
+    
+    public void SetRegularUI()
+    {
+        regularUI.SetActive(true);
+        endlessUI.SetActive(false);
+    }
+    
+    public void SetEndlessUI()
+    {
+        regularUI.SetActive(false);
+        endlessUI.SetActive(true);
     }
 }

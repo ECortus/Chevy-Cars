@@ -49,6 +49,22 @@ public abstract class BasePool<TC, T, TP> : Instancer<TC>
         return Pools[GetIndexByType(type)].List;
     }
     
+    public List<T> GetAllArray()
+    {
+        if(Pools.Length < TypeCount)
+        {
+            CreatePools();
+        }
+
+        List<T> array = new List<T>();
+        for (int i = 0; i < Pools.Length; i++)
+        {
+            array.AddRange(Pools[i].List);
+        }
+        
+        return array;
+    }
+    
     public GameObject Insert(TP type, T obj, Vector3 pos, Quaternion rot = new Quaternion())
     {
         List<T> list = GetArray(type);

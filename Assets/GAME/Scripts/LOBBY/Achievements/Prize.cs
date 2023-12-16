@@ -9,11 +9,16 @@ public class Prize : ScriptableObject
     [field: SerializeField] public Sprite Sprite { get; private set; }
     
     [SerializeField] private UnityEvent<int> Event;
-    [field: SerializeField] public int Count { get; set; }
+    [field: SerializeField] public int Number { get; set; }
 
-    public void Get(int count = -1)
+    [Space] 
+    [SerializeField] private ThrowingSpriteAnimationType AnimationType;
+    
+    public void Get(int number = -1)
     {
-        if (count > 0) Count = count;
-        Event?.Invoke(Count);
+        if (number > 0) Number = number;
+        Event?.Invoke(Number);
+
+        ThrowingSpritesController.Play(AnimationType);
     }
 }

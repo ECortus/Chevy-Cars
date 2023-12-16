@@ -10,9 +10,11 @@ public class SceneRotating : MonoBehaviour
     float angle;
     int sign = 1;
 
+    private Vector3 offset;
+
     void OnEnable()
     {
-        toRotate.eulerAngles = Vector3.zero;
+        offset = toRotate.eulerAngles;
     }
 
     void Update()
@@ -31,7 +33,7 @@ public class SceneRotating : MonoBehaviour
                 sign = 1;
             }
 
-            transform.eulerAngles = new Vector3(0f, angle, 0f);
+            toRotate.eulerAngles = Vector3.Lerp(toRotate.eulerAngles, new Vector3(0f, angle, 0f) + offset, speed * Time.deltaTime);
         }
     }
 }

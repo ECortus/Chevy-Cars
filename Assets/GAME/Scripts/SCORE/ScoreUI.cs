@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,15 +6,15 @@ using Zenject;
 
 public class ScoreUI : BarUI
 {
-    [Inject] public static ScoreUI Instance { get; set; }
-    [Inject] void Awake()
+    private void OnEnable()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(Instance.gameObject);
-        }
+        Score.OnUpdate += Refresh;
+        Refresh();
+    }
 
-        Instance = this;
+    private void OnDisable()
+    {
+        Score.OnUpdate -= Refresh;
     }
 
     protected override float Amount => Score.ValueToCurrentGoal;

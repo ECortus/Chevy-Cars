@@ -6,9 +6,6 @@ using Cysharp.Threading.Tasks;
 public class HelicopterController : CopBasic
 {
     [Space]
-    [SerializeField] private GameObject _light;
-
-    [Space]
     [SerializeField] private Transform objectToRotate;
     [SerializeField] private float angle = 30f;
 
@@ -19,6 +16,10 @@ public class HelicopterController : CopBasic
     [Space] 
     [SerializeField] private Transform screwOne;
     [SerializeField] private Transform screwTwo;
+
+    [Space]
+    [SerializeField] private GameObject undamaged;
+    [SerializeField] private GameObject damaged;
 
     public override Vector3 Center
     {
@@ -32,7 +33,7 @@ public class HelicopterController : CopBasic
 
     public override void On(Transform target, Vector3 spawn)
     {
-        FullHeal();
+        _diedTime = 0;
         
         gameObject.SetActive(true);
         SetTarget(target);
@@ -43,10 +44,12 @@ public class HelicopterController : CopBasic
             transform.rotation = Quaternion.LookRotation((target.position - transform.position).normalized);
         }
 
+        FullHeal();
         SetDefaultRagdoll();
         SetControl(false);
         
-        _light.SetActive(true);
+        undamaged.SetActive(true);
+        damaged.SetActive(false);
 
         RB.useGravity = false;
         RB.isKinematic = false;
@@ -54,11 +57,12 @@ public class HelicopterController : CopBasic
 
     public override async void Destroying()
     {
-        _light.SetActive(false);
+        undamaged.SetActive(false);
+        damaged.SetActive(true);
         
         base.Destroying();
-        await UniTask.Delay(10000);
-        Off();
+        // await UniTask.Delay(10000);
+        // Off();
     }
 
     public override void Off()
@@ -73,6 +77,8 @@ public class HelicopterController : CopBasic
         _scoreTarget = GetComponent<ScoreTarget>();
     }
 
+    private float _diedTime;
+    
     protected override void FixedUpdate()
     {
         if (!IsActive)
@@ -86,6 +92,13 @@ public class HelicopterController : CopBasic
         {
             RB.velocity = Vector3.zero;
             ResetRotateObject();
+            
+            _diedTime += Time.fixedDeltaTime;
+            if (_diedTime > 10f)
+            {
+                Off();
+            }
+            
             return;	
         }
         

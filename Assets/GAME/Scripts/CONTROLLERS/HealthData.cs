@@ -9,10 +9,32 @@ public class HealthData : MonoBehaviour
     public int MaxHP => maxHP + _bonus;
     private int _bonus;
     public void SetBonus(int bns) => _bonus = bns;
-    
-    private int HP { get; set; }
 
-    [SerializeField] private UnityEvent revive, death;
+    [SerializeField] private HealthBarUI bar;
+
+    private int _hp;
+    public int HP
+    {
+        get => _hp;
+        private set
+        {
+            _hp = value;
+
+            if (bar)
+            {
+                if (!bar.Data) bar.Data = this;
+                bar.Refresh();
+            }
+        }
+    }
+
+    [Space] 
+    [SerializeField] private bool VehicleHitImmunite = false;
+    [SerializeField] private bool AmmoHitImmunite = false;
+    
+    [Space]
+    [SerializeField] protected UnityEvent revive;
+    [SerializeField] protected UnityEvent death;
 
     public void FullHeal() => Heal(MaxHP);
     public bool Died { get; set; }
@@ -29,8 +51,11 @@ public class HealthData : MonoBehaviour
         if (HP > MaxHP) HP = MaxHP;
     }
 
-    public void GetHit(int hp)
+    public void GetHit(int hp, HitType type)
     {
+        if (type == HitType.Vehicle && VehicleHitImmunite
+            || type == HitType.Ammo && AmmoHitImmunite) return;
+        
         HP -= hp;
         if (HP < 0) HP = 0;
         
@@ -40,7 +65,21 @@ public class HealthData : MonoBehaviour
             Death();
         }
     }
-    
-    void Revive() => revive?.Invoke();
-    void Death() => death?.Invoke();
+
+    void Revive()
+    {
+        if (bar) bar.gameObject.SetActive(true);
+        revive?.Invoke();
+    }
+
+    void Death()
+    {
+        if (bar) bar.gameObject.SetActive(false);
+        death?.Invoke();
+    }
+}
+
+public enum HitType
+{
+    Vehicle, Ammo, Permanent
 }

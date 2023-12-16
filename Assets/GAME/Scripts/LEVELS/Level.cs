@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -8,37 +9,47 @@ public class Level : MonoBehaviour
     public CopsRating CopsRating;
     
     public Stage[] Stages;
-    private int _stageIndex = 0;
+    private static int _stageIndex { get; set; }
 
     public int StageIndex => _stageIndex;
     public Stage CurrentStage => Stages[StageIndex];
-    
-    public bool Ended { get; set; }
+
+    public static Vector3 DefaultSpawnPosition => LevelManager.Instance.ActualLevel.defaultPlayerPosition;
 
     [Space]
-    [SerializeField] private Vector3 defaultPlayerPosition;
-    [SerializeField] private bool OnDestrictionPool = true;
+    public Vector3 defaultPlayerPosition;
+    
+    [Space]
+    [SerializeField] protected bool OnDestrictionPool = true;
+    [SerializeField] protected float DestrictionPoolDelay = 30f;
 
     public void On() => gameObject.SetActive(true);
     public void Off() => gameObject.SetActive(false);
 
-    public void StartingLevel()
+    public virtual async void StartingLevel()
     {
         gameObject.SetActive(true);
-        if(!PlayerController.Instance) LevelManager.Instance.PlayerSpawner.Spawn();
+        
+        if (!PlayerController.Instance)
+        {
+            LevelManager.Instance.PlayerSpawner.Spawn();
+            await UniTask.WaitUntil(() => PlayerController.Instance);
+        }
         
         ResetToDefault();
         CopsSpawnController.Instance.On();
         
-        if(OnDestrictionPool) DestrictionPool.Instance.On();
+        if(OnDestrictionPool) DestrictionPool.Instance.On(DestrictionPoolDelay);
         else DestrictionPool.Instance.Off();
         
-        Ended = false;
+        LevelManager.Ended = false;
+        
+        LevelManager.Instance.SetRegularUI();
     }
     
-    public void CompleteCurrentStage()
+    public virtual void CompleteCurrentStage()
     {
-        if (!Ended)
+        if (!LevelManager.Ended)
         {
             Stages[StageIndex].OnEvent();
             _stageIndex = Mathf.Clamp(_stageIndex + 1, 0, Stages.Length - 1);
@@ -54,21 +65,23 @@ public class Level : MonoBehaviour
     public void WinLevel()
     {
         WinOperator.Instance.On();
-        Ended = true;
+        LevelManager.Ended = true;
     }
     
     public void LoseLevel()
     {
         LoseOperator.Instance.On();
-        Ended = true;
+        LevelManager.Ended = true;
     }
 
-    void ResetToDefault()
+    public void ResetToDefault()
     {
+        _stageIndex = 0;
+        
         Score.Reset();
         AttentionController.Instance.UpdateAttention();
         
-        PlayerController.Instance.SpawnOnStartDot(defaultPlayerPosition);
+        PlayerController.Instance.On(defaultPlayerPosition);
         CameraController.Instance.Reset();
         
         CopsSpawnController.Instance.Off();

@@ -147,7 +147,7 @@ public class FortuneWheel : MonoBehaviour
             if (angle > LotSectorAngleStart[i] && angle <= LotSectorAngleSize[i] + LotSectorAngleStart[i])
             {
                 prize[0] = Lots[i].Prize;
-                prize[0].Count = Lots[i].Count;
+                prize[0].Number = Lots[i].Count;
                 break;
             }
         }

@@ -56,7 +56,7 @@ public class GetLootUI : MonoBehaviour
             cell.localPosition = new Vector3(cell.localPosition.x, cell.localPosition.y, 0f);
 
             cell.GetComponent<Image>().sprite = prizes[i].Sprite;
-            cell.GetComponentInChildren<TextMeshProUGUI>().text = $"x {prizes[i].Count.ToString()}";
+            cell.GetComponentInChildren<TextMeshProUGUI>().text = $"x {prizes[i].Number.ToString()}";
 
             cells[i] = cell;
         }

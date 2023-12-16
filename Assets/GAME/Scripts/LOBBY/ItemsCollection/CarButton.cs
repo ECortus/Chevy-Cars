@@ -9,20 +9,49 @@ public class CarButton : MonoBehaviour
 {
     public static Action OnUpdate { get; set; }
 
-    public int Index = 0;
+    public int Index { get; private set; }
+    
+    [Serializable]
+    public struct CarRaritySprite
+    {
+        public CarRarity Rarity;
+        public Sprite Sprite;
+    }
 
-    [Space] 
+    [SerializeField] private Image mainBg;
+    
+    [Space]
     [SerializeField] private Transform objectViewParent;
     [SerializeField] private TextMeshProUGUI hpText, spdText;
 
     [Space] 
     [SerializeField] private Transform costGrid;
     [SerializeField] private TextMeshProUGUI costTextPrefab;
-    
+
     [Space] 
+    [SerializeField] private GameObject forAchievementButton;
     [SerializeField] private GameObject buyButton;
     [SerializeField] private GameObject equipButton;
     [SerializeField] private GameObject equippedButton;
+    
+    [Space] 
+    [SerializeField] private CarRaritySprite[] RaritySprites;
+
+    private Sprite GetMainSprite(CarRarity rarity)
+    {
+        Sprite spr = null;
+
+        foreach (var VARIABLE in RaritySprites)
+        {
+            if (VARIABLE.Rarity == rarity)
+            {
+                spr = VARIABLE.Sprite;
+                break;
+            }
+        }
+        
+        return spr;
+    }
 
     private PlayerCarCollection _collection;
     private PlayerCarCollection.Car _car;
@@ -68,9 +97,16 @@ public class CarButton : MonoBehaviour
         OnUpdate -= Refresh;
     }
 
-    private void Awake()
+    // void Awake()
+    // {
+    //     Init();
+    // }
+
+    public void Init(PlayerCarCollection collection, int index)
     {
-        _collection = Resources.Load("PRIZES/COLLECTIONS/CarCollection") as PlayerCarCollection;
+        // _collection = Resources.Load("PRIZES/COLLECTIONS/CarCollection") as PlayerCarCollection;
+        _collection = collection;
+        Index = index;
         
         SoftCurrency.OnUpdate += Refresh;
         HardCurrency.OnUpdate += Refresh;
@@ -79,6 +115,7 @@ public class CarButton : MonoBehaviour
         
         _car = _collection.GetCar(Index);
         Costs = _car.Costs;
+        mainBg.sprite = GetMainSprite(_car.Rarity);
         
         Transform view = Instantiate(_car.PrefabObject).GetComponent<Transform>();
     
@@ -109,8 +146,10 @@ public class CarButton : MonoBehaviour
     
         if (Index == 0)
         {
-            Buyed = true;
+            Unlock();
         }
+
+        _car.RelativeButton = this;
         
         OnUpdate?.Invoke();
     }
@@ -119,7 +158,7 @@ public class CarButton : MonoBehaviour
     {
         if (EnoughResource)
         {
-            Buyed = true;
+            Unlock();
             PlayerIndex.SetCar(Index);
 
             foreach (var currency in Costs)
@@ -139,7 +178,11 @@ public class CarButton : MonoBehaviour
     
     private void Refresh()
     {
-        if (!Buyed)
+        if (_car.IsForAchievement && !Buyed)
+        {
+            ChangeButtons(-1);
+        }
+        else if (!Buyed)
         {
             ChangeButtons(0);
         }
@@ -152,9 +195,22 @@ public class CarButton : MonoBehaviour
             ChangeButtons(2);
         }
     }
+
+    public void Unlock()
+    {
+        Buyed = true;
+        OnUpdate?.Invoke();
+    }
+    
+    public void Lock()
+    {
+        Buyed = false;
+        OnUpdate?.Invoke();
+    }
     
     void ChangeButtons(int index)
     {
+        forAchievementButton.SetActive(index == -1);
         buyButton.SetActive(index == 0);
         equipButton.SetActive(index == 1);
         equippedButton.SetActive(index == 2);

@@ -10,10 +10,11 @@ public class CameraController : Instancer<CameraController>
     {
         Instance = this;
     }
+    
+    public static Transform DefaultTarget;
 
     [SerializeField] private Camera cam;
-    [Space]
-    public Transform defaultTarget;
+    
     [Space]
     [SerializeField] private float defaultDistanceToTarget = 9f;
     [SerializeField] private float upSpace = 2f;
@@ -24,7 +25,7 @@ public class CameraController : Instancer<CameraController>
     private Transform target;
     
     public void SetTarget(Transform trg) => target = trg;
-    public void ResetTarget() => SetTarget(defaultTarget);
+    public void ResetTarget() => SetTarget(DefaultTarget);
     public void SetDistance(float dist)
     {
         distanceToTarget = dist;
@@ -43,18 +44,14 @@ public class CameraController : Instancer<CameraController>
     private Vector3 position => target.position - 
         transform.rotation * new Vector3(0,0,1) * distanceToTarget * (cam.orthographic ? 2f : 1f) + new Vector3(0f, upSpace, 0f);
 
-    void Start()
-    {
-        Reset();
-    }
-
     void Update()
     {
-        if (target != null)
+        if (target)
         {
-            transform.position = Vector3.Lerp(
-                transform.position, position, speedMove * Time.unscaledDeltaTime
-            );
+            // transform.position = Vector3.Lerp(
+            //     transform.position, position, speedMove * Time.unscaledDeltaTime
+            // );
+            transform.position = position;
         }
     }
 }

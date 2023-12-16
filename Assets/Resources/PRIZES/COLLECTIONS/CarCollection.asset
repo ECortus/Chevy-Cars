@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: CarCollection
   m_EditorClassIdentifier: 
   Cars:
-  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+  - Prefab: {fileID: 2432745637969561364, guid: 9e512f9bec9f2ec4ba2a509b272a88a7,
       type: 3}
+    Rarity: 0
     HPBonus: 1
-    SPDBonus: 0.25
+    SPDBonus: 0.15
     Costs:
     - CostType: 2
       Cost: 0
@@ -24,21 +25,45 @@ MonoBehaviour:
       Cost: 0
     - CostType: 4
       Cost: 0
-  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
-      type: 3}
+  - Prefab: {fileID: 976085730481932037, guid: b1dcdbb7ca25f524f9c563d6d23bbf4b, type: 3}
+    Rarity: 0
     HPBonus: 1
-    SPDBonus: 0.25
+    SPDBonus: 0.3
     Costs:
     - CostType: 2
-      Cost: 2
+      Cost: 5
     - CostType: 3
       Cost: 0
     - CostType: 4
       Cost: 0
-  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+  - Prefab: {fileID: 2418027832150898266, guid: 21a8cfcc03d01f84c8a8e08a5f85c3e3,
       type: 3}
+    Rarity: 0
+    HPBonus: 2
+    SPDBonus: 0.1
+    Costs:
+    - CostType: 2
+      Cost: 7
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 654539794680826935, guid: 5d452074c4e82f444b16b03e05304e01, type: 3}
+    Rarity: 0
     HPBonus: 1
-    SPDBonus: 0.25
+    SPDBonus: 0.3
+    Costs:
+    - CostType: 2
+      Cost: 7
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 9149610624471814512, guid: 4531b5af00543a045a03d9d1ad5b9191,
+      type: 3}
+    Rarity: 0
+    HPBonus: 0
+    SPDBonus: 0.45
     Costs:
     - CostType: 2
       Cost: 10
@@ -46,58 +71,243 @@ MonoBehaviour:
       Cost: 0
     - CostType: 4
       Cost: 0
-  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+  - Prefab: {fileID: 8939450942848710653, guid: d81b9dd55ada08c459e4b114466e3f81,
       type: 3}
-    HPBonus: 1
-    SPDBonus: 0.25
-    Costs:
-    - CostType: 2
-      Cost: 5
-    - CostType: 3
-      Cost: 0
-    - CostType: 4
-      Cost: 0
-  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
-      type: 3}
-    HPBonus: 1
-    SPDBonus: 0.25
-    Costs:
-    - CostType: 2
-      Cost: 5
-    - CostType: 3
-      Cost: 5
-    - CostType: 4
-      Cost: 5
-  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
-      type: 3}
-    HPBonus: 1
-    SPDBonus: 0.25
-    Costs:
-    - CostType: 2
-      Cost: 8
-    - CostType: 3
-      Cost: 1
-    - CostType: 4
-      Cost: 0
-  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
-      type: 3}
-    HPBonus: 1
-    SPDBonus: 0.25
+    Rarity: 0
+    HPBonus: 0
+    SPDBonus: 0.45
     Costs:
     - CostType: 2
       Cost: 10
     - CostType: 3
-      Cost: 5
+      Cost: 0
     - CostType: 4
       Cost: 0
-  - Prefab: {fileID: 8871610631275104943, guid: 9886b4a437f440d49a4d2e48602572d1,
+  - Prefab: {fileID: 6927688579904136091, guid: e98f332e70d7b484787f901a5602b557,
       type: 3}
-    HPBonus: 1
+    Rarity: 0
+    HPBonus: 2
     SPDBonus: 0.25
     Costs:
     - CostType: 2
-      Cost: 2
+      Cost: 12
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 6340858502197162348, guid: 4bd5b028c68743649aeaff2dfe37d295,
+      type: 3}
+    Rarity: 0
+    HPBonus: 1
+    SPDBonus: 0.55
+    Costs:
+    - CostType: 2
+      Cost: 15
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 7922940066667513878, guid: ea96dd0d697f93840ba93e2ecccc38d5,
+      type: 3}
+    Rarity: 0
+    HPBonus: 1
+    SPDBonus: 0.55
+    Costs:
+    - CostType: 2
+      Cost: 15
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 3645694918957748126, guid: 150d1de79664880479ef2e65265dd7b0,
+      type: 3}
+    Rarity: 0
+    HPBonus: 1
+    SPDBonus: 0.55
+    Costs:
+    - CostType: 2
+      Cost: 15
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 2723542658018001082, guid: 6b9fdaa6eebe33142992d3af28fe9115,
+      type: 3}
+    Rarity: 0
+    HPBonus: 1
+    SPDBonus: 0.6
+    Costs:
+    - CostType: 2
+      Cost: 17
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 5956968003577021109, guid: 7606539183b0987468dae2ad261bb332,
+      type: 3}
+    Rarity: 0
+    HPBonus: 1
+    SPDBonus: 0.6
+    Costs:
+    - CostType: 2
+      Cost: 17
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 7879924781337209332, guid: 91e9c0873932b4b4fb24dc2eb6ed1831,
+      type: 3}
+    Rarity: 0
+    HPBonus: 1
+    SPDBonus: 0.7
+    Costs:
+    - CostType: 2
+      Cost: 20
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 2090970458351177231, guid: e4b2a8b48a989b64689955c82a8d6d79,
+      type: 3}
+    Rarity: 0
+    HPBonus: 3
+    SPDBonus: 0.15
+    Costs:
+    - CostType: 2
+      Cost: 20
     - CostType: 3
       Cost: 2
     - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 7396795787385052597, guid: bddba42a7b051de46846c626c085493a,
+      type: 3}
+    Rarity: 1
+    HPBonus: 2
+    SPDBonus: 0.83
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 12
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 5526339581647536981, guid: d52f3642cec14894498b29c21311862d,
+      type: 3}
+    Rarity: 1
+    HPBonus: 2
+    SPDBonus: 0.88
+    Costs:
+    - CostType: 2
+      Cost: 5
+    - CostType: 3
+      Cost: 10
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 1521633171296793629, guid: febf69f36970a1049ac22b023588825b,
+      type: 3}
+    Rarity: 1
+    HPBonus: 2
+    SPDBonus: 0.9
+    Costs:
+    - CostType: 2
+      Cost: 5
+    - CostType: 3
+      Cost: 12
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 5674820832321552849, guid: 4c1c9f0b1f4dfa5459d3993e737765a2,
+      type: 3}
+    Rarity: 1
+    HPBonus: 2
+    SPDBonus: 1
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 15
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 5082204607110266000, guid: 6269a851460a23a4b96ed23342f4e35b,
+      type: 3}
+    Rarity: 1
+    HPBonus: 2
+    SPDBonus: 1.05
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 12
+    - CostType: 4
       Cost: 2
+  - Prefab: {fileID: 8410753796995342572, guid: dd9c8b6c723198e4697010c2ff9d1307,
+      type: 3}
+    Rarity: 2
+    HPBonus: 2
+    SPDBonus: 1.1
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 6870256459015333163, guid: 42d20ceb35a32fb4e86a97a359658b7c,
+      type: 3}
+    Rarity: 2
+    HPBonus: 2
+    SPDBonus: 1.1
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0
+  - Prefab: {fileID: 8497625976826274120, guid: 029ba70df60f0884dbf65f24e8053522,
+      type: 3}
+    Rarity: 1
+    HPBonus: 3
+    SPDBonus: 1.35
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 18
+  - Prefab: {fileID: 7504165293647875751, guid: 4974dd04ee0fe154ca55f1fb8b23825a,
+      type: 3}
+    Rarity: 1
+    HPBonus: 3
+    SPDBonus: 1.4
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 23
+  - Prefab: {fileID: 1885474799378245430, guid: e779bf9cb0c844049b5fe833964c1f4f,
+      type: 3}
+    Rarity: 1
+    HPBonus: 3
+    SPDBonus: 1.45
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 26
+  - Prefab: {fileID: 6819574704590040090, guid: daafc84b7c751324f8e28c80515dfc22,
+      type: 3}
+    Rarity: 1
+    HPBonus: 4
+    SPDBonus: 1.5
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 30

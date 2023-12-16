@@ -49,7 +49,7 @@ public class LootBox : MonoBehaviour
                 if (rarityIndex <= 0)
                 {
                     list[j] = collection.GetPuzzleByType(Rarities[i].Type).Prize;
-                    list[j].Count = Random.Range(Rarities[i].minCount, Rarities[i].maxCount + 1);
+                    list[j].Number = Random.Range(Rarities[i].minCount, Rarities[i].maxCount + 1);
                     break;
                 }
             }

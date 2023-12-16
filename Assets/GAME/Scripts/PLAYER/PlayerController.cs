@@ -19,21 +19,29 @@ public class PlayerController : CarController
 
     public void FullHeal() => _health.FullHeal();
     public void Heal(int hp) => _health.Heal(hp);
-    public void GetHit(int dmg) => _health.GetHit(dmg);
+    public void GetHit(int dmg, HitType type) => _health.GetHit(dmg, type);
 
     public void On(Vector3 spawn)
     {
-        FullHeal();
+        CameraController.DefaultTarget = Transform;
         
         gameObject.SetActive(true);
         SpawnOnStartDot(spawn);
+        
+        FullHeal();
         
         SetDefaultRagdoll();
         SetControl(false);
         
         carController.enabled = true;
     }
-    
+
+    public override void Destroying()
+    {
+        base.Destroying();
+        GetArrested();
+    }
+
     public void Off()
     {
         gameObject.SetActive(false);

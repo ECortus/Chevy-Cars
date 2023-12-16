@@ -71,6 +71,7 @@ public class CopsSpawnController : Instancer<CopsSpawnController>
                     for (int j = 0; j < unit.Count; j++)
                     {
                         type = unit.CopPrefab.Type;
+                        
                         cops = CopsPool.Instance.GetArray(type);
 
                         requireCount = unit.Count;

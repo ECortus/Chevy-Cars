@@ -6,20 +6,20 @@ using Cysharp.Threading.Tasks;
 
 public class RagdollController : MonoBehaviour
 {
-    [SerializeField] private GameObject objParent;
+    private GameObject objParent;
     [SerializeField] private float rbMasses = 5;
 
     [Space] 
     [SerializeField] private PhysicMaterial standardPhysicMaterial;
-
-    [Space] 
-    [SerializeField] private MeshRenderer[] meshes;
-    [SerializeField] private Material defaultMaterial;
-    [SerializeField] private Material blackMaterial;
+    
+    [Space]
+    [SerializeField] private Material[] defaultMaterial;
+    [SerializeField] private Material[] blackMaterial;
     
     [Header("DEBUG (click 'Write default'):")]
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject[] rbObjects;
+    [SerializeField] private MeshRenderer[] meshes;
     [SerializeField] private Rigidbody[] rbs;
     [SerializeField] private Collider[] cols;
     [SerializeField] private Transform[] DefaultParents;
@@ -30,8 +30,10 @@ public class RagdollController : MonoBehaviour
     [ContextMenu("Write default")]
     public void WriteDefault()
     {
+        objParent = transform.GetChild(0).gameObject;
         rb = GetComponent<Rigidbody>();
 
+        meshes = objParent.GetComponentsInChildren<MeshRenderer>();
         cols = objParent.GetComponentsInChildren<Collider>();
         rbObjects = new GameObject[cols.Length];
         
@@ -90,11 +92,11 @@ public class RagdollController : MonoBehaviour
     void SetDefaultMaterials() => SetMaterials(defaultMaterial);
     void SetBlackMaterials() => SetMaterials(blackMaterial);
 
-    void SetMaterials(Material mat)
+    void SetMaterials(Material[] mat)
     {
         foreach (var VARIABLE in meshes)
         {
-            VARIABLE.materials = new Material[] { mat };
+            VARIABLE.materials = mat;
         }
     }
 
@@ -186,5 +188,6 @@ public class RagdollController : MonoBehaviour
         rbc.transform.SetParent(null);
         
         rbc.AddForce(dir * force, ForceMode.Force);
+        rbc.angularVelocity = dir * Random.Range(5f, 15f);
     }
 }

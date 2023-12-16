@@ -15,13 +15,17 @@ public class DestrictionPool : MonoBehaviour
 
         Instance = this;
     }
-    
-    [SerializeField] private float delayToSpawn = 30f;
+
+    private float _delayToSpawn;
 
     private bool _isOn = false;
     public bool IsOn => _isOn;
 
-    public void On() => _isOn = true;
+    public void On(float delay)
+    {
+        _isOn = true;
+        _delayToSpawn = delay;
+    }
     public void Off() => _isOn = false;
     
     public class DestrictionWaiter
@@ -49,12 +53,12 @@ public class DestrictionPool : MonoBehaviour
         {
             if (Waiters[i].Object == obj)
             {
-                Waiters[i].ResetTime(delayToSpawn);
+                Waiters[i].ResetTime(_delayToSpawn);
                 return;
             }
         }
 
-        DestrictionWaiter waiter = new DestrictionWaiter(obj, delayToSpawn);
+        DestrictionWaiter waiter = new DestrictionWaiter(obj, _delayToSpawn);
         Waiters.Add(waiter);
     }
 
@@ -64,7 +68,7 @@ public class DestrictionPool : MonoBehaviour
         {
             if (Waiters[i].Object == obj)
             {
-                Waiters[i].ResetTime(delayToSpawn);
+                Waiters[i].ResetTime(_delayToSpawn);
                 return;
             }
         }

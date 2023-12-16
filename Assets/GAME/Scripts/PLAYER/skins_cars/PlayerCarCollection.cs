@@ -9,8 +9,14 @@ public class PlayerCarCollection : ScriptableObject
     [Serializable]
     public struct Car
     {
+        public bool IsForAchievement => Rarity == CarRarity.Achieved;
+        
+        [Space]
         public PlayerController Prefab;
+        public CarRarity Rarity;
         public GameObject PrefabObject => Prefab.Transform.GetChild(0).gameObject;
+        
+        [Space]
         [Range(0, 10)]
         public int HPBonus;
         [Range(0f, 10f)]
@@ -18,6 +24,8 @@ public class PlayerCarCollection : ScriptableObject
 
         [Space] 
         public PuzzlesCost[] Costs;
+        
+        public CarButton RelativeButton { get; set; }
     }
     
     [Serializable]
@@ -27,6 +35,11 @@ public class PlayerCarCollection : ScriptableObject
         public int Cost;
     }
     
-    [field: SerializeField] private Car[] Cars;
+    public Car[] Cars;
     public Car GetCar(int index) => Cars[index % Cars.Length];
+}
+
+public enum CarRarity
+{
+    Normal, Rare, Achieved
 }

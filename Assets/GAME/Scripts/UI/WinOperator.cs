@@ -20,6 +20,8 @@ public class WinOperator : Instancer<WinOperator>
     public void ToLobby()
     {
         GameManager.Instance.SetTimeScale(1f);
+        LevelManager.Instance.ActualLevel.ResetToDefault();
+        
         GameManager.Instance.ToLobbyLoader.LoadLobby();
     }
 }

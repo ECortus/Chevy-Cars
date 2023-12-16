@@ -12,11 +12,11 @@ public class CopBasic : CarController
     public void FullHeal() => _health.FullHeal();
     public void Heal(int hp) => _health.Heal(hp);
 
-    public void GetHit(int dmg)
+    public void GetHit(int dmg, HitType type)
     {
         if (!_arrest.RequireToArrest)
         {
-            _health.GetHit(dmg);
+            _health.GetHit(dmg, type);
         }
     }
     

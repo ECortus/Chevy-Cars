@@ -809,6 +809,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objParent: {fileID: 2953080878881975948}
   rbMasses: 0.25
+  defaultMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  destroyedMask:
+    serializedVersion: 2
+    m_Bits: 2048
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 7028063278242413527}
   additionalActionOnOn:

@@ -28,6 +28,8 @@ public class LoseOperator : Instancer<LoseOperator>
     public void BackToLobby()
     {
         GameManager.Instance.SetTimeScale(1f);
+        LevelManager.Instance.ActualLevel.ResetToDefault();
+        
         GameManager.Instance.ToLobbyLoader.LoadLobby();
     }
 }

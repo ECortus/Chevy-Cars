@@ -16,7 +16,7 @@ public class DestrictionObject : MonoBehaviour
     [Header("DEBUG")]
     public bool IsDestroyed = false;
 
-    void Start()
+    protected virtual void Awake()
     {
         _cancellation = new CancellationTokenSource();
         
@@ -72,9 +72,9 @@ public class DestrictionObject : MonoBehaviour
     {
         if (IsDestroyed) return;
         
-        if (other.CompareTag("Player") || other.CompareTag("Cop"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Cop"))
         {
-            if (other.CompareTag("Player"))
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
                 score.AddPoint();
             }

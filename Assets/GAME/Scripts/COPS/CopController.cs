@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public class CopController : CopBasic
 {
     public override void On(Transform target, Vector3 spawn)
     {
-        FullHeal();
+        _diedTime = 0;
         
         gameObject.SetActive(true);
         SetTarget(target);
@@ -19,6 +20,7 @@ public class CopController : CopBasic
             transform.rotation = Quaternion.LookRotation((target.position - transform.position).normalized);
         }
 
+        FullHeal();
         SetDefaultRagdoll();
         SetControl(false);
         
@@ -28,8 +30,8 @@ public class CopController : CopBasic
     public override async void Destroying()
     {
         base.Destroying();
-        await UniTask.Delay(10000);
-        Off();
+        // await UniTask.Delay(10000);
+        // Off();
     }
 
     public override void Off()
@@ -44,6 +46,8 @@ public class CopController : CopBasic
         _scoreTarget = GetComponent<ScoreTarget>();
     }
 
+    private float _diedTime;
+
     protected override void FixedUpdate()
     {
         if (!IsActive)
@@ -52,8 +56,21 @@ public class CopController : CopBasic
             SetMotor(0);
             return;	
         }
+
+        if (Died)
+        {
+            _diedTime += Time.fixedDeltaTime;
+            SetMotor(0);
+            
+            if (_diedTime > 10f)
+            {
+                Off();
+            }
+            
+            return;
+        }
         
-        if (TakeControl || Died)
+        if (TakeControl)
         {
             SetMotor(0);
             return;	

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fbfa6fd59563c4282124177cf81ac1, type: 3}
+  m_Name: CopsRating_Boss_00
+  m_EditorClassIdentifier: 
+  Slots:
+  - GoalPercentToReachThisRating: 0
+    Units:
+    - CopPrefab: {fileID: 7039755396929659707, guid: 0087782cfe8f08840af030ee0d4e8085,
+        type: 3}
+      Count: 1
+    - CopPrefab: {fileID: 3166723721924440251, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 1
+  - GoalPercentToReachThisRating: 25
+    Units:
+    - CopPrefab: {fileID: 3166723721924440251, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 2
+  - GoalPercentToReachThisRating: 75
+    Units:
+    - CopPrefab: {fileID: 3166723721924440251, guid: 0ab4b5cd37319ca41b466ee9393ac7ce,
+        type: 3}
+      Count: 1
+    - CopPrefab: {fileID: 3166723721924440251, guid: 3807f3a7adadf7b4c8a161099ee6c555,
+        type: 3}
+      Count: 2

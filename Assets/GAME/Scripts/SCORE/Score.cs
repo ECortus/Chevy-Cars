@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public static class Score
 {
+    public static Action OnUpdate;
+    
     public static uint Value
     {
         get => (uint)PlayerPrefs.GetInt(PlayerPrefsNamesManager.ScoreKey, 0);
@@ -59,25 +62,24 @@ public static class Score
     public static void Plus(uint amount)
     {
         Value += amount;
-
+        
+        if (!LevelManager.Ended) OnUpdate?.Invoke();
+        
         if (ValueToCurrentGoal >= CurrentGoal)
         {
             LevelManager.Instance.ActualLevel.CompleteCurrentStage();
-            return;
         }
-        
-        ScoreUI.Instance.Refresh();
     }
     
     public static void Minus(uint amount)
     {
         Value -= amount;
-        ScoreUI.Instance.Refresh();
+        if (!LevelManager.Ended) OnUpdate?.Invoke();
     }
     
     public static void Reset()
     {
         Value = 0;
-        ScoreUI.Instance.Refresh();
+        if (!LevelManager.Ended) OnUpdate?.Invoke();
     }
 }

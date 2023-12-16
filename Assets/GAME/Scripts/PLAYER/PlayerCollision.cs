@@ -10,14 +10,14 @@ public class PlayerCollision : MonoBehaviour
         CopController cop;
         GameObject go = other.gameObject;
         
-        if (go.CompareTag("Cop"))
+        if (go.layer == LayerMask.NameToLayer("Cop"))
         {
             if (!go.TryGetComponent(out cop))
             {
                 cop = go.GetComponentInParent<CopController>();
             }
             
-            if(cop) cop.GetHit(1);
+            if(cop) cop.GetHit(1, HitType.Vehicle);
         }
     }
 }

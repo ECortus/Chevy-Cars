@@ -9,7 +9,13 @@ public class PlayerSkinCollection : ScriptableObject
     [Serializable]
     public struct Skin
     {
+        public bool IsForAchievement => Rarity == SkinRarity.Achieved;
+        
+        [Space]
         public GameObject Prefab;
+        public SkinRarity Rarity;
+        
+        [Space]
         [Range(0, 10)]
         public int HPBonus;
         [Range(0f, 10f)]
@@ -18,8 +24,15 @@ public class PlayerSkinCollection : ScriptableObject
         [Space] 
         public TypedCurrency.Currency CostType;
         public int Cost;
+        
+        public SkinButton RelativeButton { get; set; }
     }
     
-    [field: SerializeField] private Skin[] Skins;
+    public Skin[] Skins;
     public Skin GetSkin(int index) => Skins[index % Skins.Length];
+}
+
+public enum SkinRarity
+{
+    Normal, Rare, Achieved
 }

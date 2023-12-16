@@ -10,6 +10,10 @@ public class DestrictionRagdollController : MonoBehaviour
     [SerializeField] private float rbMasses = 1;
 
     [Space] 
+    [SerializeField] private LayerMask defaultMask;
+    [SerializeField] private LayerMask destroyedMask;
+
+    [Space] 
     [SerializeField] private GameObject additionalObjectToOn;
     [SerializeField] private GameObject additionalObjectToOff;
     
@@ -43,6 +47,7 @@ public class DestrictionRagdollController : MonoBehaviour
         for(int i = 0; i < rbs.Length; i++)
         {
             SetRb(rbs[i], false);
+            rbs[i].gameObject.layer = LayerMask.NameToLayer("ScoreObject");
             
             DefaultPoses[i] = rbs[i].transform.localPosition;
             DefaultRotation[i] = rbs[i].transform.localRotation;
@@ -59,6 +64,7 @@ public class DestrictionRagdollController : MonoBehaviour
         for(int i = 0; i < rbs.Length; i++)
         {
             SetRb(rbs[i], false);
+            rbs[i].gameObject.layer = LayerMask.NameToLayer("ScoreObject");
             
             rbs[i].transform.localPosition = DefaultPoses[i];
             rbs[i].transform.localRotation = DefaultRotation[i];
@@ -152,6 +158,9 @@ public class DestrictionRagdollController : MonoBehaviour
     void ForceRb(Rigidbody rbc, Vector3 dir, float force)
     {
         SetRb(rbc, true);
+        rbc.gameObject.layer = LayerMask.NameToLayer("DestroyedDestrictable");
+        
         rbc.AddForce(dir * force, ForceMode.Force);
+        rbc.angularVelocity = dir * Random.Range(5f, 15f);
     }
 }

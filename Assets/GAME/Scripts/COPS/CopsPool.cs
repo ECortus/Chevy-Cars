@@ -45,7 +45,7 @@ public class CopsPool : BasePool<CopsPool, CopBasic, CopType>
             for (int j = 0; j < cops.Count; j++)
             {
                 cop = cops[j];
-                cop.GetHit(999);
+                cop.GetHit(999, HitType.Permanent);
             }
         }
     }
@@ -66,7 +66,7 @@ public class CopsPool : BasePool<CopsPool, CopBasic, CopType>
                 cop = cops[j];
                 if ((target.position - cop.transform.position).magnitude <= distance)
                 {
-                    cop.GetHit(damage);
+                    cop.GetHit(damage, HitType.Permanent);
                 }
             }
         }

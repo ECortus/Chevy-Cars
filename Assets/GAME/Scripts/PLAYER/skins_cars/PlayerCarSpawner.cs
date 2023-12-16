@@ -25,9 +25,6 @@ public class PlayerCarSpawner : MonoBehaviour
             }
             
             player.SetBonus(hp, spd);
-
-            CameraController.Instance.defaultTarget = player.Transform;
-            CameraController.Instance.Reset();
         }
     }
 }

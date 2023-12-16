@@ -19,8 +19,13 @@ public class AttentionController : Instancer<AttentionController>
     
     private CopsSlot[] Cops => LevelManager.Instance.ActualLevel.CopsRating.GetSlots();
 
+    [SerializeField] private bool OnTestToggle = true;
+
     public void UpdateAttention()
     {
+        if (!OnTestToggle) return;
+        if (LevelManager.Ended) return;
+        
         int attention = 0;
         for (int i = 0; i < Cops.Length; i++)
         {
