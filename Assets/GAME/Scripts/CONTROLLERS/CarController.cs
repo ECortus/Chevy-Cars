@@ -59,8 +59,31 @@ public abstract class CarController : MonoBehaviour
 		RB.position = spawn;
 		transform.position = spawn;
 		
-		// RB.rotation = Quaternion.Euler(Vector3.zero);
-		// transform.rotation = Quaternion.Euler(Vector3.zero);
+		RB.rotation = Quaternion.Euler(Vector3.zero);
+		transform.rotation = Quaternion.Euler(Vector3.zero);
+        
+		ClearTrials();
+		SetControl(false);
+	}
+	
+	public void SpawnOnStartDotWithoutRotation(Vector3 spawn)
+	{
+		if (trails == null)
+		{
+			trails = GetComponentsInChildren<TrailRenderer>(true);
+			foreach (var VARIABLE in trails)
+			{
+				VARIABLE.transform.localEulerAngles = new Vector3(0, 0, 0);
+				VARIABLE.alignment = LineAlignment.View;
+				VARIABLE.textureMode = LineTextureMode.Stretch;
+				VARIABLE.materials = new Material[] { trailMat };
+			}
+		}
+		
+		Stop();
+
+		RB.position = spawn;
+		transform.position = spawn;
         
 		ClearTrials();
 		SetControl(false);

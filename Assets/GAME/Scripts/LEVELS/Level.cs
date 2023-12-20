@@ -18,16 +18,23 @@ public class Level : MonoBehaviour
 
     [Space]
     public Vector3 defaultPlayerPosition;
+
+    private GameObject joystick => GameManager.Instance.Joystick.gameObject;
     
     [Space]
     [SerializeField] protected bool OnDestrictionPool = true;
     [SerializeField] protected float DestrictionPoolDelay = 30f;
+
+    [Space]
+    [SerializeField] private int coinReward;
 
     public void On() => gameObject.SetActive(true);
     public void Off() => gameObject.SetActive(false);
 
     public virtual async void StartingLevel()
     {
+        Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
+        
         gameObject.SetActive(true);
         
         if (!PlayerController.Instance)
@@ -45,6 +52,16 @@ public class Level : MonoBehaviour
         LevelManager.Ended = false;
         
         LevelManager.Instance.SetRegularUI();
+        
+        joystick.SetActive(true);
+
+        GameManager.GameStarted = true;
+        
+        if (!Tutorial.Completed)
+        {
+            Tutorial.Instance.On();
+            await UniTask.WaitUntil(() => Tutorial.Completed);
+        }
     }
     
     public virtual void CompleteCurrentStage()
@@ -58,20 +75,34 @@ public class Level : MonoBehaviour
 
     public void RestartLevel()
     {
+        LevelManager.Ended = false;
+        GameManager.GameStarted = true;
+        
         ResetToDefault();
         StartingLevel();
     }
 
     public void WinLevel()
     {
-        WinOperator.Instance.On();
+        joystick.SetActive(false);
+        Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
+        
+        SoftCurrency.Plus(coinReward);
+        WinOperator.Instance.On(coinReward);
         LevelManager.Ended = true;
+        
+        GameManager.GameStarted = false;
     }
     
     public void LoseLevel()
     {
+        joystick.SetActive(false);
+        Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
+        
         LoseOperator.Instance.On();
         LevelManager.Ended = true;
+        
+        GameManager.GameStarted = false;
     }
 
     public void ResetToDefault()

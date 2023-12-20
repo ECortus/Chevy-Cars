@@ -17,6 +17,10 @@ public class LevelManager : Instancer<LevelManager>
     [Space]
     [SerializeField] private GameObject regularUI;
     [SerializeField] private GameObject endlessUI;
+
+    [Space] 
+    [SerializeField] private int vibrationMillisecondsTime = 100;
+    public static int VibrationMillisecondsTimeOnStartOnEnd => Instance.vibrationMillisecondsTime;
     
     private int index { get { return Statistics.LevelIndex; } set { Statistics.LevelIndex = value; } }
     public int Index => index % Levels.Length;

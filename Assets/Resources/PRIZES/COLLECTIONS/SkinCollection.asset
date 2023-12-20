@@ -13,51 +13,58 @@ MonoBehaviour:
   m_Name: SkinCollection
   m_EditorClassIdentifier: 
   Skins:
-  - Prefab: {fileID: 1487946100914390354, guid: 522b48afe110447e8b6c11906f9c1c7d,
-      type: 3}
+  - Prefab: {fileID: 102724829946290474, guid: ee10069940dadf94f8fb202fc69594a8, type: 3}
+    Rarity: 0
     HPBonus: 0
     SPDBonus: 0.1
     CostType: 0
-    Cost: 10
-  - Prefab: {fileID: 1487946100914390354, guid: 522b48afe110447e8b6c11906f9c1c7d,
+    Cost: 0
+  - Prefab: {fileID: 2754465248013530629, guid: 76b9df9d21554cb41ac7891c953f9621,
       type: 3}
+    Rarity: 0
     HPBonus: 0
-    SPDBonus: 0.1
+    SPDBonus: 0.25
     CostType: 0
-    Cost: 10
-  - Prefab: {fileID: 1487946100914390354, guid: 522b48afe110447e8b6c11906f9c1c7d,
+    Cost: 50
+  - Prefab: {fileID: 5129989326412969569, guid: 0dab748f8b44a604fa2d18fd71cf8150,
       type: 3}
+    Rarity: 0
     HPBonus: 0
-    SPDBonus: 0.1
+    SPDBonus: 0.3
     CostType: 0
-    Cost: 10
-  - Prefab: {fileID: 1487946100914390354, guid: 522b48afe110447e8b6c11906f9c1c7d,
+    Cost: 100
+  - Prefab: {fileID: 8422169537628703747, guid: 1162cc092e2bfdd41b1aa79555861cfa,
       type: 3}
-    HPBonus: 0
-    SPDBonus: 0.1
+    Rarity: 0
+    HPBonus: 1
+    SPDBonus: 0.35
     CostType: 0
-    Cost: 10
-  - Prefab: {fileID: 1487946100914390354, guid: 522b48afe110447e8b6c11906f9c1c7d,
+    Cost: 125
+  - Prefab: {fileID: 1767416291799421017, guid: 87d98bc7816fbee4e961ceac89e88f00,
       type: 3}
-    HPBonus: 0
-    SPDBonus: 0.1
+    Rarity: 1
+    HPBonus: 3
+    SPDBonus: 0.85
     CostType: 1
-    Cost: 10
-  - Prefab: {fileID: 1487946100914390354, guid: 522b48afe110447e8b6c11906f9c1c7d,
+    Cost: 50
+  - Prefab: {fileID: 2553872007575771755, guid: 8d7d98ce1ea852f46924989f0b7b5de8,
       type: 3}
-    HPBonus: 0
-    SPDBonus: 0.1
+    Rarity: 0
+    HPBonus: 1
+    SPDBonus: 0.4
     CostType: 0
-    Cost: 10
-  - Prefab: {fileID: 1487946100914390354, guid: 522b48afe110447e8b6c11906f9c1c7d,
+    Cost: 150
+  - Prefab: {fileID: 3203260528328786810, guid: 7f841f5df32dcd6428c7d5e143d6dacf,
       type: 3}
-    HPBonus: 0
-    SPDBonus: 0.1
+    Rarity: 1
+    HPBonus: 2
+    SPDBonus: 0.75
     CostType: 1
-    Cost: 10
-  - Prefab: {fileID: 1487946100914390354, guid: 522b48afe110447e8b6c11906f9c1c7d,
+    Cost: 45
+  - Prefab: {fileID: 5451745013180174403, guid: d52322193a07ef44e949a21e5c1cdc5a,
       type: 3}
-    HPBonus: 0
-    SPDBonus: 0.1
+    Rarity: 1
+    HPBonus: 6
+    SPDBonus: 0.25
     CostType: 1
-    Cost: 10
+    Cost: 75

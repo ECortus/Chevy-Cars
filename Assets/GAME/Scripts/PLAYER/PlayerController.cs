@@ -35,6 +35,21 @@ public class PlayerController : CarController
         
         carController.enabled = true;
     }
+    
+    public void OnWithoutRotation(Vector3 spawn)
+    {
+        CameraController.DefaultTarget = Transform;
+        
+        gameObject.SetActive(true);
+        SpawnOnStartDotWithoutRotation(spawn);
+        
+        FullHeal();
+        
+        SetDefaultRagdoll();
+        SetControl(false);
+        
+        carController.enabled = true;
+    }
 
     public override void Destroying()
     {

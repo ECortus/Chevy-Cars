@@ -6,10 +6,10 @@ using UnityEngine.Serialization;
 
 public class DestrictionChel : DestrictionObject
 {
-    private readonly int _speed = Animator.StringToHash("Speed");
+    // private readonly int _speed = Animator.StringToHash("Speed");
     
     [Space] 
-    [SerializeField] private Animator animator;
+    // [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody body;
     [SerializeField] private SphereCollider sphere;
 
@@ -59,14 +59,14 @@ public class DestrictionChel : DestrictionObject
         body.position = dot.position;
 
         sphere.enabled = true;
-        animator.enabled = true;
+        // animator.enabled = true;
         body.isKinematic = false;
     }
 
     public override void Destroy()
     {
         sphere.enabled = false;
-        animator.enabled = false;
+        // animator.enabled = false;
         body.isKinematic = true;
         
         base.Destroy();
@@ -95,6 +95,6 @@ public class DestrictionChel : DestrictionObject
         body.rotation = Quaternion.Slerp(body.rotation, rotation, rotateSpeed * Time.fixedDeltaTime);
         body.velocity = body.transform.forward * moveSpeed;
         
-        animator.SetFloat(_speed, body.velocity.magnitude);
+        // animator.SetFloat(_speed, body.velocity.magnitude);
     }
 }

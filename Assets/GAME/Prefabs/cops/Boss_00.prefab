@@ -659,6 +659,7 @@ MonoBehaviour:
   muzzle: {fileID: 3497926977288357999}
   coolDown: 2
   shootDistance: 20
+  offsetForward: 3
   ammo: {fileID: 7710656429067675344, guid: 07957dd29cbd46242bf69d4dd61f4b28, type: 3}
 --- !u!1 &4213016243184347075
 GameObject:
@@ -1447,9 +1448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2822560330766964caa6dd864d4427be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 4
-  speed: 3
-  arrestTime: 8
+  distance: 8
+  speed: 7
+  arrestTime: 5
 --- !u!1 &7154840298362547402
 GameObject:
   m_ObjectHideFlags: 0

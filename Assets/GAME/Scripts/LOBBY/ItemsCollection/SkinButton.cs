@@ -107,6 +107,8 @@ public class SkinButton : MonoBehaviour
         view.transform.localEulerAngles = Vector3.zero;
         view.transform.localScale = Vector3.one;
         
+        view.transform.GetComponent<Animator>().SetBool("OnScene", false);
+        
         hpText.text = $"HP: +{_skin.HPBonus.ToString()}";
         spdText.text = $"SPD: +{((int)(_skin.SPDBonus * 100f)).ToString()}%";
 

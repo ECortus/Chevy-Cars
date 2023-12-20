@@ -70,7 +70,7 @@ public class DestrictionObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (IsDestroyed) return;
+        if (IsDestroyed || !GameManager.GameStarted) return;
         
         if (other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Cop"))
         {

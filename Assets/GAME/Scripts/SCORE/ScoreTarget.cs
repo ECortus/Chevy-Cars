@@ -13,5 +13,10 @@ public class ScoreTarget : MonoBehaviour
         
         Score.Plus(toAdd);
         AttentionController.Instance.UpdateAttention();
+
+        if (toAdd > 0)
+        {
+            ScoreAnimPool.Instance.Insert(transform.position, (int)toAdd);
+        }
     }
 }
