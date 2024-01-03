@@ -7,6 +7,8 @@ public class EndlessLevel : Level
 {
     public override async void StartingLevel()
     {
+        Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
+        
         gameObject.SetActive(true);
         
         if (!PlayerController.Instance)
@@ -24,6 +26,10 @@ public class EndlessLevel : Level
         LevelManager.Ended = false;
         
         LevelManager.Instance.SetEndlessUI();
+        
+        Joystick.SetActive(true);
+
+        GameManager.GameStarted = true;
     }
 
     public override void CompleteCurrentStage() { }

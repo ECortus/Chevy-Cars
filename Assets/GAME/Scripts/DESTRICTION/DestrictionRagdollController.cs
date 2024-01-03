@@ -10,8 +10,8 @@ public class DestrictionRagdollController : MonoBehaviour
     [SerializeField] private float rbMasses = 1;
 
     [Space] 
-    [SerializeField] private LayerMask defaultMask;
-    [SerializeField] private LayerMask destroyedMask;
+    [SerializeField] private string defaultMask;
+    [SerializeField] private string destroyedMask;
 
     [Space] 
     [SerializeField] private GameObject additionalObjectToOn;
@@ -147,6 +147,9 @@ public class DestrictionRagdollController : MonoBehaviour
         rbc.mass = rbMasses;
         rbc.useGravity = state;
         rbc.constraints = RigidbodyConstraints.None;
+        
+        rbc.gameObject.layer = state ? LayerMask.NameToLayer(destroyedMask) 
+            : LayerMask.NameToLayer(defaultMask);
     }
 
     void AdditionalObjectsState(bool state)
@@ -158,7 +161,6 @@ public class DestrictionRagdollController : MonoBehaviour
     void ForceRb(Rigidbody rbc, Vector3 dir, float force)
     {
         SetRb(rbc, true);
-        rbc.gameObject.layer = LayerMask.NameToLayer("DestroyedDestrictable");
         
         rbc.AddForce(dir * force, ForceMode.Force);
         rbc.angularVelocity = dir * Random.Range(5f, 15f);

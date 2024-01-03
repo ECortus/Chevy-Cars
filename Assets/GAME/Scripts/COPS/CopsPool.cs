@@ -64,7 +64,7 @@ public class CopsPool : BasePool<CopsPool, CopBasic, CopType>
             for (int j = 0; j < cops.Count; j++)
             {
                 cop = cops[j];
-                if ((target.position - cop.transform.position).magnitude <= distance)
+                if ((target.position - cop.transform.position).magnitude <= distance && cop.Type != CopType.Boss)
                 {
                     cop.GetHit(damage, HitType.Permanent);
                 }

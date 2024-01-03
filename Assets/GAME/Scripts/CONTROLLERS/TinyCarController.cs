@@ -243,8 +243,14 @@ namespace DavidJalbert
             rightVelocity = Vector3.Dot(velocity, crossRight);
 
             groundRotation = Quaternion.LookRotation(crossForward, crossUp);
-            float groundXAngle = groundRotation.eulerAngles.x;
-            float groundZAngle = groundRotation.eulerAngles.z;
+
+            float groundXAngle = Mathf.Clamp(groundRotation.eulerAngles.x > 180f 
+                    ? -(360f - groundRotation.eulerAngles.x) : groundRotation.eulerAngles.x,
+                -75f, 75f);
+            float groundZAngle = Mathf.Clamp(groundRotation.eulerAngles.z > 180f 
+                    ? -(360f - groundRotation.eulerAngles.z) : groundRotation.eulerAngles.z,
+                -75f, 75f);
+            
             slopeDelta = Mathf.Clamp(groundXAngle > 180 ? groundXAngle - 360 : groundXAngle, -90, 90) / 90f;
             // ---
             

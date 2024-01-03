@@ -62,10 +62,10 @@ public class LevelManager : Instancer<LevelManager>
         ActualLevel.RestartLevel();
     }
 
-    public void Win()
+    public async void Win()
     {
+        await ActualLevel.WinLevel();
         IncreaseIndex();
-        ActualLevel.WinLevel();
     }
     
     public void Lose()

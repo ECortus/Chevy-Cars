@@ -36,6 +36,29 @@ public class FortuneWheel : MonoBehaviour
     [Space] 
     [SerializeField] private int Cost;
 
+    private void Awake()
+    {
+        SoftCurrency.OnUpdate += SetButton;
+        SetButton();
+    }
+
+    private void OnDestroy()
+    {
+        SoftCurrency.OnUpdate -= SetButton;
+    }
+
+    private void SetButton()
+    {
+        if (_coroutine != null || SoftCurrency.Value < Cost)
+        {
+            turnButton.interactable = false;
+        }
+        else
+        {
+            turnButton.interactable = true;
+        }
+    }
+
     [ContextMenu("Form wheel")]
     public void Form()
     {

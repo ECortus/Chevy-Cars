@@ -57,7 +57,7 @@ public class SlideMenuUI : MonoBehaviour
             currentPosition = Input.mousePosition;
             currentDiff = Mathf.Clamp(startPosition.x - currentPosition.x, -maxDiff, maxDiff);
 
-            if (diffPercent >= minDiffPercent)
+            if (Mathf.Abs(diffPercent) >= minDiffPercent)
             {
                 toMove.localPosition = Vector3.Lerp(
                     toMove.localPosition, 

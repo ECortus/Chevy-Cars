@@ -40,13 +40,6 @@ MonoBehaviour:
     SPDBonus: 0.35
     CostType: 0
     Cost: 125
-  - Prefab: {fileID: 1767416291799421017, guid: 87d98bc7816fbee4e961ceac89e88f00,
-      type: 3}
-    Rarity: 1
-    HPBonus: 3
-    SPDBonus: 0.85
-    CostType: 1
-    Cost: 50
   - Prefab: {fileID: 2553872007575771755, guid: 8d7d98ce1ea852f46924989f0b7b5de8,
       type: 3}
     Rarity: 0
@@ -68,3 +61,10 @@ MonoBehaviour:
     SPDBonus: 0.25
     CostType: 1
     Cost: 75
+  - Prefab: {fileID: 1767416291799421017, guid: 87d98bc7816fbee4e961ceac89e88f00,
+      type: 3}
+    Rarity: 2
+    HPBonus: 3
+    SPDBonus: 1
+    CostType: 1
+    Cost: 50

@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f55287dd41a69d4291353488508aadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyingForce: 250
+  destroyingForce: 150
   IsDestroyed: 0
 --- !u!114 &3458439899894437154
 MonoBehaviour:
@@ -404,12 +404,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objParent: {fileID: 2929766619671831839}
   rbMasses: 0.25
-  defaultMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  destroyedMask:
-    serializedVersion: 2
-    m_Bits: 2048
+  defaultMask: ScoreObject
+  destroyedMask: DestroyedDestrictable
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 6409555442094413707}
   additionalActionOnOn:

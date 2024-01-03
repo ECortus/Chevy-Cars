@@ -19,7 +19,7 @@ public class Level : MonoBehaviour
     [Space]
     public Vector3 defaultPlayerPosition;
 
-    private GameObject joystick => GameManager.Instance.Joystick.gameObject;
+    protected GameObject Joystick => GameManager.Instance.Joystick.gameObject;
     
     [Space]
     [SerializeField] protected bool OnDestrictionPool = true;
@@ -53,7 +53,7 @@ public class Level : MonoBehaviour
         
         LevelManager.Instance.SetRegularUI();
         
-        joystick.SetActive(true);
+        Joystick.SetActive(true);
 
         GameManager.GameStarted = true;
         
@@ -82,9 +82,9 @@ public class Level : MonoBehaviour
         StartingLevel();
     }
 
-    public void WinLevel()
+    public async UniTask WinLevel()
     {
-        joystick.SetActive(false);
+        Joystick.SetActive(false);
         Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
         
         SoftCurrency.Plus(coinReward);
@@ -92,11 +92,12 @@ public class Level : MonoBehaviour
         LevelManager.Ended = true;
         
         GameManager.GameStarted = false;
+        await UniTask.Delay(100);
     }
     
     public void LoseLevel()
     {
-        joystick.SetActive(false);
+        Joystick.SetActive(false);
         Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
         
         LoseOperator.Instance.On();

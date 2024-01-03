@@ -68,7 +68,9 @@ public class PreviewPlayerAssets : MonoBehaviour
         view.transform.localPosition = Vector3.zero;
         view.transform.localEulerAngles = Vector3.zero;
         view.transform.localScale = Vector3.one;
-        
-        view.transform.GetComponent<Animator>().SetBool("OnScene", true);
+
+        Animator animator = view.transform.GetComponent<Animator>();
+        animator.enabled = true;
+        animator.SetBool("OnScene", true);
     }
 }

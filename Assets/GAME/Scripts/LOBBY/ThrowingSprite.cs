@@ -15,5 +15,5 @@ public class ThrowingSprite : MonoBehaviour
 [Serializable]
 public enum ThrowingSpriteAnimationType
 {
-    Default, Soft, Hard, Car
+    Default, Soft, Hard, Car, HotDog
 }

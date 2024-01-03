@@ -1448,8 +1448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2822560330766964caa6dd864d4427be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 8
-  speed: 7
+  distance: 5
+  speed: 6.5
   arrestTime: 5
 --- !u!1 &7154840298362547402
 GameObject:
@@ -1696,7 +1696,7 @@ PrefabInstance:
     - target: {fileID: 2027304700191261882, guid: 9dd730d5242989b4eac8c4488ee2f6e5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2027304700191261882, guid: 9dd730d5242989b4eac8c4488ee2f6e5,
         type: 3}
@@ -1706,7 +1706,7 @@ PrefabInstance:
     - target: {fileID: 2027304700191261882, guid: 9dd730d5242989b4eac8c4488ee2f6e5,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2027304700191261882, guid: 9dd730d5242989b4eac8c4488ee2f6e5,
         type: 3}
@@ -1761,7 +1761,7 @@ PrefabInstance:
     - target: {fileID: 2027304700191261882, guid: 9dd730d5242989b4eac8c4488ee2f6e5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 670
+      value: -380
       objectReference: {fileID: 0}
     - target: {fileID: 2027304700191261882, guid: 9dd730d5242989b4eac8c4488ee2f6e5,
         type: 3}
