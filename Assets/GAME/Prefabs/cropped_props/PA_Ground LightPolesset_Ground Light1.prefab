@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toAdd: 5
-  achievement: {fileID: 11400000, guid: c87fa9d8bae3d94438b8f750113e388c, type: 2}
+  achievement: {fileID: 11400000, guid: 195c896b8e8bfab459fb6fa800b6c9b8, type: 2}
 --- !u!65 &6093974917409371631
 BoxCollider:
   m_ObjectHideFlags: 0
