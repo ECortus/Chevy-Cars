@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class VibrationSetting : MonoBehaviour
 {
     private PlayerSettings _settings;
 
-    private Toggle toggle;
+    [SerializeField] private Toggle toggle;
     private GameObject offPart;
 
     private bool Mode
@@ -16,11 +17,9 @@ public class VibrationSetting : MonoBehaviour
         set => SettingsModes.Vibration = value;
     }
 
-    void Start()
+    private void Awake()
     {
         _settings = Resources.Load<PlayerSettings>("SETTINGS/PlayerSettings");
-
-        toggle = GetComponent<Toggle>();
         
         offPart = toggle.targetGraphic.gameObject;
         SetVibration(Mode);

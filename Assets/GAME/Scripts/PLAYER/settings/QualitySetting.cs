@@ -6,7 +6,7 @@ using Zenject;
 
 public class QualitySetting : MonoBehaviour
 {
-    private TMP_Dropdown Dropdown;
+    [SerializeField] private TMP_Dropdown Dropdown;
     
     private int Index
     {
@@ -18,9 +18,8 @@ public class QualitySetting : MonoBehaviour
         }
     }
     
-    [Inject] void Awake()
+    private void Awake()
     {
-        Dropdown = GetComponent<TMP_Dropdown>();
         Dropdown.value = Index;
         SetQuality(Index);
     }

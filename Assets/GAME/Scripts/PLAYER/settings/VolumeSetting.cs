@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using Zenject;
 
 public class VolumeSetting : MonoBehaviour
 {
     private PlayerSettings _settings;
     private AudioMixer Master => _settings.Mixer;
 
-    private Toggle toggle;
+    [SerializeField] private Toggle toggle;
     private GameObject offPart;
     
     private string Name = "MasterVolume";
@@ -19,11 +20,9 @@ public class VolumeSetting : MonoBehaviour
         set => SettingsModes.Volume = value;
     }
     
-    void Start()
+    private void Awake()
     {
         _settings = Resources.Load<PlayerSettings>("SETTINGS/PlayerSettings");
-        
-        toggle = GetComponent<Toggle>();
         
         offPart = toggle.targetGraphic.gameObject;
         SetVolume(Mode);
