@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance { get; private set; }
+
     private static AudioSource[] toPlay;
     
     void Awake()
     {
+        if (Instance)
+        {
+            Destroy(gameObject);
+        }
+        
+        Instance = this;
+        
         Init();
         Play(0);
     }

@@ -7912,7 +7912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52cf275f78d64a347a9d1a8ffb76db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 4
+  maxHP: 3
   bar: {fileID: 688597623717250175}
   VehicleHitImmunite: 1
   AmmoHitImmunite: 0
@@ -8054,8 +8054,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  maxAccelerationForward: 15
-  maxSpeedForward: 40
+  maxAccelerationForward: 20
+  maxSpeedForward: 45
   maxAccelerationReverse: 10
   maxSpeedReverse: 5
   brakeStrength: 8

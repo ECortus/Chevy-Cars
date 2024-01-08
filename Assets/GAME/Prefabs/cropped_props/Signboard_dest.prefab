@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 2953080878881975948}
-  rbMasses: 0.25
+  rbMasses: 1
   defaultMask: ScoreObject
   destroyedMask: DestroyedDestrictable
   additionalObjectToOn: {fileID: 0}

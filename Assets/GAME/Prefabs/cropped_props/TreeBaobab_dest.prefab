@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb010323e504d874b9edeaa57f07a224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toAdd: 30
+  toAdd: 20
   achievement: {fileID: 0}
 --- !u!114 &257748640824416228
 MonoBehaviour:

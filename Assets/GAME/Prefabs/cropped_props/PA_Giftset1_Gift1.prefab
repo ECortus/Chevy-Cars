@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb010323e504d874b9edeaa57f07a224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toAdd: 5
+  toAdd: 35
   achievement: {fileID: 11400000, guid: d58d6d4ddaa246249ba876771540f383, type: 2}
 --- !u!65 &5858693899139166170
 BoxCollider:
@@ -79,7 +79,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objParent: {fileID: 6597936686986047537}
-  rbMasses: 1
+  rbMasses: 0.5
   defaultMask: ScoreObject
   destroyedMask: DestroyedDestrictable
   additionalObjectToOn: {fileID: 0}

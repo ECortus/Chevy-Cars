@@ -22,5 +22,5 @@ MonoBehaviour:
   - <ToCompleteCount>k__BackingField: 10
     Prize: {fileID: 11400000, guid: 2b96d5ce582ee2547b9a3e7554612c3f, type: 2}
     PrizeCount: 1
-  <Sprite>k__BackingField: {fileID: 21300000, guid: f19885817bc9b3d4fbd490f085646c68,
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 783f1c5318d978b409a12e2f5accd1a9,
     type: 3}
