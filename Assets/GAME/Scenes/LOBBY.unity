@@ -772,6 +772,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8585041934824007211, guid: ba59f0edcf91bb44f8547f42da084bf6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.9000015
+      objectReference: {fileID: 0}
     - target: {fileID: 9005723585920990378, guid: ba59f0edcf91bb44f8547f42da084bf6,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3031,6 +3036,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585041934824007211, guid: ba59f0edcf91bb44f8547f42da084bf6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 9005723585920990378, guid: ba59f0edcf91bb44f8547f42da084bf6,
         type: 3}
@@ -7979,16 +7989,16 @@ RectTransform:
   m_GameObject: {fileID: 840708543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1945591205}
   m_Father: {fileID: 306786420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -108}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -60}
+  m_SizeDelta: {x: 0, y: -240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840708545
 MonoBehaviour:
@@ -13465,9 +13475,9 @@ MonoBehaviour:
   skinButton: {fileID: 1751159852}
   carMenu: {fileID: 1472147060}
   skinMenu: {fileID: 724341806}
-  chooseSpr: {fileID: 21300000, guid: ef4a2477c77fd44f7bc698b115d9b619, type: 3}
-  carSpr: {fileID: 21300000, guid: 65490cbb27e9742c3a235389d662ae8e, type: 3}
-  skinSpr: {fileID: 21300000, guid: 391a60b494538403988593ac66bfadc2, type: 3}
+  chooseSpr: {fileID: 21300000, guid: effa6f3c2b9db0340afb39ffea1be5a0, type: 3}
+  carSpr: {fileID: 21300000, guid: df098bc6975f9e74dafc7a8c0db43850, type: 3}
+  skinSpr: {fileID: 21300000, guid: 391bd461d1bf1b74aa34427e3d3da8a8, type: 3}
 --- !u!1001 &1361497606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17956,6 +17966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585041934824007211, guid: ba59f0edcf91bb44f8547f42da084bf6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 9005723585920990378, guid: ba59f0edcf91bb44f8547f42da084bf6,
         type: 3}
