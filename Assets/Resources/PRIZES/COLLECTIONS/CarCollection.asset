@@ -107,7 +107,7 @@ MonoBehaviour:
       Cost: 0
     - CostType: 4
       Cost: 0
-  - Prefab: {fileID: 7922940066667513878, guid: ea96dd0d697f93840ba93e2ecccc38d5,
+  - Prefab: {fileID: 8410753796995342572, guid: dd9c8b6c723198e4697010c2ff9d1307,
       type: 3}
     Rarity: 0
     HPBonus: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
       Cost: 12
     - CostType: 4
       Cost: 2
-  - Prefab: {fileID: 8410753796995342572, guid: dd9c8b6c723198e4697010c2ff9d1307,
+  - Prefab: {fileID: 7922940066667513878, guid: ea96dd0d697f93840ba93e2ecccc38d5,
       type: 3}
     Rarity: 2
     HPBonus: 2

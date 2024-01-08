@@ -21,6 +21,9 @@ public class LevelManager : Instancer<LevelManager>
     [Space] 
     [SerializeField] private int vibrationMillisecondsTime = 100;
     public static int VibrationMillisecondsTimeOnStartOnEnd => Instance.vibrationMillisecondsTime;
+
+    [Space] 
+    [SerializeField] private AchievementObject achievementObject;
     
     private int index { get { return Statistics.LevelIndex; } set { Statistics.LevelIndex = value; } }
     public int Index => index % Levels.Length;
@@ -32,6 +35,11 @@ public class LevelManager : Instancer<LevelManager>
         int ind = index;
         ind++;
         SetIndex(ind);
+
+        if (achievementObject)
+        {
+            achievementObject.AddCompletedCount();
+        }
     }
 
     public void DecreaseIndex()
