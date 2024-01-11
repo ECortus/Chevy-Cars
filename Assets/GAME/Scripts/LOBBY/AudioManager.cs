@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
         Instance = this;
         
         Init();
-        Play(0);
+        // Play(0);
     }
 
     void Init()
@@ -36,11 +36,15 @@ public class AudioManager : MonoBehaviour
 
     public static void Play(int i)
     {
+        Stop();
+        toPlay[i].Play();
+    }
+    
+    public static void Stop()
+    {
         foreach (var VARIABLE in toPlay)
         {
             VARIABLE.Stop();
         }
-        
-        toPlay[i].Play();
     }
 }

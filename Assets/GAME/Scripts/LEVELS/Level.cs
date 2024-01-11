@@ -33,6 +33,7 @@ public class Level : MonoBehaviour
 
     public virtual async void StartingLevel()
     {
+        AudioManager.Play(0);
         Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
         
         gameObject.SetActive(true);

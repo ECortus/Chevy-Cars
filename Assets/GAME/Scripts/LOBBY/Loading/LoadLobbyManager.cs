@@ -9,6 +9,7 @@ public class LoadLobbyManager : MonoBehaviour, ILoading
 
     public void LoadLobby()
     {
+        AudioManager.Stop();
         loadingScreen.LoadScene(this);
     }
 
