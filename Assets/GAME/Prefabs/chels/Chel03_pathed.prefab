@@ -142,12 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objParent: {fileID: 5416179478827614476}
   rbMasses: 1
-  defaultMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  destroyedMask:
-    serializedVersion: 2
-    m_Bits: 2048
+  defaultMask: 
+  destroyedMask: 
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 0}
   additionalActionOnOn:
@@ -287,8 +283,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1328754822599550405}
   - {fileID: 5471367305530057744}
