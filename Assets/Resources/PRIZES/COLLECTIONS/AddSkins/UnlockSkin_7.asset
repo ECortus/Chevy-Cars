@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670785be38832424fa835a88cbd073c5, type: 3}
   m_Name: UnlockSkin_7
   m_EditorClassIdentifier: 
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 09ff672e0f03c4ca0947abf603e43c87,
+  <Sprite>k__BackingField: {fileID: 21300000, guid: fe72cba2b61bcfd4ebab4105864d5ef3,
     type: 3}
   Event:
     m_PersistentCalls:

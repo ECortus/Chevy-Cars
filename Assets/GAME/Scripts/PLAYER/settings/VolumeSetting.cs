@@ -37,11 +37,11 @@ public class VolumeSetting : MonoBehaviour
         
         if (!Mode)
         {
-            offPart.SetActive(true);
+            //offPart.SetActive(true);
         }
         else
         {
-            offPart.SetActive(false);
+            //offPart.SetActive(false);
         }
     }
 }

@@ -32,12 +32,12 @@ public class VibrationSetting : MonoBehaviour
         
         if (!Mode)
         {
-            offPart.SetActive(true);
+            //offPart.SetActive(true);
             Vibration.Cancel();
         }
         else
         {
-            offPart.SetActive(false);
+            //offPart.SetActive(false);
         }
     }
 }

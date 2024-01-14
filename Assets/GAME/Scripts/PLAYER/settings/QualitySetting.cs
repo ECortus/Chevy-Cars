@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 public class QualitySetting : MonoBehaviour
 {
-    [SerializeField] private TMP_Dropdown Dropdown;
+    // [SerializeField] private TMP_Dropdown Dropdown;
+
+    [SerializeField] private Toggle low, middle, high;
     
     private int Index
     {
@@ -20,8 +23,13 @@ public class QualitySetting : MonoBehaviour
     
     private void Awake()
     {
-        Dropdown.value = Index;
+        // Dropdown.value = Index;
+
         SetQuality(Index);
+        
+        low.isOn = Index == 0;
+        middle.isOn = Index == 1;
+        high.isOn = Index == 2;
     }
     
     public void SetQuality(int index)

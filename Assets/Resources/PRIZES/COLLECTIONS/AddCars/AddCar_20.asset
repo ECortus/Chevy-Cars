@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670785be38832424fa835a88cbd073c5, type: 3}
   m_Name: AddCar_20
   m_EditorClassIdentifier: 
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 2b08ae32eef9b8c44a5ca911698b0ee1,
+  <Sprite>k__BackingField: {fileID: 21300000, guid: f79f87d4ecbd53b45ae738e9ed8b1e74,
     type: 3}
   Event:
     m_PersistentCalls:

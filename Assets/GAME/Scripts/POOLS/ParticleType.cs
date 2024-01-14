@@ -5,5 +5,5 @@ using UnityEngine;
 [System.Serializable]
 public enum ParticleType
 {
-    Nothing, BlowUpCar, AmmoHit, AmmoBoom
+    Nothing = 0, BlowUpCar = 1, AmmoHit = 2, AmmoBoom = 4
 }

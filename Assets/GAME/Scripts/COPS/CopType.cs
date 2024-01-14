@@ -5,5 +5,5 @@ using UnityEngine;
 [System.Serializable]
 public enum CopType
 {
-    Nothing, StandartVehicle, SpecialVehicle, Helicopter, Tank, Boss
+    Nothing = 0, StandartVehicle = 1, SpecialVehicle = 2, Helicopter = 4, Tank = 8, Boss = 16
 }
