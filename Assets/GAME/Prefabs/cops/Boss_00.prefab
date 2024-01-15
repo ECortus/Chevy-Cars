@@ -1159,7 +1159,7 @@ MonoBehaviour:
   ragdoll: {fileID: 7031964296650703159}
   destroyingEffect: {fileID: 4326550291119950910, guid: 6c7fafe3d7a26fe41a1ecc4b9aad8881,
     type: 3}
-  Type: 5
+  Type: 16
   _scoreTarget: {fileID: 3135654396614327786}
   _arrest: {fileID: 8427717013383362960}
 --- !u!114 &-1939311021140421757
@@ -1403,6 +1403,14 @@ MonoBehaviour:
     m_RotationOrder: 4
   forwardFriction: 8
   lateralFriction: 18
+  Wheels:
+  - {fileID: 2181285730259198436}
+  - {fileID: 2130548614508498804}
+  - {fileID: 8513060823200121151}
+  - {fileID: 5871390642461206171}
+  - {fileID: 3454283555632515971}
+  - {fileID: 6547746948772700687}
+  wheelsRotateSpeed: 60
   SpeedBonus: 0
 --- !u!114 &6709008396703489274
 MonoBehaviour:
@@ -1436,7 +1444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toAdd: 40
-  achievement: {fileID: 11400000, guid: b8dd8878ebc38f942b9b0308387eae90, type: 2}
+  achievement: {fileID: 11400000, guid: 4aea55b50a75cb741b33aa3d184f241d, type: 2}
 --- !u!114 &8427717013383362960
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -536,6 +536,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   forwardFriction: 8
   lateralFriction: 18
+  Wheels: []
+  wheelsRotateSpeed: 1
   SpeedBonus: 0
 --- !u!114 &2821046933848264015
 MonoBehaviour:

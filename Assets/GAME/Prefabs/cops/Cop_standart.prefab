@@ -494,6 +494,12 @@ MonoBehaviour:
     m_RotationOrder: 4
   forwardFriction: 8
   lateralFriction: 18
+  Wheels:
+  - {fileID: 8868116418226013042}
+  - {fileID: 5419503156833813893}
+  - {fileID: 3928675297202781723}
+  - {fileID: 2237768261623867625}
+  wheelsRotateSpeed: 60
   SpeedBonus: 0
 --- !u!114 &5530421842339099359
 MonoBehaviour:
@@ -1090,6 +1096,12 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8086809397760034199, guid: ae67cfe224d169d4eb102cda4b030cf3, type: 3}
+--- !u!4 &2237768261623867625 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -324938149649591883, guid: ae67cfe224d169d4eb102cda4b030cf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7238322650950547804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &2414163321139433201 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5040483073055602605, guid: ae67cfe224d169d4eb102cda4b030cf3,
@@ -1105,6 +1117,12 @@ MeshRenderer:
 --- !u!23 &3847895910641343082 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -3380575044938325194, guid: ae67cfe224d169d4eb102cda4b030cf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7238322650950547804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3928675297202781723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3245189568780204217, guid: ae67cfe224d169d4eb102cda4b030cf3,
     type: 3}
   m_PrefabInstance: {fileID: 7238322650950547804}
   m_PrefabAsset: {fileID: 0}
@@ -1136,6 +1154,12 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2595675788235273022, guid: ae67cfe224d169d4eb102cda4b030cf3, type: 3}
+--- !u!4 &5419503156833813893 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5816889912940413735, guid: ae67cfe224d169d4eb102cda4b030cf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7238322650950547804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5673722582689183333 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3084592705848659769, guid: ae67cfe224d169d4eb102cda4b030cf3,
@@ -1334,6 +1358,12 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7088890269622845387, guid: ae67cfe224d169d4eb102cda4b030cf3, type: 3}
+--- !u!4 &8868116418226013042 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2261459007979518510, guid: ae67cfe224d169d4eb102cda4b030cf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7238322650950547804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9020370676979914203 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7395619431756403577, guid: ae67cfe224d169d4eb102cda4b030cf3,

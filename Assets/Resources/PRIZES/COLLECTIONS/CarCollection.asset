@@ -311,3 +311,15 @@ MonoBehaviour:
       Cost: 0
     - CostType: 4
       Cost: 30
+  - Prefab: {fileID: 4651703672892556385, guid: 81156b816b3c0ac47b22b8eea6a1b77b,
+      type: 3}
+    Rarity: 2
+    HPBonus: 7
+    SPDBonus: 2
+    Costs:
+    - CostType: 2
+      Cost: 0
+    - CostType: 3
+      Cost: 0
+    - CostType: 4
+      Cost: 0

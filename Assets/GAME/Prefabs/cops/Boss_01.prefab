@@ -5150,7 +5150,7 @@ Transform:
   m_GameObject: {fileID: 4489197135858824693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: -0.25}
+  m_LocalPosition: {x: 0, y: 2.75, z: -5.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7298,7 +7298,7 @@ MonoBehaviour:
   ragdoll: {fileID: 7031964296650703159}
   destroyingEffect: {fileID: 4326550291119950910, guid: 6c7fafe3d7a26fe41a1ecc4b9aad8881,
     type: 3}
-  Type: 5
+  Type: 16
   _scoreTarget: {fileID: 3135654396614327786}
   _arrest: {fileID: 8427717013383362960}
 --- !u!114 &-1939311021140421757
@@ -7492,6 +7492,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   forwardFriction: 8
   lateralFriction: 18
+  Wheels: []
+  wheelsRotateSpeed: 60
   SpeedBonus: 0
 --- !u!114 &6709008396703489274
 MonoBehaviour:
@@ -7525,7 +7527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toAdd: 40
-  achievement: {fileID: 11400000, guid: b8dd8878ebc38f942b9b0308387eae90, type: 2}
+  achievement: {fileID: 11400000, guid: 4aea55b50a75cb741b33aa3d184f241d, type: 2}
 --- !u!114 &8427717013383362960
 MonoBehaviour:
   m_ObjectHideFlags: 0

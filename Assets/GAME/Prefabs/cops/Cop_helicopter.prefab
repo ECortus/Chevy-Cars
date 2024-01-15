@@ -216,7 +216,7 @@ MonoBehaviour:
   ragdoll: {fileID: -3951507876404379714}
   destroyingEffect: {fileID: 4326550291119950910, guid: 6c7fafe3d7a26fe41a1ecc4b9aad8881,
     type: 3}
-  Type: 3
+  Type: 4
   _scoreTarget: {fileID: 9108547428591215412}
   _arrest: {fileID: -4344981357470601841}
   objectToRotate: {fileID: 6148060852296583782}

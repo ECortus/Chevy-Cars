@@ -107,7 +107,7 @@ public class SkinButton : MonoBehaviour
         view.transform.localEulerAngles = Vector3.zero;
         view.transform.localScale = Vector3.one;
         
-        Animator animator = view.transform.GetComponent<Animator>();
+        Animator animator = view.transform.GetComponentInChildren<Animator>();
         // animator.enabled = false;
         animator.enabled = true;
         animator.SetBool("OnScene", false);

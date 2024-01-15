@@ -2184,6 +2184,12 @@ MonoBehaviour:
     m_RotationOrder: 4
   forwardFriction: 8
   lateralFriction: 18
+  Wheels:
+  - {fileID: 143807833542896810}
+  - {fileID: 8334119265709666346}
+  - {fileID: 6646249227549759304}
+  - {fileID: 3062900646939508440}
+  wheelsRotateSpeed: 1
   SpeedBonus: 0
 --- !u!114 &4233896015487555916
 MonoBehaviour:

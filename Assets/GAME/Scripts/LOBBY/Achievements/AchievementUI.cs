@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class AchievementUI : MonoBehaviour
 {
-    [SerializeField] private AchievementObject achievement;
+    public AchievementObject achievement;
 
     [Space] 
     [SerializeField] private Image spriteShow;
@@ -27,7 +27,7 @@ public class AchievementUI : MonoBehaviour
 
     private Button button;
 
-    private void OnEnable()
+    private void Awake()
     {
         // achievement.OnUpdate += Refresh;
 

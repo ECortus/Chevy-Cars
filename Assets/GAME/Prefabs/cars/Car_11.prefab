@@ -330,6 +330,12 @@ MonoBehaviour:
     m_RotationOrder: 4
   forwardFriction: 8
   lateralFriction: 18
+  Wheels:
+  - {fileID: 41102173972923342}
+  - {fileID: 4973092680484028651}
+  - {fileID: 3185883317513433092}
+  - {fileID: 1076138981038628840}
+  wheelsRotateSpeed: 1
   SpeedBonus: 0
 --- !u!114 &6362535214204397405
 MonoBehaviour:
@@ -487,7 +493,7 @@ Transform:
   m_GameObject: {fileID: 2454657215513774702}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.775, z: 0}
+  m_LocalPosition: {x: 0, y: 0.775, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -597,11 +603,11 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4980731461738705329}
   - {fileID: 41102173972923342}
   - {fileID: 4973092680484028651}
   - {fileID: 3185883317513433092}
   - {fileID: 1076138981038628840}
-  - {fileID: 4980731461738705329}
   m_Father: {fileID: 5780806417538802863}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7974195509890247092

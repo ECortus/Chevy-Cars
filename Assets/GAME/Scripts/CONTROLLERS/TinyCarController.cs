@@ -72,6 +72,10 @@ namespace DavidJalbert
         [Tooltip("How much grip the car should have on the road when turning.")]
         public float lateralFriction = 80;
 
+        [Space] 
+        [SerializeField] private Transform[] Wheels;
+        [SerializeField] private float wheelsRotateSpeed = 60f;
+
         private Rigidbody body;
         private SphereCollider sphereCollider;
         private bool onGround = false;
@@ -295,6 +299,17 @@ namespace DavidJalbert
             body.velocity = velocity;
             // ---
 
+            // if (getMotor() > 0) wheelsRotate = wheelsRotateSpeed;
+            // else wheelsRotate = Mathf.Lerp(wheelsRotate, 0, 5f * deltaTime);
+            //
+            // foreach (var VARIABLE in Wheels)
+            // {
+            //     if (VARIABLE)
+            //     {
+            //         VARIABLE.Rotate(new Vector3(velocity.magnitude * wheelsRotate * deltaTime, 0, 0), Space.Self);
+            //     }
+            // }
+
             // reset current frame vars
             hitSide = false;
             hitSideStayStatic = false;
@@ -306,6 +321,8 @@ namespace DavidJalbert
             triggersParameters = null;
             // ---
         }
+
+        private float wheelsRotate = 0;
 
         void OnDestroy()
         {

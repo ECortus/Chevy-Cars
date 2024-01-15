@@ -19,7 +19,7 @@ public class ChoiseButtons : MonoBehaviour
         {
             OpenSkins();
         }
-        else if (carMenu.activeSelf)
+        else
         {
             OpenCars();
         }
