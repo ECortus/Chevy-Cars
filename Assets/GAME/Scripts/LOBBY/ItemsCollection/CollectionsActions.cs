@@ -5,16 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Prizes/Create collections actions")]
 public class CollectionsActions : ScriptableObject
 {
-    [SerializeField] private PlayerSkinCollection _skinCollection;
-    [SerializeField] private PlayerCarCollection _carCollection;
-    
     public void UnlockSkin(int index)
     {
-        _skinCollection.Skins[index].RelativeButton.Unlock();
+        SkinsLoader.Instance.Unlock(index);
     }
 
     public void UnlockCar(int index)
     {
-        _carCollection.Cars[index].RelativeButton.Unlock();
+        CarsLoader.Instance.Unlock(index);
     }
 }

@@ -146,10 +146,8 @@ public class CarButton : MonoBehaviour
     
         if (Index == 0)
         {
-            Unlock();
+            Buyed = true;
         }
-
-        _car.RelativeButton = this;
         
         OnUpdate?.Invoke();
     }
@@ -158,13 +156,12 @@ public class CarButton : MonoBehaviour
     {
         if (EnoughResource)
         {
-            Unlock();
-            PlayerIndex.SetCar(Index);
-
             foreach (var currency in Costs)
             {
                 TypedCurrency.Minus(currency.CostType, currency.Cost);
             }
+            
+            Unlock();
         }
         
         OnUpdate?.Invoke();
@@ -199,13 +196,7 @@ public class CarButton : MonoBehaviour
     public void Unlock()
     {
         Buyed = true;
-        OnUpdate?.Invoke();
-    }
-    
-    public void Lock()
-    {
-        Buyed = false;
-        OnUpdate?.Invoke();
+        OnEquipButtonClick();
     }
     
     void ChangeButtons(int index)

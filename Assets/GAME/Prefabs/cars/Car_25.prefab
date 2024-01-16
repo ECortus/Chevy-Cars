@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3970849830360334172}
   - component: {fileID: 5405268568178116665}
   - component: {fileID: 3816340676266320573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1706668600804755403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,8 +132,8 @@ Transform:
   m_GameObject: {fileID: 495337659162407415}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.125, y: -0.45, z: -0.68999994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.124, y: -0.36, z: -1.64}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4488427014723336459}
@@ -148,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3413419364657809369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: JeepPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,8 +164,8 @@ Transform:
   m_GameObject: {fileID: 2277887383599371299}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.125, y: -0.25, z: -0.616}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_LocalPosition: {x: 0, y: -0.34, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7954116930624537006}
@@ -173,7 +173,6 @@ Transform:
   - {fileID: 3961473789147229736}
   - {fileID: 1706668600804755403}
   - {fileID: 3531871619993108767}
-  - {fileID: 1506550086822772394}
   m_Father: {fileID: 4312493238081319480}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2696032066775675664
@@ -185,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3531871619993108767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,8 +200,8 @@ Transform:
   m_GameObject: {fileID: 2696032066775675664}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.125, y: -0.45, z: 3.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.124, y: -0.36, z: 1.632}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7624039586659959363}
@@ -365,7 +364,7 @@ GameObject:
   - component: {fileID: 4757347550799280980}
   - component: {fileID: 4077753981346881564}
   - component: {fileID: 5368867265624155082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,38 +459,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: fc274d0ad72d1f744bc15e808b0e380c, type: 3}
---- !u!1 &3541269358999183102
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1506550086822772394}
-  m_Layer: 0
-  m_Name: WheelPrefab (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1506550086822772394
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3541269358999183102}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.244, y: 1.54, z: -2.204}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7716685699328597476}
-  m_Father: {fileID: 3413419364657809369}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &4159668044439650520
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +471,7 @@ GameObject:
   - component: {fileID: 702762268529573679}
   - component: {fileID: 494120656430164000}
   - component: {fileID: 8524009213262183702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7954116930624537006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,11 +591,12 @@ Transform:
   m_GameObject: {fileID: 4741198067352646483}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.22399999, y: 0, z: -1.088}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6789691862908577822}
+  - {fileID: 7716685699328597476}
   m_Father: {fileID: 3413419364657809369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5149461789512253347
@@ -831,11 +799,11 @@ MonoBehaviour:
   - {fileID: 7039298238632247846}
   meshes:
   - {fileID: 5405268568178116665}
+  - {fileID: 2327573047645027478}
   - {fileID: 494120656430164000}
   - {fileID: 4485657368513398745}
   - {fileID: 4077753981346881564}
   - {fileID: 2879099159776912329}
-  - {fileID: 2327573047645027478}
   rbs:
   - {fileID: 0}
   - {fileID: 0}
@@ -1138,7 +1106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4249256100392223104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1154,8 +1122,8 @@ Transform:
   m_GameObject: {fileID: 6850045205427856009}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -1.527, y: -0.45, z: -0.69400007}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.99759996, y: -0.36, z: -1.6432002}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6142982014442380529}
@@ -1173,7 +1141,7 @@ GameObject:
   - component: {fileID: 1876008213600354956}
   - component: {fileID: 4485657368513398745}
   - component: {fileID: 1140337348050890898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1280,7 +1248,7 @@ GameObject:
   - component: {fileID: 5896429865063653334}
   - component: {fileID: 2879099159776912329}
   - component: {fileID: 8113843405873346940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7716685699328597476}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1399,13 +1367,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8085833675902795509}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.725, z: -0.05}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.29400003, y: 0.81499994, z: -2.204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 608635034109807809}
-  m_Father: {fileID: 1506550086822772394}
+  m_Father: {fileID: 7954116930624537006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8833218323753801970
 GameObject:
@@ -1418,7 +1386,7 @@ GameObject:
   - component: {fileID: 608635034109807809}
   - component: {fileID: 7535465283676785320}
   - component: {fileID: 2327573047645027478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1500,7 +1468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3961473789147229736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1516,8 +1484,8 @@ Transform:
   m_GameObject: {fileID: 9214570257748312032}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -1.527, y: -0.45, z: 3.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.99759996, y: -0.36, z: 1.7119999}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 79969812944332666}

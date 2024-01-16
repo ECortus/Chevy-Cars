@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -15,8 +16,13 @@ public class GetLootUI : MonoBehaviour
     [Space]
     [SerializeField] private GameObject cellPrefab;
 
+    [Space] 
+    [SerializeField] private bool AD = false;
+    [SerializeField] private GameObject common, forAD;
+    [SerializeField] private Transform noThanks;
+
     private Prize[] prizes;
-    
+
     public async void Show(Prize[] prs)
     {
         SlideMenuUI.Block = true;
@@ -33,6 +39,10 @@ public class GetLootUI : MonoBehaviour
         parent.gameObject.SetActive(true);
         parent.transform.localScale = Vector3.zero;
         buttonTransform.localScale = Vector3.zero;
+
+        common.SetActive(!AD);
+        forAD.SetActive(AD);
+        noThanks.localScale = Vector3.zero;
 
         foreach (Transform VARIABLE in grid)
         {
@@ -67,10 +77,36 @@ public class GetLootUI : MonoBehaviour
         }
 
         buttonTransform.DOScale(Vector3.one, 0.5f);
+        
+        if (AD)
+        {
+            await UniTask.Delay(1650);
+            await noThanks.DOScale(Vector3.one, 0.35f).AsyncWaitForCompletion();
+        }
     }
 
     public async void OnGetButtonClick()
     {
+        foreach (var VARIABLE in prizes)
+        {
+            VARIABLE.Get();
+        }
+        
+        await parent.transform.DOScale(Vector3.zero, 0.35f).AsyncWaitForCompletion();
+        
+        parent.SetActive(false);
+        SlideMenuUI.Block = false;
+    }
+    
+    public async void OnGetButtonClick_AD_X2()
+    {
+        foreach (var VARIABLE in prizes)
+        {
+            VARIABLE.Get();
+        }
+
+        await UniTask.Delay(100);
+        
         foreach (var VARIABLE in prizes)
         {
             VARIABLE.Get();

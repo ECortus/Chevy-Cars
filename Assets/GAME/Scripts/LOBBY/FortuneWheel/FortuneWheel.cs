@@ -20,7 +20,8 @@ public class FortuneWheel : MonoBehaviour
     
     [Space] 
     [SerializeField] private Transform lotsParent;
-    [SerializeField] private Button turnButton, closeButton;
+    [SerializeField] private Button settings, turnButton, turnFreeButton, turnAdButton, closeButton;
+    [SerializeField] private GameObject notAvailableButton;
     [SerializeField] private TextMeshProUGUI costText;
     
     [Space]
@@ -40,11 +41,30 @@ public class FortuneWheel : MonoBehaviour
     {
         SoftCurrency.OnUpdate += SetButton;
         SetButton();
+
+        float time = TimeInSeconds();
+        if (time - SpinningTime > 6 * 60 * 60)
+        {
+            FreeSpin = true;
+            AdSpinningCount = 5;
+
+            SpinningTime = time;
+        }
+        
+        RefreshButtons();
     }
 
     private void OnDestroy()
     {
         SoftCurrency.OnUpdate -= SetButton;
+    }
+    
+    float TimeInSeconds()
+    {
+        DateTime epochStart = new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+        float timestamp = (float)(DateTime.UtcNow - epochStart).TotalSeconds;
+
+        return timestamp;
     }
 
     private void SetButton()
@@ -118,6 +138,8 @@ public class FortuneWheel : MonoBehaviour
         }
         
         SetRandomStartAngle();
+        
+        RefreshButtons();
     }
 
     private Coroutine _coroutine;
@@ -130,6 +152,36 @@ public class FortuneWheel : MonoBehaviour
         Form();
     }
 
+    private float SpinningTime
+    {
+        get => PlayerPrefs.GetFloat("Fortune_SpinningTime", 0);
+        set
+        {
+            PlayerPrefs.SetFloat("Fortune_SpinningTime", value);
+            PlayerPrefs.Save();
+        }
+    }
+
+    private bool FreeSpin
+    {
+        get => PlayerPrefs.GetInt("Fortune_FreeSpin", 0) > 0;
+        set
+        {
+            PlayerPrefs.SetInt("Fortune_FreeSpin", value ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+    }
+
+    private int AdSpinningCount
+    {
+        get => PlayerPrefs.GetInt("Fortune_AdSpinningCount", 0);
+        set
+        {
+            PlayerPrefs.SetInt("Fortune_AdSpinningCount", value);
+            PlayerPrefs.Save();
+        }
+    }
+
     public void TRY_YOU_LUCK()
     {
         if (SoftCurrency.Value >= Cost)
@@ -138,10 +190,37 @@ public class FortuneWheel : MonoBehaviour
             _coroutine ??= StartCoroutine(Rotating());
         }
     }
+    
+    public void TRY_YOU_LUCK_FREE()
+    {
+        if (FreeSpin)
+        {
+            FreeSpin = false;
+            SpinningTime = TimeInSeconds();
+            
+            _coroutine ??= StartCoroutine(Rotating());
+        }
+    }
 
+    public void TRY_YOU_LUCK_AD()
+    {
+        if (AdSpinningCount > 0)
+        {
+            // ad and check no ads
+            
+            AdSpinningCount--;
+            SpinningTime = TimeInSeconds();
+            
+            _coroutine ??= StartCoroutine(Rotating());
+        }
+    }
+    
     IEnumerator Rotating()
     {
-        turnButton.interactable = false;
+        // turnButton.interactable = false;
+        settings.interactable = false;
+        turnFreeButton.interactable = false;
+        turnAdButton.interactable = false;
         closeButton.interactable = false;
         
         float angle = lotsParent.eulerAngles.z;
@@ -178,11 +257,16 @@ public class FortuneWheel : MonoBehaviour
         getLoot.Show(prize);
         yield return new WaitUntil(() => !getLoot.parent.gameObject.activeSelf);
         
-        turnButton.interactable = true;
+        // turnButton.interactable = true;
+        turnFreeButton.interactable = FreeSpin;
+        turnAdButton.interactable = !FreeSpin && AdSpinningCount > 0;
+        settings.interactable = true;
         closeButton.interactable = true;
 
         _coroutine = null;
         SetRandomStartAngle();
+        
+        RefreshButtons();
         
         yield return null;
     }
@@ -190,6 +274,14 @@ public class FortuneWheel : MonoBehaviour
     void SetText()
     {
         costText.text = $"{Cost.ToString()}";
+    }
+
+    void RefreshButtons()
+    {
+        turnButton.gameObject.SetActive(false);
+        turnFreeButton.gameObject.SetActive(FreeSpin);
+        turnAdButton.gameObject.SetActive(!FreeSpin && AdSpinningCount > 0);
+        notAvailableButton.gameObject.SetActive(!FreeSpin && AdSpinningCount == 0);
     }
 
     void SetRandomStartAngle()

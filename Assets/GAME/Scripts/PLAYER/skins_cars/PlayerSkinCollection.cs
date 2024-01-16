@@ -24,8 +24,6 @@ public class PlayerSkinCollection : ScriptableObject
         [Space] 
         public TypedCurrency.Currency CostType;
         public int Cost;
-        
-        public SkinButton RelativeButton { get; set; }
     }
     
     public Skin[] Skins;

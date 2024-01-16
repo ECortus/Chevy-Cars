@@ -120,10 +120,8 @@ public class SkinButton : MonoBehaviour
 
         if (Index == 0)
         {
-            Unlock();
+            Buyed = true;
         }
-        
-        _skin.RelativeButton = this;
         
         OnUpdate?.Invoke();
     }
@@ -132,10 +130,8 @@ public class SkinButton : MonoBehaviour
     {
         if (TypedCurrency.Value(_currency) >= Cost)
         {
-            Unlock();
-            PlayerIndex.SetSkin(Index);
-            
             TypedCurrency.Minus(_currency, Cost);
+            Unlock();
         }
         
         OnUpdate?.Invoke();
@@ -170,13 +166,7 @@ public class SkinButton : MonoBehaviour
     public void Unlock()
     {
         Buyed = true;
-        OnUpdate?.Invoke();
-    }
-    
-    public void Lock()
-    {
-        Buyed = false;
-        OnUpdate?.Invoke();
+        OnEquipButtonClick();
     }
 
     void ChangeButtons(int index)

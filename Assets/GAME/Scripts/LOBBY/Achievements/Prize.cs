@@ -12,7 +12,7 @@ public class Prize : ScriptableObject
     [field: SerializeField] public int Number { get; set; }
 
     [Space] 
-    [SerializeField] private ThrowingSpriteAnimationType AnimationType;
+    public ThrowingSpriteAnimationType AnimationType;
     
     public void Get(int number = -1)
     {

@@ -142,8 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objParent: {fileID: 5416179478827614476}
   rbMasses: 1
-  defaultMask: 
-  destroyedMask: 
+  defaultMask: ScoreObject
+  destroyedMask: DestroyedDestrictable
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 0}
   additionalActionOnOn:

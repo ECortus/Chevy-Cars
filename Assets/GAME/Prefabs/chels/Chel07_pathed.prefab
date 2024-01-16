@@ -342,8 +342,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objParent: {fileID: 1011097474874208682}
   rbMasses: 1
-  defaultMask: 
-  destroyedMask: 
+  defaultMask: ScoreObject
+  destroyedMask: DestroyedDestrictable
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 0}
   additionalActionOnOn:
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb010323e504d874b9edeaa57f07a224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toAdd: 5
+  toAdd: 10
   achievement: {fileID: 0}
 --- !u!1001 &3185487236082643959
 PrefabInstance:

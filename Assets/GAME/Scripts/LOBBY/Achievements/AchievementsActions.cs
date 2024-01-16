@@ -14,14 +14,4 @@ public class AchievementsActions : ScriptableObject
     {
         HardCurrency.Plus(amount);
     }
-
-    public void UnlockCar(int index)
-    {
-        
-    }
-    
-    public void UnlockCharacter(int index)
-    {
-        
-    }
 }

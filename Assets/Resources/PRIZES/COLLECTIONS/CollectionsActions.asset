@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a4b22e8d17bde4584298c794c595c0, type: 3}
+  m_Name: CollectionsActions
+  m_EditorClassIdentifier: 
+  _skinCollection: {fileID: 11400000, guid: 6cf950f84ab707c4095334037c6e1d56, type: 2}
+  _carCollection: {fileID: 11400000, guid: 01cedf4396b18834a8fc85739661d2ea, type: 2}

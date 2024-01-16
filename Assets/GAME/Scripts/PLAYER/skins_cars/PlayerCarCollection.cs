@@ -24,8 +24,6 @@ public class PlayerCarCollection : ScriptableObject
 
         [Space] 
         public PuzzlesCost[] Costs;
-        
-        public CarButton RelativeButton { get; set; }
     }
     
     [Serializable]
