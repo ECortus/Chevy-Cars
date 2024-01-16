@@ -37,12 +37,15 @@ public class FortuneWheel : MonoBehaviour
     [Space] 
     [SerializeField] private int Cost;
 
+    [Space] 
+    [SerializeField] private TextMeshProUGUI timer;
+
     private void Awake()
     {
         SoftCurrency.OnUpdate += SetButton;
         SetButton();
 
-        float time = TimeInSeconds();
+        time = TimeInSeconds();
         if (time - SpinningTime > 6 * 60 * 60)
         {
             FreeSpin = true;
@@ -271,6 +274,26 @@ public class FortuneWheel : MonoBehaviour
         yield return null;
     }
 
+    private float time;
+    private string seconds, minutes, hours;
+    
+    void Update()
+    {
+        if (!FreeSpin && AdSpinningCount == 0)
+        {
+            time = (SpinningTime + 6 * 60 * 60) - TimeInSeconds();
+            seconds = $"{(int)time % 60}";
+            minutes = $"{(int)time / 60}";
+            hours = $"{(int)time / 3600}";
+            
+            seconds += seconds.Length < 2 ? "0" : "";
+            minutes += minutes.Length < 2 ? "0" : "";
+            hours += hours.Length < 2 ? "0" : "";
+            
+            timer.text = $"{hours}:{minutes}:{seconds}";
+        }
+    }
+
     void SetText()
     {
         costText.text = $"{Cost.ToString()}";
@@ -282,6 +305,7 @@ public class FortuneWheel : MonoBehaviour
         turnFreeButton.gameObject.SetActive(FreeSpin);
         turnAdButton.gameObject.SetActive(!FreeSpin && AdSpinningCount > 0);
         notAvailableButton.gameObject.SetActive(!FreeSpin && AdSpinningCount == 0);
+        timer.gameObject.SetActive(!FreeSpin && AdSpinningCount == 0);
     }
 
     void SetRandomStartAngle()
