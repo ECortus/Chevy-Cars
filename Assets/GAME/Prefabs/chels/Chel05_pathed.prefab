@@ -309,7 +309,7 @@ MonoBehaviour:
   objParent: {fileID: 730833336628623399}
   rbMasses: 1
   defaultMask: ScoreObject
-  destroyedMask: DestroyedDestrictable
+  destroyedMask: ScoreObject
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 0}
   additionalActionOnOn:
@@ -387,6 +387,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimplePeople_Bride
       objectReference: {fileID: 0}
+    - target: {fileID: 453365720389149317, guid: 3f68e2937b45b4116859e6c203361dc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857118044685205960, guid: 3f68e2937b45b4116859e6c203361dc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3852058890712278017, guid: 3f68e2937b45b4116859e6c203361dc6,
         type: 3}
       propertyPath: m_Layer
@@ -461,6 +471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861082756678740961, guid: 3f68e2937b45b4116859e6c203361dc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -64,8 +64,8 @@ public class FortuneWheel : MonoBehaviour
     
     float TimeInSeconds()
     {
-        DateTime epochStart = new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-        float timestamp = (float)(DateTime.UtcNow - epochStart).TotalSeconds;
+        DateTime epochStart = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+        float timestamp = (float)((DateTime.UtcNow - epochStart).TotalSeconds);
 
         return timestamp;
     }
@@ -281,16 +281,28 @@ public class FortuneWheel : MonoBehaviour
     {
         if (!FreeSpin && AdSpinningCount == 0)
         {
-            time = (SpinningTime + 6 * 60 * 60) - TimeInSeconds();
-            seconds = $"{(int)time % 60}";
-            minutes = $"{(int)time / 60}";
-            hours = $"{(int)time / 3600}";
+            if (timer.gameObject.activeSelf)
+            {
+                time = (SpinningTime + 6 * 60 * 60) - TimeInSeconds();
+                seconds = $"{(int)time % 60}";
+                minutes = $"{(int)(time - ((int)time / 3600) * 3600) / 60}";
+                hours = $"{(int)time / 3600}";
             
-            seconds += seconds.Length < 2 ? "0" : "";
-            minutes += minutes.Length < 2 ? "0" : "";
-            hours += hours.Length < 2 ? "0" : "";
+                seconds = seconds.Length < 2 ? "0" + seconds : seconds;
+                minutes = minutes.Length < 2 ? "0" + minutes : minutes;
+                hours = hours.Length < 2 ? "0" + hours : hours;
             
-            timer.text = $"{hours}:{minutes}:{seconds}";
+                timer.text = $"{hours}:{minutes}:{seconds}";
+
+                if (time <= 0)
+                {
+                    FreeSpin = true;
+                    AdSpinningCount = 5;
+
+                    SpinningTime = time;
+                    RefreshButtons();
+                }
+            }
         }
     }
 

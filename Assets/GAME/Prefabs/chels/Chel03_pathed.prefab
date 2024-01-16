@@ -143,7 +143,7 @@ MonoBehaviour:
   objParent: {fileID: 5416179478827614476}
   rbMasses: 1
   defaultMask: ScoreObject
-  destroyedMask: DestroyedDestrictable
+  destroyedMask: ScoreObject
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 0}
   additionalActionOnOn:
@@ -392,6 +392,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimplePeople_PregnantWoman
       objectReference: {fileID: 0}
+    - target: {fileID: 3965244197250850502, guid: 666c6824ca9f7415d904e7496d094b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969165923208221371, guid: 666c6824ca9f7415d904e7496d094b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6846384783291513682, guid: 666c6824ca9f7415d904e7496d094b59,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -461,6 +471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815666404418671579, guid: 666c6824ca9f7415d904e7496d094b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

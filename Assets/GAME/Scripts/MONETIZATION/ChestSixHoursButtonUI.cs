@@ -49,16 +49,15 @@ public class ChestSixHoursButtonUI : MonoBehaviour
     
     float TimeInSeconds()
     {
-        DateTime epochStart = new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-        float timestamp = (float)(DateTime.UtcNow - epochStart).TotalSeconds;
+        DateTime epochStart = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+        float timestamp = (float)((DateTime.UtcNow - epochStart).TotalSeconds);
 
         return timestamp;
     }
 
     void Refresh()
     {
-        float time = TimeInSeconds();
-        gameObject.SetActive(time - BuyTime > 6 * 60 * 60);
+        gameObject.SetActive(true);
 
         if (BuyCount > 0)
         {
@@ -81,14 +80,22 @@ public class ChestSixHoursButtonUI : MonoBehaviour
         {
             time = (BuyTime + 6 * 60 * 60) - TimeInSeconds();
             seconds = $"{(int)time % 60}";
-            minutes = $"{(int)time / 60}";
+            minutes = $"{(int)(time - ((int)time / 3600) * 3600) / 60}";
             hours = $"{(int)time / 3600}";
             
-            seconds += seconds.Length < 2 ? "0" : "";
-            minutes += minutes.Length < 2 ? "0" : "";
-            hours += hours.Length < 2 ? "0" : "";
+            seconds = seconds.Length < 2 ? "0" + seconds : seconds;
+            minutes = minutes.Length < 2 ? "0" + minutes : minutes;
+            hours = hours.Length < 2 ? "0" + hours : hours;
             
             timer.text = $"{hours}:{minutes}:{seconds}";
+            
+            if (time <= 0)
+            {
+                BuyCount = 5;
+
+                BuyTime = TimeInSeconds();
+                Refresh();
+            }
         }
     }
 
@@ -119,6 +126,8 @@ public class ChestSixHoursButtonUI : MonoBehaviour
             TypedCurrency.Plus(type, Random.Range(min, max + 1));
             
             BuyTime = TimeInSeconds();
+            BuyCount--;
+            
             Refresh();
         }
     }

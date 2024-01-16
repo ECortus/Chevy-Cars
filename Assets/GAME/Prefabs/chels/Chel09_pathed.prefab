@@ -143,7 +143,7 @@ MonoBehaviour:
   objParent: {fileID: 2821991116123007814}
   rbMasses: 1
   defaultMask: ScoreObject
-  destroyedMask: DestroyedDestrictable
+  destroyedMask: ScoreObject
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 0}
   additionalActionOnOn:
@@ -387,7 +387,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimplePeople_Groom
       objectReference: {fileID: 0}
+    - target: {fileID: 1110300910082386337, guid: 2d086fc846cb24d41a18f7ea76361865,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3722074981609931657, guid: 2d086fc846cb24d41a18f7ea76361865,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4168459738127377010, guid: 2d086fc846cb24d41a18f7ea76361865,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296741455515713338, guid: 2d086fc846cb24d41a18f7ea76361865,
         type: 3}
       propertyPath: m_Layer
       value: 10

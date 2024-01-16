@@ -91,6 +91,8 @@ public class CarButton : MonoBehaviour
 
     private void OnDestroy()
     {
+        // Debug.Log("car button destroy " + Index);
+        
         SoftCurrency.OnUpdate -= Refresh;
         HardCurrency.OnUpdate -= Refresh;
         PuzzlePeaces.OnUpdate -= Refresh;

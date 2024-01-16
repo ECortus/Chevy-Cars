@@ -177,7 +177,7 @@ MonoBehaviour:
   objParent: {fileID: 2868046806625462760}
   rbMasses: 1
   defaultMask: ScoreObject
-  destroyedMask: DestroyedDestrictable
+  destroyedMask: ScoreObject
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 0}
   additionalActionOnOn:
@@ -452,10 +452,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5204082628816657032, guid: c4eaa9be5f10d4543a3bfde450c4fd1a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412401076996138550, guid: c4eaa9be5f10d4543a3bfde450c4fd1a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5910437509433995668, guid: c4eaa9be5f10d4543a3bfde450c4fd1a,
         type: 3}
       propertyPath: m_Name
       value: SimplePeople_ChildBoy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910437509433995668, guid: c4eaa9be5f10d4543a3bfde450c4fd1a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6087681077219569002, guid: c4eaa9be5f10d4543a3bfde450c4fd1a,
         type: 3}

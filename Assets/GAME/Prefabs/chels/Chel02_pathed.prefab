@@ -343,7 +343,7 @@ MonoBehaviour:
   objParent: {fileID: 6188097026419764964}
   rbMasses: 1
   defaultMask: ScoreObject
-  destroyedMask: DestroyedDestrictable
+  destroyedMask: ScoreObject
   additionalObjectToOn: {fileID: 0}
   additionalObjectToOff: {fileID: 0}
   additionalActionOnOn:
@@ -457,7 +457,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimplePeople_OldPeople
       objectReference: {fileID: 0}
+    - target: {fileID: 817425765127558203, guid: 193ffa1cf54454abea5ada6d8b3cf450,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 966271620081070858, guid: 193ffa1cf54454abea5ada6d8b3cf450,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8216177024617817424, guid: 193ffa1cf54454abea5ada6d8b3cf450,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050712441947298607, guid: 193ffa1cf54454abea5ada6d8b3cf450,
         type: 3}
       propertyPath: m_Layer
       value: 10
