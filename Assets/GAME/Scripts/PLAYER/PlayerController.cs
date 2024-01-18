@@ -83,10 +83,10 @@ public class PlayerController : CarController
 
     void Start()
     {
-        _handle = GameManager.Instance.Joystick.transform.GetChild(0);
-        _health = GetComponent<HealthData>();
+        _handle ??= GameManager.Instance.Joystick.transform.GetChild(0);
+        _health ??= GetComponent<HealthData>();
         _health.SetBonus(HPBonus);
-        _arrest = GetComponent<ArrestData>();
+        _arrest ??= GetComponent<ArrestData>();
 
         carController.SpeedBonus = SPDBonus;
         FullHeal();

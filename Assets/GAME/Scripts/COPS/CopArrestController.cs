@@ -7,13 +7,15 @@ public class CopArrestController : MonoBehaviour
     private PlayerController Player => PlayerController.Instance;
     
     private CopBasic controller;
-    [SerializeField] private float distance = 2f, speed = 1f, arrestTime = 3f;
+    [SerializeField] private float distance = 2f, speed = 1f, _arrestTime = 3f;
 
-    private float time = 0f;
+    private static float time = 0f, arrestTime = 0f;
 
     void Start()
     {
         controller = GetComponent<CopBasic>();
+        arrestTime = _arrestTime;
+        
         SetTime();
     }
 
@@ -36,9 +38,19 @@ public class CopArrestController : MonoBehaviour
         SetTime();
     }
 
-    void SetTime()
+    static void SetTime()
     {
         time = arrestTime;
+    }
+
+    public static void Reset()
+    {
+        SetTime();
+    }
+    
+    public void _Reset()
+    {
+        SetTime();
     }
 
     public bool RequireToArrest => RequireSpeed && RequireDistance;

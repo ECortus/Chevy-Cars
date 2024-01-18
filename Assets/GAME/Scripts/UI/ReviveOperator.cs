@@ -41,6 +41,8 @@ public class ReviveOperator : Instancer<ReviveOperator>
     public void Revive()
     {
         menu.SetActive(false);
+        
+        CopArrestController.Reset();
         GameManager.Instance.SetTimeScale(1f);
         
         CopsPool.Instance.KillAllOnDistanceFromTarget(PlayerController.Instance.Transform, 10f);

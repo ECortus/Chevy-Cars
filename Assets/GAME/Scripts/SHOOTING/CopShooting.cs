@@ -23,11 +23,10 @@ public class CopShooting : MonoBehaviour
     
     public void StartShooting()
     {
-        if (_coroutine == null)
-        {
-            _coroutine = StartCoroutine(Shooting());
-            time = 0;
-        }
+        StopShooting();
+        
+        _coroutine = StartCoroutine(Shooting());
+        time = 0;
     }
 
     public void StopShooting()

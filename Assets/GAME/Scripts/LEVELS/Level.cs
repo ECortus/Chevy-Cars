@@ -33,6 +33,8 @@ public class Level : MonoBehaviour
 
     public virtual async void StartingLevel()
     {
+        ArrestData.Attempt = 0;
+        
         AudioManager.Play(0);
         Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
         

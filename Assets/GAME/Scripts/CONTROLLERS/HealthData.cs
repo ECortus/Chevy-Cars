@@ -36,7 +36,11 @@ public class HealthData : MonoBehaviour
     [SerializeField] protected UnityEvent revive;
     [SerializeField] protected UnityEvent death;
 
-    public void FullHeal() => Heal(MaxHP);
+    public void FullHeal()
+    {
+        Heal(MaxHP);
+        Revive();
+    }
     public bool Died { get; set; }
 
     public void Heal(int hp)

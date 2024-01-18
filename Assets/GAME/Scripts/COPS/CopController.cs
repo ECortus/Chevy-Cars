@@ -10,6 +10,7 @@ public class CopController : CopBasic
     public override void On(Transform target, Vector3 spawn)
     {
         _diedTime = 0;
+        _arrest._Reset();
         
         gameObject.SetActive(true);
         SetTarget(target);
@@ -21,6 +22,7 @@ public class CopController : CopBasic
         }
 
         FullHeal();
+        
         SetDefaultRagdoll();
         SetControl(false);
         
@@ -41,9 +43,9 @@ public class CopController : CopBasic
     
     void Start()
     {
-        _health = GetComponent<HealthData>();
-        _arrest = GetComponent<CopArrestController>();
-        _scoreTarget = GetComponent<ScoreTarget>();
+        _health ??= GetComponent<HealthData>();
+        _arrest ??= GetComponent<CopArrestController>();
+        _scoreTarget ??= GetComponent<ScoreTarget>();
     }
 
     private float _diedTime;

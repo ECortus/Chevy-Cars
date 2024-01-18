@@ -533,7 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toAdd: 40
-  achievement: {fileID: 11400000, guid: b8dd8878ebc38f942b9b0308387eae90, type: 2}
+  achievement: {fileID: 0}
 --- !u!114 &7506678771079464248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,9 +546,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2822560330766964caa6dd864d4427be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 5
-  speed: 6.5
-  arrestTime: 5
+  distance: 6
+  speed: 4
+  _arrestTime: 7
 --- !u!1 &6865059612459285651
 GameObject:
   m_ObjectHideFlags: 0

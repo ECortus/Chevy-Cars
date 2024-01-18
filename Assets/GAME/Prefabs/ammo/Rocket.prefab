@@ -242,7 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: -567914100534804488}
   Type: 2
-  speed: 15
+  speed: 18
   gravityValue: 6
   effectType: 3
   hitEffect: {fileID: 19848870, guid: 609c0353edb2a7d4daba06848d5d01cf, type: 3}
