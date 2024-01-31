@@ -7,7 +7,7 @@ using Zenject;
 
 public class VolumeSetting : MonoBehaviour
 {
-    private PlayerSettings _settings;
+    private GamePlayerSettings _settings;
     private AudioMixer Master => _settings.Mixer;
 
     [SerializeField] private Toggle toggle;
@@ -22,7 +22,7 @@ public class VolumeSetting : MonoBehaviour
     
     private void Awake()
     {
-        _settings = Resources.Load<PlayerSettings>("SETTINGS/PlayerSettings");
+        _settings = Resources.Load<GamePlayerSettings>("SETTINGS/PlayerSettings");
         
         offPart = toggle.targetGraphic.gameObject;
         SetVolume(Mode);

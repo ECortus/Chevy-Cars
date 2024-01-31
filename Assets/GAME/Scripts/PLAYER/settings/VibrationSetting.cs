@@ -6,7 +6,7 @@ using Zenject;
 
 public class VibrationSetting : MonoBehaviour
 {
-    private PlayerSettings _settings;
+    private GamePlayerSettings _settings;
 
     [SerializeField] private Toggle toggle;
     private GameObject offPart;
@@ -19,7 +19,7 @@ public class VibrationSetting : MonoBehaviour
 
     private void Awake()
     {
-        _settings = Resources.Load<PlayerSettings>("SETTINGS/PlayerSettings");
+        _settings = Resources.Load<GamePlayerSettings>("SETTINGS/PlayerSettings");
         
         offPart = toggle.targetGraphic.gameObject;
         SetVibration(Mode);
