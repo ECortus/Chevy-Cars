@@ -7,7 +7,7 @@ public class EndlessLevel : Level
 {
     public override async void StartingLevel()
     {
-        Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
+        if (SettingsModes.Vibration) Handheld.Vibrate();
         
         gameObject.SetActive(true);
         

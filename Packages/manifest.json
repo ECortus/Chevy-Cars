@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "appsflyer-unity-plugin": "https://github.com/AppsFlyerSDK/appsflyer-unity-plugin.git#upm",
+    "com.google.external-dependency-manager": "1.2.178",
+    "com.unity.adaptiveperformance.google.android": "1.2.1",
+    "com.unity.adaptiveperformance.samsung.android": "5.0.0",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.collab-proxy": "2.2.0",
     "com.unity.feature.mobile": "1.0.0",
@@ -44,5 +48,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.google.external-dependency-manager"
+      ]
+    }
+  ]
 }

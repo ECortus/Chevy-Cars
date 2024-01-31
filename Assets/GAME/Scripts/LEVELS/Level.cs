@@ -36,7 +36,7 @@ public class Level : MonoBehaviour
         ArrestData.Attempt = 0;
         
         AudioManager.Play(0);
-        Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
+        if (SettingsModes.Vibration) Handheld.Vibrate();
         
         gameObject.SetActive(true);
         
@@ -88,7 +88,7 @@ public class Level : MonoBehaviour
     public async UniTask WinLevel()
     {
         Joystick.SetActive(false);
-        Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
+        if (SettingsModes.Vibration) Handheld.Vibrate();
         
         SoftCurrency.Plus(coinReward);
         WinOperator.Instance.On(coinReward);
@@ -101,7 +101,7 @@ public class Level : MonoBehaviour
     public void LoseLevel()
     {
         Joystick.SetActive(false);
-        Vibration.Vibrate(LevelManager.VibrationMillisecondsTimeOnStartOnEnd);
+        if (SettingsModes.Vibration) Handheld.Vibrate();
         
         LoseOperator.Instance.On();
         LevelManager.Ended = true;

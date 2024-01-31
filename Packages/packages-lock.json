@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "appsflyer-unity-plugin": {
+      "version": "https://github.com/AppsFlyerSDK/appsflyer-unity-plugin.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "6e1e828e002770c0fe9faa4012137922b6ef3d50"
+    },
     "com.autodesk.fbx": {
       "version": "4.2.1",
       "depth": 1,
@@ -7,13 +14,37 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.google.external-dependency-manager": {
+      "version": "1.2.178",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.adaptiveperformance": {
-      "version": "4.0.1",
+      "version": "5.0.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.subsystemregistration": "1.1.0",
         "com.unity.profiling.core": "1.0.2"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.adaptiveperformance.google.android": {
+      "version": "1.2.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.adaptiveperformance": "5.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.adaptiveperformance.samsung.android": {
+      "version": "5.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.adaptiveperformance": "5.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -170,15 +201,6 @@
         "com.unity.render-pipelines.core": "14.0.9",
         "com.unity.searcher": "4.9.2"
       }
-    },
-    "com.unity.subsystemregistration": {
-      "version": "1.1.1",
-      "depth": 2,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.subsystems": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
       "version": "1.1.33",
