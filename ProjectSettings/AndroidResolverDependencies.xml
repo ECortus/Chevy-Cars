@@ -11,8 +11,6 @@
     <package>com.applovin.mediation:chartboost-adapter:9.6.1.0</package>
     <package>com.applovin.mediation:facebook-adapter:[6.16.0.2]</package>
     <package>com.applovin.mediation:fyber-adapter:8.2.5.0</package>
-    <package>com.applovin.mediation:google-adapter:[22.6.0.0]</package>
-    <package>com.applovin.mediation:google-ad-manager-adapter:[22.6.0.0]</package>
     <package>com.applovin.mediation:inmobi-adapter:10.6.3.0</package>
     <package>com.applovin.mediation:ironsource-adapter:7.6.0.0.0</package>
     <package>com.applovin.mediation:mintegral-adapter:16.6.31.0</package>
