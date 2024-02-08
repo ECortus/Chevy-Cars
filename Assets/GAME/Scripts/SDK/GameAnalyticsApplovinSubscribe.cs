@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class GameAnalyticsApplovinSubscribe : MonoBehaviour
 {
-    void Start ()
+    void Start()
     {
-        GameAnalyticsILRD.SubscribeMaxImpressions();
-        
         MaxSdkCallbacks.OnSdkInitializedEvent += (MaxSdkBase.SdkConfiguration sdkConfiguration) => {
             // Show Mediation Debugger
             MaxSdk.ShowMediationDebugger();
