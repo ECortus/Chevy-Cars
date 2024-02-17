@@ -422,6 +422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground4 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2305731792875858466, guid: b01aec18fe4fddd4884be925fab3ee5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2953604929549333737, guid: b01aec18fe4fddd4884be925fab3ee5d,
         type: 3}
       propertyPath: m_LocalPosition.x
