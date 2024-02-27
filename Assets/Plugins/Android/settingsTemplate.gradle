@@ -22,15 +22,6 @@ dependencyResolutionManagement {
             url "https://verve.jfrog.io/artifactory/verve-gradle-release" // Assets/MaxSdk/Mediation/Verve/Editor/Dependencies.xml:7
         }
         maven {
-            url "https://android-sdk.is.com/" // Assets/IronSource/Editor/IronSourceSDKDependencies.xml:9, Assets/IronSource/Editor/ISAdColonyAdapterDependencies.xml:16, Assets/IronSource/Editor/ISAdMobAdapterDependencies.xml:16, Assets/IronSource/Editor/ISAppLovinAdapterDependencies.xml:8, Assets/IronSource/Editor/ISFyberAdapterDependencies.xml:16, Assets/IronSource/Editor/ISInMobiAdapterDependencies.xml:8, Assets/IronSource/Editor/ISUnityAdsAdapterDependencies.xml:8, Assets/MaxSdk/Mediation/IronSource/Editor/Dependencies.xml:8
-        }
-        maven {
-            url "https://maven.google.com/" // Assets/IronSource/Editor/IronSourceSDKDependencies.xml:17, Assets/IronSource/Editor/IronSourceSDKDependencies.xml:25, Assets/IronSource/Editor/ISAdColonyAdapterDependencies.xml:8, Assets/IronSource/Editor/ISAdMobAdapterDependencies.xml:8, Assets/IronSource/Editor/ISAppLovinAdapterDependencies.xml:15, Assets/IronSource/Editor/ISInMobiAdapterDependencies.xml:22, Assets/IronSource/Editor/ISUnityAdsAdapterDependencies.xml:15
-        }
-        maven {
-            url "https://repo.maven.apache.org/maven2/" // Assets/IronSource/Editor/ISFyberAdapterDependencies.xml:8, Assets/IronSource/Editor/ISInMobiAdapterDependencies.xml:15
-        }
-        maven {
             url "https://artifactory.bidmachine.io/bidmachine" // Assets/MaxSdk/Mediation/BidMachine/Editor/Dependencies.xml:8
         }
         maven {
@@ -38,6 +29,9 @@ dependencyResolutionManagement {
         }
         maven {
             url "https://cboost.jfrog.io/artifactory/chartboost-ads/" // Assets/MaxSdk/Mediation/Chartboost/Editor/Dependencies.xml:8
+        }
+        maven {
+            url "https://android-sdk.is.com/" // Assets/MaxSdk/Mediation/IronSource/Editor/Dependencies.xml:8
         }
         maven {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" // Assets/MaxSdk/Mediation/Mintegral/Editor/Dependencies.xml:8

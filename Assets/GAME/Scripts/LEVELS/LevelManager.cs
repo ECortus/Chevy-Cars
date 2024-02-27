@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using AppsFlyerSDK;
 using UnityEngine;
 
 public class LevelManager : Instancer<LevelManager>
@@ -25,14 +26,14 @@ public class LevelManager : Instancer<LevelManager>
     [Space] 
     [SerializeField] private AchievementObject achievementObject;
     
-    private int index { get { return Statistics.LevelIndex; } set { Statistics.LevelIndex = value; } }
-    public int Index => index % Levels.Length;
+    private int _index { get { return Statistics.LevelIndex; } set { Statistics.LevelIndex = value; } }
+    public int Index => _index % Levels.Length;
     
-    public void SetIndex(int value) => index = Mathf.Clamp(value, 0, 9999);
+    public void SetIndex(int value) => _index = Mathf.Clamp(value, 0, 9999);
 
     public void IncreaseIndex()
     {
-        int ind = index;
+        int ind = _index;
         ind++;
         SetIndex(ind);
 
@@ -44,7 +45,7 @@ public class LevelManager : Instancer<LevelManager>
 
     public void DecreaseIndex()
     {
-        int ind = index;
+        int ind = _index;
         ind--;
         SetIndex(ind);
     }
@@ -61,6 +62,15 @@ public class LevelManager : Instancer<LevelManager>
     {
         OffAllLevel();
         ActualLevel.On();
+
+        if (Index % 2 == 0)
+        {
+            AudioManager.Play(1);
+        }
+        else
+        {
+            AudioManager.Play(2);
+        }
         
         ActualLevel.StartingLevel();
     }
@@ -72,6 +82,8 @@ public class LevelManager : Instancer<LevelManager>
 
     public async void Win()
     {
+        AppsFlyerEventsSuite.AF_LEVEL_ACHIEVED($"level-{Index.ToString()}", $"score-{Score.Value.ToString()}");
+        
         await ActualLevel.WinLevel();
         IncreaseIndex();
     }

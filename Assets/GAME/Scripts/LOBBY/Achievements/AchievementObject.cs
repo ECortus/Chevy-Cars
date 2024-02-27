@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AppsFlyerSDK;
 using ModestTree;
 using UnityEngine;
 using UnityEngine.Events;
@@ -41,6 +42,8 @@ public class AchievementObject : ScriptableObject
                 HaveCompleted = true;
 
                 Main.ProgressLevel = Index;
+
+                AppsFlyerEventsSuite.AF_BONUS_CLAIMED($"achievement-{Main.Name}-stage-{Main.ProgressLevel.ToString()}");
             }
         }
     }

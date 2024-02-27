@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4188388-8ad8-4ad4-af3e-68a98db9e9a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/IronSource/Plugins/Android/IronSource.androidlib/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IronSource/Plugins/Android/IronSource.androidlib/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameAnalytics/Plugins/Scripts/ILRD/Max/GAMaxIntegration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAnalytics/Plugins/Scripts/ILRD/Max/GAMaxIntegration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Editor/Dependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Editor/Dependencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/Android/applovin-max-unity-plugin.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/Android/applovin-max-unity-plugin.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityAdManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityAdManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityAdManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityAdManager.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityPlugin.mm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Plugins/iOS/MAUnityPlugin.mm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/Google.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/Google/Editor.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/Google/Editor/Dependencies.xml" beforeDir="false" />
@@ -14,10 +26,30 @@
       <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/GoogleAdManager/Editor.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/GoogleAdManager/Editor/Dependencies.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Mediation/GoogleAdManager/Editor/Dependencies.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Resources/AppLovinSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Resources/AppLovinSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxInitialization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxInitialization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxPostProcessBuildAndroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxPostProcessBuildAndroid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxPostProcessBuildiOS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/Editor/MaxPostProcessBuildiOS.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinAutoUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinAutoUpdater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinIntegrationManagerWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinIntegrationManagerWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinProcessGradleBuildFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinProcessGradleBuildFile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/IntegrationManager/Editor/AppLovinSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkAndroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkAndroid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkCallbacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkUnityEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkUnityEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkiOS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MaxSdk/Scripts/MaxSdkiOS.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +82,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "AnalyzeApkAction.lastApkPath": "E:/MISC/UNITY/Chevy-Cars",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",

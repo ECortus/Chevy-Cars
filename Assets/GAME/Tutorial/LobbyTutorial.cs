@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using AppsFlyerSDK;
 using UnityEngine;
 using Zenject;
 using Cysharp.Threading.Tasks;
@@ -77,6 +78,8 @@ public class LobbyTutorial : MonoBehaviour
         
         Completed = true;
         gameObject.SetActive(false);
+        
+        AppsFlyerEventsSuite.AF_TUTORIAL_COMPLETION("lobby-1", "01", "Get-reward-for-achievement");
 
         SlideMenuUI.Block = false;
     }

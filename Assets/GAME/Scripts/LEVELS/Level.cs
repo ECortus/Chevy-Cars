@@ -35,7 +35,6 @@ public class Level : MonoBehaviour
     {
         ArrestData.Attempt = 0;
         
-        AudioManager.Play(0);
         if (SettingsModes.Vibration) Handheld.Vibrate();
         
         gameObject.SetActive(true);

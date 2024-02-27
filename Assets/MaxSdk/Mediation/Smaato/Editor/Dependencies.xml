@@ -8,6 +8,6 @@
         </androidPackage>
     </androidPackages>
     <iosPods>
-        <iosPod name="AppLovinMediationSmaatoAdapter" version="22.6.1.0" />
+        <iosPod name="AppLovinMediationSmaatoAdapter" version="22.7.0.0" />
     </iosPods>
 </dependencies>

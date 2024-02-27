@@ -4,21 +4,21 @@ using UnityEngine;
 
 namespace AppsFlyerSDK
 {
-    public class AppsFlyerEventsSuite
+    public static class AppsFlyerEventsSuite
     {
-        public void AF_COMPLETE_REGISTRATION(string method)
+        public static void AF_COMPLETE_REGISTRATION(string method)
         {
             Dictionary<string, string> eventParameters0 = new Dictionary<string, string>();
             eventParameters0.Add(AFInAppEvents.REGSITRATION_METHOD, method); // Type of signup method
             AppsFlyer.sendEvent(AFInAppEvents.COMPLETE_REGISTRATION, eventParameters0);
         }
 
-        public void AF_LOGIN()
+        public static void AF_LOGIN()
         {
             AppsFlyer.sendEvent(AFInAppEvents.LOGIN, null);
         }
 
-        public void AF_SEARCH(string term, string list)
+        public static void AF_SEARCH(string term, string list)
         {
             Dictionary<string, string> eventParameters2 = new Dictionary<string, string>();
             eventParameters2.Add(AFInAppEvents.SEARCH_STRING, term); // Search term
@@ -26,7 +26,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent(AFInAppEvents.SEARCH, eventParameters2);
         }
 
-        public void AF_CONTENT_VIEW(string price, string id, string category, string currency)
+        public static void AF_CONTENT_VIEW(string price, string id, string category, string currency)
         {
             Dictionary<string, string> eventParameters3 = new Dictionary<string, string>();
             eventParameters3.Add(AFInAppEvents.PRICE, price); // Product price
@@ -37,7 +37,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent(AFInAppEvents.CONTENT_VIEW, eventParameters3);
         }
 
-        public void AF_LIST_VIEW(string type, string list)
+        public static void AF_LIST_VIEW(string type, string list)
         {
             Dictionary<string, string> eventParameters4 = new Dictionary<string, string>();
             eventParameters4.Add(AFInAppEvents.CONTENT_TYPE, type); // Type of list
@@ -45,7 +45,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent("", eventParameters4);
         }
 
-        public void AD_ADD_TO_WISHLIST(string price, string id, string category)
+        public static void AD_ADD_TO_WISHLIST(string price, string id, string category)
         {
             Dictionary<string, string> eventParameters5 = new Dictionary<string, string>();
             eventParameters5.Add(AFInAppEvents.PRICE, price); // Price of the product
@@ -54,7 +54,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent(AFInAppEvents.ADD_TO_WISH_LIST, eventParameters5);
         }
 
-        public void AF_ADD_TO_CART(string price, string id, string category, string currency, string quantity)
+        public static void AF_ADD_TO_CART(string price, string id, string category, string currency, string quantity)
         {
             Dictionary<string, string> eventParameters6 = new Dictionary<string, string>();
             eventParameters6.Add(AFInAppEvents.PRICE, price); // Product price
@@ -66,7 +66,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent(AFInAppEvents.ADD_TO_CART, eventParameters6);
         }
 
-        public void AF_INITIATED_CHECKOUT(string price, string id, string category, string currency, string quantity)
+        public static void AF_INITIATED_CHECKOUT(string price, string id, string category, string currency, string quantity)
         {
             Dictionary<string, string> eventParameters7 = new Dictionary<string, string>();
             eventParameters7.Add(AFInAppEvents.PRICE, price); // Total price in the cart
@@ -77,7 +77,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent(AFInAppEvents.INITIATED_CHECKOUT, eventParameters7);
         }
 
-        public void AF_PURCHASE(string revenue, string price, string id, string category, string currency, string quantity, string orderID)
+        public static void AF_PURCHASE(string revenue, string price, string id, string category, string currency, string quantity, string orderID)
         {
             Dictionary<string, string> eventParameters8 = new Dictionary<string, string>();
             eventParameters8.Add(AFInAppEvents.REVENUE, revenue); // Estimated revenue from the purchase. The revenue value should not contain comma separators, currency, special characters, or text.
@@ -92,7 +92,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent(AFInAppEvents.PURCHASE, eventParameters8);
         }
 
-        public void AF_FIRST_PURCHASE(string revenue, string price, string id, string category, string currency, string quantity, string orderID)
+        public static void AF_FIRST_PURCHASE(string revenue, string price, string id, string category, string currency, string quantity, string orderID)
         {
             Dictionary<string, string> eventParameters9 = new Dictionary<string, string>();
             eventParameters9.Add(AFInAppEvents.REVENUE, revenue); // Revenue from purchase
@@ -107,7 +107,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent("first_purchase", eventParameters9);
         }
 
-        public void AF_REMOVE_FROM_CART(string id, string category)
+        public static void AF_REMOVE_FROM_CART(string id, string category)
         {
             Dictionary<string, string> eventParameters10 = new Dictionary<string, string>();
             eventParameters10.Add(AFInAppEvents.CONTENT_ID, id); // Item or product ID
@@ -115,7 +115,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent("remove_from_cart", eventParameters10);
         }
 
-        public void AF_LEVEL_ACHIEVED(string level, string score)
+        public static void AF_LEVEL_ACHIEVED(string level, string score)
         {
             Dictionary<string, string> eventParameters3 = new Dictionary<string, string>();
             eventParameters3.Add(AFInAppEvents.LEVEL, level); // Level the user achieved
@@ -123,7 +123,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent(AFInAppEvents.LEVEL_ACHIEVED, eventParameters3);
         }
 
-        public void AF_TUTORIAL_COMPLETION(string level, string tutorialID, string tutorialName)
+        public static void AF_TUTORIAL_COMPLETION(string level, string tutorialID, string tutorialName)
         {
             Dictionary<string, string> eventParameters4 = new Dictionary<string, string>();
             eventParameters4.Add(AFInAppEvents.SUCCESS, level); // Whether the user completed the tutorial
@@ -132,7 +132,7 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent(AFInAppEvents.TUTORIAL_COMPLETION, eventParameters4);
         }
 
-        public void AF_SHARE(string reason, string platform)
+        public static void AF_SHARE(string reason, string platform)
         {
             Dictionary<string, string> eventParameters5 = new Dictionary<string, string>();
             eventParameters5.Add(AFInAppEvents.DESCRIPTION, reason); // Reason for sharing on social media, for example, a new high score or leveling up
@@ -140,21 +140,21 @@ namespace AppsFlyerSDK
             AppsFlyer.sendEvent(AFInAppEvents.SHARE, eventParameters5);
         }
 
-        public void AF_INVITE(string context)
+        public static void AF_INVITE(string context)
         {
             Dictionary<string, string> eventParameters6 = new Dictionary<string, string>();
             eventParameters6.Add(AFInAppEvents.DESCRIPTION, context); // Context of invitation
             AppsFlyer.sendEvent(AFInAppEvents.INVITE, eventParameters6);
         }
 
-        public void AF_BONUS_CLAIMED(string bonusType)
+        public static void AF_BONUS_CLAIMED(string bonusType)
         {
             Dictionary<string, string> eventParameters7 = new Dictionary<string, string>();
             eventParameters7.Add(bonusType, ""); // Type of bonus user claims
             AppsFlyer.sendEvent("bonus_claimed", eventParameters7);
         }
         
-        public void AF_AD_REVENUE(string country, string id, string category, string placement, string payload = "")
+        public static void AF_AD_REVENUE(string country, string id, string category, string placement, string payload = "")
         {
             Dictionary<string, string> eventParameters3 = new Dictionary<string, string>();
             eventParameters3.Add("country", country);

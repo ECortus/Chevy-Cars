@@ -17,6 +17,11 @@ public class LobbyManagerUI : MonoBehaviour
         transform.localPosition = Vector3.zero;
     }
 
+    private void Start()
+    {
+        AudioManager.Play(0);
+    }
+
     public void OpenMain()
     {
         OnMain = true;

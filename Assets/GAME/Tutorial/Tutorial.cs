@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AppsFlyerSDK;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 using Zenject;
@@ -44,6 +45,8 @@ public class Tutorial : MonoBehaviour
         driveObj.SetActive(true);
 
         await UniTask.WaitUntil(() => Input.GetMouseButton(0));
+        
+        AppsFlyerEventsSuite.AF_TUTORIAL_COMPLETION("play-0", "00", "Tap-to-drive");
 
         Completed = true;
         gameObject.SetActive(false);
